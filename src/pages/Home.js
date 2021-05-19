@@ -10,7 +10,8 @@ import Footer from '../partials/Footer';
 
 function Home() {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden">
+    <div>
+      <div className="absolute inset-0 md:mt-24 lg:mt-0 bg-blue-200 pointer-events-none" aria-hidden="true"></div>
 
       {/*  Site header */}
       <Header />

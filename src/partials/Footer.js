@@ -49,7 +49,7 @@ function Footer() {
               </li>
               <li className="mb-2">
                 <Link to="#" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Command-line</Link>
-              </li>                            
+              </li>
             </ul>
           </div>
 
@@ -119,7 +119,7 @@ function Footer() {
                 </div>
               </div>
             </form>
-          </div>          
+          </div>
 
         </div>
 
