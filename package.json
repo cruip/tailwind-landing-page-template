@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.1.1",
+    "@ckeditor/ckeditor5-build-classic": "^28.0.0",
+    "@craco/craco": "^6.1.2",
     "@tailwindcss/forms": "^0.3.2",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
@@ -11,6 +12,7 @@
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "^9.8.6",
     "cruip-js-toolkit": "^1.0.3",
+    "firebase": "^8.7.0",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.9",
     "react": "^17.0.2",
@@ -25,7 +27,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"

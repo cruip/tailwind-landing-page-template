@@ -1,14 +1,20 @@
-import React from 'react';
-import profileImg from '../images/profile.jpg';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../App';
 
 const Profile = () => {
+
+
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+
+
     return (
-        <section className="container m-auto w-full h-screen flex items-center justify-center">
-            <div className="w-2/3 bg-blue-100 mt-20 p-10">
+        <section className="container m-auto w-full flex items-center justify-center">
+            <div className="w-2/3 bg-blue-100 pt-14 p-10">
 
                 <div>
-                    <img src={profileImg} className="object-cover rounded-full w-28 h-28 m-auto" alt="" />
-                    <h2 className="text-center font-bold text-2xl">Mahadi Hasan</h2>
+                    <img src={loggedInUser.photoURL} className="object-cover rounded-full w-28 h-28 m-auto" alt="" />
+                    <h2 className="text-center font-bold text-2xl">{loggedInUser.displayName}</h2>
                 </div>
 
                 <div className="w-full flex justify-end">
@@ -19,12 +25,12 @@ const Profile = () => {
 
                     <div className="my-6">
                         <label htmlFor="name">Your Name</label>
-                        <input type="text" id="name" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue="Mahadi" disabled />
+                        <input type="text" id="name" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue={loggedInUser.displayName} disabled />
                     </div>
 
                     <div className="my-6">
                         <label htmlFor="email">Your Email</label>
-                        <input type="email" id="email" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue="mahadi.hasan.937524.mh@gmail.com" disabled />
+                        <input type="email" id="email" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue={loggedInUser.email} disabled />
                     </div>
 
                     <div className="my-6">
@@ -41,7 +47,7 @@ const Profile = () => {
 
                 <div className="flex mt-5">
 
-                    <button className="text-center m-auto border-2 border-red-400 bg-red-100 px-4 py-2 rounded-full shadow-lg flex text-gray-800 hover:bg-red-200 transition duration-300 ease-in-out text-center">
+                    <button onClick={() => setLoggedInUser({})} className="text-center m-auto border-2 border-red-400 bg-red-100 px-4 py-2 rounded-full shadow-lg flex text-gray-800 hover:bg-red-200 transition duration-300 ease-in-out text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
                         </svg>
@@ -57,6 +63,9 @@ const Profile = () => {
                 </div>
 
             </div>
+
+
+            <Link to="/" className="right-0 mr-10 px-5 py-3 rounded-full bg-blue-100 shadow-lg text-blue-900 absolute hover:bg-blue-200 transition duration-150 ease-in-out">Back To Home</Link>
         </section>
     );
 };
