@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../partials/Header';
 import firebase from "firebase/app";
@@ -6,8 +6,8 @@ import "firebase/analytics";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../App';
-
-
+import { useForm } from "react-hook-form";
+import loader from '../images/simpleLoader.gif';
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -19,6 +19,7 @@ function SignUp() {
 
 
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+  const [showLoader, setShowLoader] = useState(false)
 
   const googleProvider = new firebase.auth.GoogleAuthProvider();
   const gitHubProvider = new firebase.auth.GithubAuthProvider();
@@ -66,6 +67,26 @@ function SignUp() {
 
   }
 
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => {
+
+    setShowLoader(true)
+
+    fetch('http://localhost:5000/addUser', {
+      method: 'POST',
+
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        setShowLoader(false);
+      })
+
+  };
+
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
@@ -87,34 +108,40 @@ function SignUp() {
 
               {/* Form */}
               <div className="max-w-sm mx-auto">
-                <form>
+
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="name">Name <span className="text-red-600">*</span></label>
-                      <input id="name" type="text" className="form-input w-full text-gray-800" placeholder="Enter your name" required />
+                      <input id="name" {...register("displayName", { required: true })} type="text" className="form-input w-full text-gray-800" placeholder="Enter your name" required />
+                      {errors.displayName && <span className="text-red-500 font-bold">This field is required</span>}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="email">Email <span className="text-red-600">*</span></label>
-                      <input id="email" type="email" className="form-input w-full text-gray-800" placeholder="Enter your email address" required />
+                      <input id="email" {...register("email", { required: true })} type="email" className="form-input w-full text-gray-800" placeholder="Enter your email address" required />
+                      {errors.email && <span className="text-red-500 font-bold">This field is required</span>}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="password">Password <span className="text-red-600">*</span></label>
-                      <input id="password" type="password" className="form-input w-full text-gray-800" placeholder="Enter your password" required />
+                      <input id="password" {...register("password", { required: true })} type="password" className="form-input w-full text-gray-800" placeholder="Enter your password" required />
+                      {errors.password && <span className="text-red-500 font-bold">This field is required</span>}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">Sign up</button>
+                      <button type="submit" className="btn text-white bg-blue-600 hover:bg-blue-700 w-full" disabled={showLoader}>{showLoader && < img src={loader} className="w-12 pr-5" alt="" />} Sign up</button>
                     </div>
                   </div>
                   <div className="text-sm text-gray-500 text-center mt-3">
                     By creating an account, you agree to the <a className="underline" href="#0">terms & conditions</a>, and our <a className="underline" href="#0">privacy policy</a>.
                   </div>
                 </form>
+
+
                 <div className="flex items-center my-6">
                   <div className="border-t border-gray-300 flex-grow mr-3" aria-hidden="true"></div>
                   <div className="text-gray-600 italic">Or</div>

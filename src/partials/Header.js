@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../App';
-
+import defaultProfile from '../images/defaultProfile.jpg';
 
 function Header() {
 
@@ -66,7 +66,7 @@ function Header() {
                     <button
                       onClick={() => setProfileDropdown(!profileDropdown)}
                       className="flex items-center space-x-3 border p-1 rounded-full shadow-md">
-                      <img src={loggedInUser.photoURL} alt="" className="object-cover w-14 rounded-full" />
+                      <img src={loggedInUser.photoURL || defaultProfile} alt="" className="object-cover w-14 rounded-full" />
                       <h3 className="font-bold text-lg text-gray-800 pr-2">{loggedInUser.displayName}</h3>
                     </button>
 
