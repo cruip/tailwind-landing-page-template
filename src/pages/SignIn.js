@@ -74,7 +74,7 @@ function SignIn() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
 
-    fetch('http://localhost:5000/checkEmail', {
+    fetch('https://glacial-sands-75205.herokuapp.com/checkEmail', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)

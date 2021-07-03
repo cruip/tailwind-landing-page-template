@@ -74,7 +74,7 @@ function SignUp() {
 
     setShowLoader(true)
 
-    fetch('http://localhost:5000/addUser', {
+    fetch('https://glacial-sands-75205.herokuapp.com/addUser', {
       method: 'POST',
 
       headers: { 'Content-Type': 'application/json' },

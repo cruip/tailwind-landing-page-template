@@ -15,7 +15,7 @@ const Profile = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
         console.log(data);
-        fetch(`http://localhost:5000/updateInfo/${loggedInUser._id}`, {
+        fetch(`https://glacial-sands-75205.herokuapp.com/updateInfo/${loggedInUser._id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -34,7 +34,7 @@ const Profile = () => {
     const deleteUser = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:5000/deleteUser/${loggedInUser._id}`, {
+        fetch(`https://glacial-sands-75205.herokuapp.com/deleteUser/${loggedInUser._id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
