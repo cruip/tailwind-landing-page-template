@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import {
   Switch,
   Route,
@@ -14,8 +14,14 @@ import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import ResetPassword from './pages/ResetPassword';
+import Profile from './pages/Profile';
+
+export const UserContext = createContext()
+
 
 function App() {
+
+  const [loggedInUser, setLoggedInUser] = useState({})
 
   const location = useLocation();
 
@@ -36,7 +42,7 @@ function App() {
   }, [location.pathname]); // triggered on route change
 
   return (
-    <>
+    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -47,11 +53,14 @@ function App() {
         <Route path="/signup">
           <SignUp />
         </Route>
+        <Route path="/profile">
+          <Profile />
+        </Route>
         <Route path="/reset-password">
           <ResetPassword />
         </Route>
       </Switch>
-    </>
+    </UserContext.Provider>
   );
 }
 

@@ -1,9 +1,97 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React, { useContext, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import Header from '../partials/Header';
+import firebase from "firebase/app";
+import "firebase/analytics";
+import "firebase/auth";
+import firebaseConfig from './firebase.config';
+import { UserContext } from '../App';
+import { useForm } from "react-hook-form";
+
+
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+} else {
+  firebase.app();
+}
+
 
 function SignIn() {
+
+  let history = useHistory();
+
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+
+  const googleProvider = new firebase.auth.GoogleAuthProvider();
+  const gitHubProvider = new firebase.auth.GithubAuthProvider();
+
+  const handleGoogleLogin = (e) => {
+    e.preventDefault()
+
+    firebase.auth()
+      .signInWithPopup(googleProvider)
+      .then((result) => {
+        var credential = result.credential;
+        var token = credential.accessToken;
+        var user = result.user;
+        setLoggedInUser(user)
+        console.log(user)
+      }).catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        var email = error.email;
+        var credential = error.credential;
+        console.log(errorCode, errorMessage, email, credential);
+      });
+  }
+
+
+  const handleGitHubLogin = (e) => {
+    e.preventDefault()
+
+    firebase
+      .auth()
+      .signInWithPopup(gitHubProvider)
+      .then((result) => {
+        var credential = result.credential;
+        var token = credential.accessToken;
+        var user = result.user;
+        setLoggedInUser(user)
+        console.log(user)
+      }).catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        var email = error.email;
+        var credential = error.credential;
+        console.log(errorCode, errorMessage, email, credential);
+      });
+
+  }
+
+
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => {
+
+    fetch('https://glacial-sands-75205.herokuapp.com/checkEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data) {
+          setLoggedInUser(data[0])
+          history.push("/profile");
+        } else {
+          alert('Email or Password does not match.')
+        }
+      })
+
+  };
+
+
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
 
@@ -24,11 +112,12 @@ function SignIn() {
 
               {/* Form */}
               <div className="max-w-sm mx-auto">
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="email">Email</label>
-                      <input id="email" type="email" className="form-input w-full text-gray-800" placeholder="Enter your email address" required />
+                      <input {...register("email", { required: true })} id="email" type="email" className="form-input w-full text-gray-800" placeholder="Enter your email address" required />
+                      {errors.email && <span>This field is required</span>}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
@@ -37,7 +126,8 @@ function SignIn() {
                         <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="password">Password</label>
                         <Link to="reset-password" className="text-sm font-medium text-blue-600 hover:underline">Having trouble signing in?</Link>
                       </div>
-                      <input id="password" type="password" className="form-input w-full text-gray-800" placeholder="Enter your password" required />
+                      <input {...register("password", { required: true })} id="password" type="password" className="form-input w-full text-gray-800" placeholder="Enter your password" required />
+                      {errors.password && <span>This field is required</span>}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
@@ -52,7 +142,7 @@ function SignIn() {
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">Sign in</button>
+                      <button type="submit" className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">Sign in</button>
                     </div>
                   </div>
                 </form>
@@ -64,7 +154,7 @@ function SignIn() {
                 <form>
                   <div className="flex flex-wrap -mx-3 mb-3">
                     <div className="w-full px-3">
-                      <button className="btn px-0 text-white bg-gray-900 hover:bg-gray-800 w-full relative flex items-center">
+                      <button onClick={(e) => handleGitHubLogin(e)} className="btn px-0 text-white bg-gray-900 hover:bg-gray-800 w-full relative flex items-center">
                         <svg className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                           <path d="M7.95 0C3.578 0 0 3.578 0 7.95c0 3.479 2.286 6.46 5.466 7.553.397.1.497-.199.497-.397v-1.392c-2.187.497-2.683-.993-2.683-.993-.398-.895-.895-1.193-.895-1.193-.696-.497.1-.497.1-.497.795.1 1.192.795 1.192.795.696 1.292 1.888.895 2.286.696.1-.497.298-.895.497-1.093-1.79-.2-3.578-.895-3.578-3.975 0-.895.298-1.59.795-2.087-.1-.2-.397-.994.1-2.087 0 0 .695-.2 2.186.795a6.408 6.408 0 011.987-.299c.696 0 1.392.1 1.988.299 1.49-.994 2.186-.795 2.186-.795.398 1.093.199 1.888.1 2.087.496.596.795 1.291.795 2.087 0 3.08-1.889 3.677-3.677 3.875.298.398.596.895.596 1.59v2.187c0 .198.1.497.596.397C13.714 14.41 16 11.43 16 7.95 15.9 3.578 12.323 0 7.95 0z" />
                         </svg>
@@ -74,7 +164,7 @@ function SignIn() {
                   </div>
                   <div className="flex flex-wrap -mx-3">
                     <div className="w-full px-3">
-                      <button className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center">
+                      <button onClick={(e) => handleGoogleLogin(e)} className="btn px-0 text-white bg-red-600 hover:bg-red-700 w-full relative flex items-center">
                         <svg className="w-4 h-4 fill-current text-white opacity-75 flex-shrink-0 mx-4" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                           <path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" />
                         </svg>
