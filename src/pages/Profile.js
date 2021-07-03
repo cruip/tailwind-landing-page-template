@@ -13,7 +13,22 @@ const Profile = () => {
 
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+        fetch(`http://localhost:5000/updateInfo/${loggedInUser._id}`, {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data) {
+                    alert('Profile updated successfully')
+                    setIsEdit(false);
+                }
+            })
+    }
 
 
     const deleteUser = (e) => {
@@ -31,7 +46,6 @@ const Profile = () => {
                     }
                 }
             })
-
     }
 
 
@@ -44,8 +58,8 @@ const Profile = () => {
                     <h2 className="text-center font-bold text-2xl">{loggedInUser.displayName}</h2>
                 </div>
 
-                <div className="w-full flex justify-end">
-                    <button onClick={() => setIsEdit(true)} className="px-5 py-2 text-blue-600 border-2 border-blue-600 bg-gray-100 rounded-full shadow-lg hover:bg-blue-300 hover:text-blue-900 hover:shadow-2xl transition duration-150 ease-in-out">Edit Your Profile</button>
+                <div className="w-full flex justify-end mt-4">
+                    <button onClick={() => setIsEdit(true)} className="px-5 py-2 text-blue-600 border-2 border-blue-400 bg-gray-100 rounded-full shadow-lg hover:bg-blue-300 hover:text-blue-900 hover:shadow-2xl transition duration-150 ease-in-out">Edit Your Profile</button>
                 </div>
 
                 <form action="" onSubmit={handleSubmit(onSubmit)} className="py-4">
@@ -62,12 +76,12 @@ const Profile = () => {
 
                     <div className="my-6">
                         <label htmlFor="dateOfBath">Your Date Of Bath</label>
-                        <input {...register("dateOfBath")} type="date" id="dateOfBath" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue="2002-05-22" disabled={!isEdit} />
+                        <input {...register("dateOfBath")} type="date" id="dateOfBath" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue="0000-00-00" disabled={!isEdit} />
                     </div>
 
                     <div className="my-6">
                         <label htmlFor="name">Your profession</label>
-                        <input {...register("profession")} type="text" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue="Edit your profession" disabled={!isEdit} />
+                        <input {...register("profession")} type="text" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue={loggedInUser.profession} placeholder="Add Your Profession" disabled={!isEdit} />
                     </div>
 
                     {isEdit &&
@@ -102,7 +116,7 @@ const Profile = () => {
             </div>
 
 
-            <Link to="/" className="right-0 mr-10 px-5 py-3 rounded-full bg-blue-100 shadow-lg text-blue-900 absolute hover:bg-blue-200 transition duration-150 ease-in-out">Back To Home</Link>
+            <Link to="/" className="md:right-0 md:bottom-50 bottom-80 mr-10 px-5 py-3 rounded-full bg-blue-100 shadow-lg text-blue-900 absolute hover:bg-blue-200 transition duration-150 ease-in-out">Back To Home</Link>
         </section>
     );
 };
