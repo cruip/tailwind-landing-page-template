@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Header from '../partials/Header';
 import firebase from "firebase/app";
 import "firebase/analytics";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { UserContext } from '../App';
+import { useForm } from "react-hook-form";
 
 
 
@@ -18,9 +19,10 @@ if (!firebase.apps.length) {
 
 function SignIn() {
 
+  let history = useHistory();
+
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-  const [userData, setUserData] = useState([])
-  const [inputUserData, setInputUserData] = useState({})
+
 
   const googleProvider = new firebase.auth.GoogleAuthProvider();
   const gitHubProvider = new firebase.auth.GithubAuthProvider();
@@ -69,36 +71,26 @@ function SignIn() {
   }
 
 
-  const handleChange = (e) => {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => {
 
-    const user = { ...inputUserData };
-    user[e.target.name] = e.target.value
-
-    setInputUserData(user)
-    console.log(user);
-
-  }
-
-  const handleSignIn = (e) => {
-    e.preventDefault();
-
-    if (inputUserData.email && inputUserData.password) {
-      fetch('http://localhost:5000/checkEmail', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(inputUserData)
+    fetch('http://localhost:5000/checkEmail', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data) {
+          setLoggedInUser(data[0])
+          history.push("/profile");
+        } else {
+          alert('Email or Password does not match.')
+        }
       })
-        .then(res => res.json())
-        .then(data => {
-          setUserData(data)
-          setLoggedInUser(data)
-        })
-    }
-    else {
-      alert("Fill all required")
-    }
-    console.log(userData);
-  }
+
+  };
+
 
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
@@ -120,11 +112,12 @@ function SignIn() {
 
               {/* Form */}
               <div className="max-w-sm mx-auto">
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
                       <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="email">Email</label>
-                      <input onBlur={(e) => handleChange(e)} name="email" id="email" type="email" className="form-input w-full text-gray-800" placeholder="Enter your email address" required />
+                      <input {...register("email", { required: true })} id="email" type="email" className="form-input w-full text-gray-800" placeholder="Enter your email address" required />
+                      {errors.email && <span>This field is required</span>}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
@@ -133,7 +126,8 @@ function SignIn() {
                         <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="password">Password</label>
                         <Link to="reset-password" className="text-sm font-medium text-blue-600 hover:underline">Having trouble signing in?</Link>
                       </div>
-                      <input onBlur={(e) => handleChange(e)} id="password" name="password" type="password" className="form-input w-full text-gray-800" placeholder="Enter your password" required />
+                      <input {...register("password", { required: true })} id="password" type="password" className="form-input w-full text-gray-800" placeholder="Enter your password" required />
+                      {errors.password && <span>This field is required</span>}
                     </div>
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
@@ -148,7 +142,7 @@ function SignIn() {
                   </div>
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button onClick={(e) => handleSignIn(e)} type="submit" className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">Sign in</button>
+                      <button type="submit" className="btn text-white bg-blue-600 hover:bg-blue-700 w-full">Sign in</button>
                     </div>
                   </div>
                 </form>

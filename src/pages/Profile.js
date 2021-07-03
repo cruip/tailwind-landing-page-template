@@ -1,12 +1,38 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { UserContext } from '../App';
+import { useForm } from "react-hook-form";
+import defaultProfile from '../images/defaultProfile.jpg';
 
 const Profile = () => {
 
+    let history = useHistory();
 
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const [isEdit, setIsEdit] = useState(false)
 
+
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const onSubmit = data => console.log(data);
+
+
+    const deleteUser = (e) => {
+        e.preventDefault();
+
+        fetch(`http://localhost:5000/deleteUser/${loggedInUser._id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data) {
+                    if (data) {
+                        alert('Your Account has been deleted')
+                        history.push("/");
+                    }
+                }
+            })
+
+    }
 
 
     return (
@@ -14,37 +40,44 @@ const Profile = () => {
             <div className="w-2/3 bg-blue-100 pt-14 p-10">
 
                 <div>
-                    <img src={loggedInUser.photoURL} className="object-cover rounded-full w-28 h-28 m-auto" alt="" />
+                    <img src={loggedInUser.photoURL || defaultProfile} className="object-cover rounded-full w-28 h-28 m-auto" alt="" />
                     <h2 className="text-center font-bold text-2xl">{loggedInUser.displayName}</h2>
                 </div>
 
                 <div className="w-full flex justify-end">
-                    <button className="px-5 py-2 text-blue-600 border-2 border-blue-600 bg-gray-100 rounded-full shadow-lg hover:bg-blue-300 hover:text-blue-900 hover:shadow-2xl transition duration-150 ease-in-out">Edit Your Profile</button>
+                    <button onClick={() => setIsEdit(true)} className="px-5 py-2 text-blue-600 border-2 border-blue-600 bg-gray-100 rounded-full shadow-lg hover:bg-blue-300 hover:text-blue-900 hover:shadow-2xl transition duration-150 ease-in-out">Edit Your Profile</button>
                 </div>
 
-                <form action="" className="">
+                <form action="" onSubmit={handleSubmit(onSubmit)} className="py-4">
 
                     <div className="my-6">
                         <label htmlFor="name">Your Name</label>
-                        <input type="text" id="name" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue={loggedInUser.displayName} disabled />
+                        <input {...register("displayName")} type="text" id="name" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue={loggedInUser.displayName} disabled={!isEdit} />
                     </div>
 
                     <div className="my-6">
                         <label htmlFor="email">Your Email</label>
-                        <input type="email" id="email" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue={loggedInUser.email} disabled />
+                        <input {...register("email")} type="email" id="email" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue={loggedInUser.email} disabled={!isEdit} />
                     </div>
 
                     <div className="my-6">
                         <label htmlFor="dateOfBath">Your Date Of Bath</label>
-                        <input type="date" id="dateOfBath" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue="2002-05-22" disabled />
+                        <input {...register("dateOfBath")} type="date" id="dateOfBath" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue="2002-05-22" disabled={!isEdit} />
                     </div>
 
                     <div className="my-6">
                         <label htmlFor="name">Your profession</label>
-                        <input type="text" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue="Web Developer" disabled />
+                        <input {...register("profession")} type="text" className="block my-2 p-2 border-0 bg-gray-100 w-full" defaultValue="Edit your profession" disabled={!isEdit} />
                     </div>
 
+                    {isEdit &&
+                        <div>
+                            <button type="submit" className="bg-blue-500 px-4 py-2 rounded-full mr-5">Save</button>
+                            <button onClick={() => setIsEdit(false)} className="bg-red-400 px-4 py-2 rounded-full mr-5">Cancel</button>
+                        </div>
+                    }
                 </form>
+                <hr />
 
                 <div className="flex mt-5">
 
@@ -54,7 +87,10 @@ const Profile = () => {
                         </svg>
                         Log Out</Link>
 
-                    <button className="text-center m-auto border-2 border-red-400 bg-red-100 px-4 py-2 rounded-full shadow-lg flex text-red-900 font-bold hover:bg-red-300 transition duration-300 ease-in-out text-center">
+                    <button onClick={(e) => {
+                        deleteUser(e)
+                        setLoggedInUser({})
+                    }} className="text-center m-auto border-2 border-red-400 bg-red-100 px-4 py-2 rounded-full shadow-lg flex text-red-900 font-bold hover:bg-red-300 transition duration-300 ease-in-out text-center">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                         </svg>

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Header from '../partials/Header';
 import firebase from "firebase/app";
 import "firebase/analytics";
@@ -17,9 +17,11 @@ if (!firebase.apps.length) {
 
 function SignUp() {
 
+  let history = useHistory();
 
   const [loggedInUser, setLoggedInUser] = useContext(UserContext)
   const [showLoader, setShowLoader] = useState(false)
+
 
   const googleProvider = new firebase.auth.GoogleAuthProvider();
   const gitHubProvider = new firebase.auth.GithubAuthProvider();
@@ -34,7 +36,7 @@ function SignUp() {
         var token = credential.accessToken;
         var user = result.user;
         setLoggedInUser(user)
-        console.log(user)
+        history.push("/home");
       }).catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -56,7 +58,7 @@ function SignUp() {
         var token = credential.accessToken;
         var user = result.user;
         setLoggedInUser(user)
-        console.log(user)
+        history.push("/");
       }).catch((error) => {
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -80,9 +82,12 @@ function SignUp() {
 
     })
       .then(res => res.json())
-      .then(data => {
-        console.log(data);
+      .then(resData => {
+        console.log(resData);
         setShowLoader(false);
+        alert("Sign Up Successfully. Please Log In");
+        history.push("/signin");
+
       })
 
   };
