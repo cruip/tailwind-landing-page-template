@@ -1,0 +1,52 @@
+{
+  "hiring": {
+    "title": "HIRING PROCESS",
+    "short_description": "Let's keep it short and simple",
+    "description": " We are looking for 100 engineers to join and help us create not only the best team but the best culture. It is about you and your career above all."
+  },
+  "interviewing": {
+    "title": "INTERVIEWING PROCESS",
+    "short_description": "Short meetings with meaning",
+    "description": " We want to know about you and want to give you all the information you need so you can feel we are here for you. Our core is engineering and we protect it."
+  },
+  "benefits": {
+    "title": "Our benefits",
+    "subtitle": "",
+    "payroll": {
+      "title": "On-time Payroll",
+      "description": "We believe having your money on time is a matter of respect for your contributions"
+    },
+    "remoteFriendly": {
+      "title": "Remote Friendly",
+      "description": "We have been through much, engineering works best when you have freedom and your best workplace"
+    },
+    "training": {
+      "title": "Training support",
+      "description": "Training is part of us, if you have a learning path you want to follow... count us in!"
+    },
+    "medicalInsurance": {
+      "title": "Medical Insurance",
+      "description": "Unexpected things happens and we provide you with public and private support."
+    },
+    "flexibleHours": {
+      "title": "Flexible hours",
+      "description": "We don't timebox people, engineering is art... isn't?"
+    },
+    "events": {
+      "title": "Travel and Events",
+      "description": "We work in many cities and placen, let's jump together for exiciting event!"
+    }
+  },
+  "opening": {
+    "title": "OPEN POSITIONS",
+    "short_description": "Be the next top notch engineer and show what Nearshore is about",
+    "description": " Search over our 103 open positions!, have something else in mind? sends us an email at careers@nearshorecode.com"
+  },
+  "actions": {
+    "seeOpenings": {
+      "label": "See Openings"
+    },
+    "signup": "Sign up",
+    "signin": "Sign in"
+  }
+}

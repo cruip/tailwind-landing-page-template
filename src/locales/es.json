@@ -1,0 +1,36 @@
+{
+  "benefits": {
+    "title": "Nuestros beneficios",
+    "subtitle": "",
+    "payroll": {
+      "title": "Nómina puntual",
+      "description": "Creemos que tener su dinero a tiempo es una cuestión de respeto por sus contribuciones."
+    },
+    "remoteFriendly": {
+      "title": "Control remoto amigable",
+      "description": "Hemos pasado por mucho, la ingeniería funciona mejor cuando tienes libertad y tu mejor lugar de trabajo."
+    },
+    "training": {
+      "title": "Apoyo a la formación",
+      "description": "La formación es parte de nosotros, si tienes un camino de aprendizaje que quieres seguir ... cuenta con nosotros!"
+    },
+    "medicalInsurance": {
+      "title": "Seguro médico",
+      "description": "Suceden cosas inesperadas y te brindamos apoyo público y privado.!"
+    },
+    "flexibleHours": {
+      "title": "Horario flexible",
+      "description": "No contamos con personas en el tiempo, la ingeniería es arte ... ¿no es así?!"
+    },
+    "events": {
+      "title": "Viajes y eventos",
+      "description": "Trabajamos en muchas ciudades y lugar, saltemos juntos para un evento emocionante!"
+    }
+  },
+  "actions": {
+    "seeOpenings": {
+      "label": "See Openings"
+    },
+    "signup": "Restrarse"
+  }
+}

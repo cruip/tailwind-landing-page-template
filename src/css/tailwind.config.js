@@ -59,7 +59,7 @@ module.exports = {
         '1/1': '100%',
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif']
+        body: ['"Montserrat"', '"sans-serif"']
       },
       fontSize: {
         xs: '0.75rem',

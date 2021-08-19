@@ -1,20 +1,22 @@
 import React from 'react';
+import { useTranslation } from "react-i18next";
 
 function FeaturesBlocks() {
+  const { t } = useTranslation();
   return (
     <section className="relative">
 
       {/* Section background (needs .relative class on parent and next sibling elements) */}
       <div className="absolute inset-0 top-1/2 md:mt-24 lg:mt-0 bg-gray-900 pointer-events-none" aria-hidden="true"></div>
-      <div className="absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200 transform translate-y-1/2"></div>
+      <div className="absolute left-0 right-0 bottom-0 m-auto w-px p-px h-20 bg-gray-200transform translate-y-1/2"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20">
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 mb-4">How Simple works</h2>
-            <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+            <h2 className="h2 mb-4">{t("benefits.title")}</h2>
+            <p className="text-xl text-gray-600">{t("benefits.subtitle")}</p>
           </div>
 
           {/* Items */}
@@ -33,8 +35,8 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Initial Contact</h4>
-              <p className="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">{t("benefits.payroll.title")}</h4>
+              <p className="text-gray-600 text-center">{t("benefits.payroll.description")}.</p>
             </div>
 
             {/* 2nd item */}
@@ -49,8 +51,8 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Discovery Session</h4>
-              <p className="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">{t("benefits.remoteFriendly.title")}</h4>
+              <p className="text-gray-600 text-center">{t("benefits.remoteFriendly.description")}</p>
             </div>
 
             {/* 3rd item */}
@@ -64,8 +66,8 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Contracting</h4>
-              <p className="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">{t("benefits.training.title")}</h4>
+              <p className="text-gray-600 text-center">{t("benefits.training.description")}</p>
             </div>
 
             {/* 4th item */}
@@ -81,8 +83,8 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>              
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Fast Prototyping</h4>
-              <p className="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">{t("benefits.medicalInsurance.title")}</h4>
+              <p className="text-gray-600 text-center">{t("benefits.medicalInsurance.description")}</p>
             </div>
 
             {/* 5th item */}
@@ -96,8 +98,8 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Design Phase</h4>
-              <p className="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">{t("benefits.flexibleHours.title")}</h4>
+              <p className="text-gray-600 text-center">{t("benefits.flexibleHours.description")}</p>
             </div>
 
             {/* 6th item */}
@@ -113,8 +115,8 @@ function FeaturesBlocks() {
                   </g>
                 </g>
               </svg>
-              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">Develop & Launch</h4>
-              <p className="text-gray-600 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h4 className="text-xl font-bold leading-snug tracking-tight mb-1">{t("benefits.events.title")}</h4>
+              <p className="text-gray-600 text-center">{t("benefits.events.description")}</p>
             </div>
 
           </div>
