@@ -10,7 +10,9 @@ Created and maintained with ❤️ by [Cruip.com](https://cruip.com/).
 
 Check the live demo here 👉️ [https://simple.cruip.com/](https://simple.cruip.com/)
 
-[![Simple Pro](https://user-images.githubusercontent.com/2683512/151178282-fd81b300-349a-42c3-a30a-f70f6e711e74.png)](https://cruip.com/demos/simple/)
+## Simple Pro
+
+[![Simple Pro](https://user-images.githubusercontent.com/2683512/151178282-fd81b300-349a-42c3-a30a-f70f6e711e74.png)](https://cruip.com/)
 
 ## Table of contents
 
