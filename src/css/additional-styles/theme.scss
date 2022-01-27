@@ -2,19 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-:focus,
-button:focus,
-.btn:focus,
-.btn-sm:focus,
-.form-input:focus,
-.form-textarea:focus,
-.form-multiselect:focus,
-.form-select:focus,
-.form-checkbox:focus,
-.form-radio:focus {
-    outline: 2px solid rgba(#0070F4, 0.5);
-}
-
 .form-input,
 .form-textarea,
 .form-multiselect,
@@ -23,7 +10,7 @@ button:focus,
 .form-radio {
 
     &:focus {
-        box-shadow: none !important;
+        @apply ring-0;
     }
 }
 
@@ -75,11 +62,6 @@ button:focus,
             }
         }
     }
-}
-
-.blur {
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
 }
 
 // Pulsing animation
