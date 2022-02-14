@@ -14,6 +14,10 @@ Check the live demo here 👉️ [https://simple.cruip.com/](https://simple.crui
 
 [![Simple Pro](https://user-images.githubusercontent.com/2683512/151178282-fd81b300-349a-42c3-a30a-f70f6e711e74.png)](https://cruip.com/)
 
+## Design files
+
+If you need the design files, you can download them from Figma's Community 👉 https://bit.ly/3HOZMpf
+
 ## Table of contents
 
 * [Usage](#usage)
