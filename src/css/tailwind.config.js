@@ -39,6 +39,7 @@ module.exports = {
         primary: "#3B1BFF",
         skin: "#FEE4D1",
         yellow: "#FCC232",
+        orange: "#F57100",
       },
       boxShadow: {
         xs: "0 0 0 1px rgba(0, 0, 0, 0.16)",
