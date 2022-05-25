@@ -1,6 +1,12 @@
 import React from "react";
 import Header from "../partials/Header";
 import Footer from "../partials/Footer";
+import CouplerHero from "../partials/CouplerHero";
+import PickupRole from "../partials/PickupRole";
+import CreateProfile from "../partials/CreateProfile";
+import FindRightPeople from "../partials/FindRightPeople";
+import CheckProfile from "../partials/CheckProfile";
+import TryItOut from "../partials/TryItOut";
 
 function Coupler() {
   return (
@@ -8,8 +14,14 @@ function Coupler() {
       {/*  Site header */}
       <Header />
       {/*  Page content */}
-      <main className="flex-grow"></main>
-      <div>Neo starts from here</div>
+      <main className="flex-grow font-coupler">
+        <CouplerHero />
+        <PickupRole />
+        <CreateProfile />
+        <FindRightPeople />
+        <CheckProfile />
+        <TryItOut />
+      </main>
       {/*  Site footer */}
       <Footer />
     </div>

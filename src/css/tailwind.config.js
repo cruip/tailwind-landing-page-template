@@ -40,6 +40,9 @@ module.exports = {
         skin: "#FEE4D1",
         yellow: "#FCC232",
         orange: "#F57100",
+        couplerBg: "#F4ECE6",
+        couplerTitle: "#A77249",
+        brown: "#60422A",
       },
       boxShadow: {
         xs: "0 0 0 1px rgba(0, 0, 0, 0.16)",
@@ -61,6 +64,7 @@ module.exports = {
       },
       fontFamily: {
         inter: ['"M PLUS Rounded 1c"', "sans-serif"],
+        coupler: ['"DM Serif Display"', "serif"],
       },
       fontSize: {
         xs: "0.75rem",
