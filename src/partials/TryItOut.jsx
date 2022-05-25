@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import CouplerFoorterCurveImage from "../images/coupler-footer-curve.png";
+import CouplerFooterPeopleImage from "../images/coupler-footer-people.png";
 
 function TryItOut() {
   return (
@@ -35,6 +37,13 @@ function TryItOut() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="relative flex justify-center mb-20">
+        <img src={CouplerFoorterCurveImage} className="w-full" />
+        <img
+          src={CouplerFooterPeopleImage}
+          className="absolute bottom-0 inset-x-0 left-1/2 -translate-x-1/2"
+        />
       </div>
     </section>
   );
