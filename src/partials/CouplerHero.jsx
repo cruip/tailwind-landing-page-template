@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import CouplerHeroImage from "../images/coupler-hero.png";
+import ApplicationForm from "./ApplicationForm";
 
 function CouplerHero() {
   return (
@@ -46,36 +47,7 @@ function CouplerHero() {
                   Please fill your email adrees and click the generate button.
                   And we well generate the code for your space.
                 </p>
-                <form>
-                  <div className="flex flex-wrap mb-4">
-                    <div className="w-full">
-                      <label
-                        className="block text-sm sr-only"
-                        htmlFor="newsletter"
-                      >
-                        Email
-                      </label>
-                      <div className="relative flex items-center max-w-sm gap-x-6">
-                        <input
-                          id="newsletter"
-                          type="email"
-                          className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm"
-                          placeholder="Your email"
-                          required
-                        />
-                        <button
-                          type="submit"
-                          className="bg-couplerTitle text-white px-3 py-2 rounded whitespace-nowrap"
-                          aria-label="Subscribe"
-                        >
-                          Try it out
-                        </button>
-                      </div>
-                      {/* Success message */}
-                      {/* <p className="mt-2 text-green-600 text-sm">Thanks for subscribing!</p> */}
-                    </div>
-                  </div>
-                </form>
+                <ApplicationForm />
               </div>
             </div>
           </div>
