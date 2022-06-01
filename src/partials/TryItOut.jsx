@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import CouplerFoorterCurveImage from "../images/coupler-footer-curve.png";
 import CouplerFooterPeopleImage from "../images/coupler-footer-people.png";
+import ApplicationForm from "./ApplicationForm";
 
 function TryItOut() {
   return (
@@ -19,20 +20,7 @@ function TryItOut() {
                 And we well generate the code for you to the space.
               </p>
               <div className="relative flex items-center max-w-sm gap-x-6">
-                <input
-                  id="newsletter"
-                  type="email"
-                  className="form-input w-full text-gray-800 px-3 py-2 pr-12 text-sm"
-                  placeholder="Your email"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="bg-couplerTitle text-white px-3 py-2 rounded whitespace-nowrap"
-                  aria-label="Subscribe"
-                >
-                  Try it out
-                </button>
+                <ApplicationForm />
               </div>
             </div>
           </div>
