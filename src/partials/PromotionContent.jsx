@@ -35,7 +35,7 @@ const articles = [
 
 function PromotionContent() {
   return (
-    <section className="relative">
+    <section className="relative" id="service">
       <div className="bg-skin">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-primary">
           {/* Hero content */}

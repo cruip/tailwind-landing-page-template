@@ -36,33 +36,70 @@ function Header() {
           </div>
 
           {/* Site navigation */}
-          <nav className="flex flex-grow">
-            <ul className="flex flex-grow justify-end flex-wrap items-center">
-              <NavLink href="/platform" title="Platform" />
-              <NavLink href="/about-us" title="About us" />
-              <NavLink href="/service" title="Service" />
-              <NavLink href="/product" title="Product" />
-              <NavLink href="/contact-us" title="Contact us" />
-              {/* <li>
-                <Link
-                  to="/signup"
-                  className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
-                >
-                  <span>Sign up</span>
+          <div class="navbar">
+            <div class="justify-end w-full">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
                   <svg
-                    className="w-3 h-3 fill-current text-gray-400 flex-shrink-0 ml-2 -mr-1"
-                    viewBox="0 0 12 12"
                     xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
                   >
                     <path
-                      d="M11.707 5.293L7 .586 5.586 2l3 3H0v2h8.586l-3 3L7 11.414l4.707-4.707a1 1 0 000-1.414z"
-                      fillRule="nonzero"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
                     />
                   </svg>
-                </Link>
-              </li> */}
-            </ul>
-          </nav>
+                </label>
+                <ul
+                  tabindex="0"
+                  class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <NavLink href="/platform" title="Platform" />
+                  <NavLink href="/about-us" title="About us" />
+                  <NavLink href="/service" title="Service" />
+                  <NavLink href="/product" title="Product" />
+                  <li>
+                    <a href="mailto:creativemashimashi@gmail.com">Contact us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal p-0">
+                <NavLink href="/platform" title="Platform" />
+                <li>
+                  <a
+                    className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                    href="#about"
+                  >
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                    href="#service"
+                  >
+                    Service
+                  </a>
+                </li>
+                <NavLink href="/product" title="Product" />
+                <li>
+                  <a
+                    className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                    href="mailto:creativemashimashi@gmail.com"
+                  >
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
