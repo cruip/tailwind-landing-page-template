@@ -59,44 +59,13 @@ function Header() {
                   tabindex="0"
                   class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
                 >
-                  <NavLink href="/platform" title="Platform" />
-                  <NavLink href="/about-us" title="About us" />
-                  <NavLink href="/service" title="Service" />
-                  <NavLink href="/product" title="Product" />
-                  <li>
-                    <a href="mailto:creativemashimashi@gmail.com">Contact us</a>
-                  </li>
+                  <NavLinks />
                 </ul>
               </div>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal p-0">
-                <NavLink href="/platform" title="Platform" />
-                <li>
-                  <a
-                    className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                    href="#about"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                    href="#service"
-                  >
-                    Service
-                  </a>
-                </li>
-                <NavLink href="/product" title="Product" />
-                <li>
-                  <a
-                    className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                    href="mailto:creativemashimashi@gmail.com"
-                  >
-                    Contact us
-                  </a>
-                </li>
+                <NavLinks />
               </ul>
             </div>
           </div>
@@ -105,6 +74,45 @@ function Header() {
     </header>
   );
 }
+
+const NavLinks = () => (
+  <>
+    <NavLink href="/platform" title="Platform" />
+    <li>
+      <a
+        className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+        href="/#about"
+      >
+        About Us
+      </a>
+    </li>
+    <li>
+      <a
+        className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+        href="/#service"
+      >
+        Service
+      </a>
+    </li>
+    <li>
+      <a
+        className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+        target="_blank"
+        href="https://dowel.creativemashimashi.com/"
+      >
+        Product
+      </a>
+    </li>
+    <li>
+      <a
+        className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+        href="mailto:creativemashimashi@gmail.com"
+      >
+        Contact us
+      </a>
+    </li>
+  </>
+);
 
 const NavLink = ({ href, title }) => (
   <li>
