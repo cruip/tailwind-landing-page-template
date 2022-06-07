@@ -2,7 +2,7 @@ import React from "react";
 import WhoWeAre from "../images/who-we-are.png";
 function WhyNow() {
   return (
-    <section className="relative">
+    <section id="about" className="relative">
       <div className="bg-orange">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-white">
           {/* Hero content */}

@@ -63,17 +63,40 @@ function Header() {
                   <NavLink href="/about-us" title="About us" />
                   <NavLink href="/service" title="Service" />
                   <NavLink href="/product" title="Product" />
-                  <NavLink href="/contact-us" title="Contact us" />
+                  <li>
+                    <a href="mailto:creativemashimashi@gmail.com">Contact us</a>
+                  </li>
                 </ul>
               </div>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal p-0">
                 <NavLink href="/platform" title="Platform" />
-                <NavLink href="/about-us" title="About us" />
-                <NavLink href="/service" title="Service" />
+                <li>
+                  <a
+                    className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                    href="#about"
+                  >
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                    href="#service"
+                  >
+                    Service
+                  </a>
+                </li>
                 <NavLink href="/product" title="Product" />
-                <NavLink href="/contact-us" title="Contact us" />
+                <li>
+                  <a
+                    className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                    href="mailto:creativemashimashi@gmail.com"
+                  >
+                    Contact us
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
