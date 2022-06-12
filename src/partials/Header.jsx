@@ -80,6 +80,16 @@ const NavLinks = () => (
     <NavLink href="/platform" title="Platform" />
     <li>
       <a
+        className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out gap-2"
+        href="/platform"
+      >
+       Platform
+       <span class="badge border-none text-white badge-sm bg-secondary absolute top-0 right-0">BETA</span>
+      </a>
+      
+    </li>
+    <li>
+      <a
         className="font-bold hover:opacity-50 px-5 py-3 flex items-center transition duration-150 ease-in-out"
         href="/#about"
       >

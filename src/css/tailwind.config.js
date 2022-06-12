@@ -37,6 +37,7 @@ module.exports = {
           900: "#234E52",
         },
         primary: "#3B1BFF",
+        secondary: "#A77249",
         skin: "#FEE4D1",
         yellow: "#FCC232",
         orange: "#F57100",
@@ -130,6 +131,9 @@ module.exports = {
         "-1": "-1",
       },
     },
+  },
+  daisyui: {
+    themes: [],
   },
   variants: {
     backgroundColor: ["responsive", "hover", "focus", "group-hover"],
