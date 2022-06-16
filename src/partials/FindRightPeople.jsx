@@ -19,7 +19,7 @@ function FindRightPeople() {
                   className="text-2xl md:text-4xl font-extrabold leading-tighter tracking-tighter mb-4 text-brown"
                   data-aos="zoom-y-out"
                 >
-                  Find the right people
+                  The right people to talk
                 </h1>
 
                 <div className="max-w-3xl">
@@ -28,8 +28,7 @@ function FindRightPeople() {
                     data-aos="zoom-y-out"
                     data-aos-delay="150"
                   >
-                    Please fill your email addrees and click the generate
-                    button. And we well generate the code for you to the space.
+                    Simply click on filter and find the person immediately based on your preference and purpose.
                   </p>
                 </div>
               </div>

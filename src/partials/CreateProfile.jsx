@@ -6,7 +6,7 @@ function CreateProfile() {
   return (
     <section className="relative">
       {/* Hero content */}
-      <div className="bg-couplerBg">
+      <div>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-couplerTitle">
           <div className="pt-32 pb-12 md:pt-40 md:pb-20">
             {/* Section header */}
@@ -19,7 +19,7 @@ function CreateProfile() {
                   className="text-2xl md:text-4xl font-extrabold leading-tighter tracking-tighter mb-4 text-brown"
                   data-aos="zoom-y-out"
                 >
-                  Create your profile
+                  Build your profile
                 </h1>
 
                 <div className="max-w-3xl">
@@ -28,8 +28,7 @@ function CreateProfile() {
                     data-aos="zoom-y-out"
                     data-aos-delay="150"
                   >
-                    Please fill your email adrees and click the generate button.
-                    And we well generate the code for you to the space.
+                    Help everyone else connect you faster - through  background, interests, and purpose.
                   </p>
                 </div>
               </div>

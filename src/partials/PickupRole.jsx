@@ -19,7 +19,7 @@ function PickupRole() {
                   className="text-2xl md:text-4xl font-extrabold leading-tighter tracking-tighter mb-4 text-brown"
                   data-aos="zoom-y-out"
                 >
-                  Pickup your role
+                  Select your role
                 </h1>
 
                 <div className="max-w-3xl">
@@ -28,8 +28,7 @@ function PickupRole() {
                     data-aos="zoom-y-out"
                     data-aos-delay="150"
                   >
-                    Please fill your email adrees and click the generate button.
-                    And we well generate the code for you to the space.
+                    Pick up the role that best represents you at the event, and people would find you in a minute
                   </p>
                 </div>
               </div>
