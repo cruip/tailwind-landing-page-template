@@ -24,7 +24,7 @@ function Coupler() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/wesley-dowel.appspot.com/o/static%2Fcoupler-ogp.png?alt=media&token=9263dd76-973c-46c4-872d-0bb195277f1c"
+          content="https://firebasestorage.googleapis.com/v0/b/wesley-dowel.appspot.com/o/static%2Fcoupler-ogp.png?alt=media&token=3728ecdc-0407-4d29-8567-fdd9b315138b"
         />
         <meta
           property="og:url"
