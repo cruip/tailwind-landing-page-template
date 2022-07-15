@@ -1,4 +1,4 @@
-// Typography
+/* Typography */
 .h1 {
     @apply text-4xl font-extrabold leading-tight tracking-tighter;
 }
@@ -25,7 +25,7 @@
     }
 }
 
-// Buttons
+/* Buttons */
 .btn,
 .btn-sm {
     @apply font-medium inline-flex items-center justify-center border border-transparent rounded leading-snug transition duration-150 ease-in-out;
@@ -39,7 +39,7 @@
     @apply px-4 py-2 shadow;
 }
 
-// Forms
+/* Forms */
 .form-input,
 .form-textarea,
 .form-multiselect,
