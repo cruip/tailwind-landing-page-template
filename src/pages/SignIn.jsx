@@ -35,7 +35,7 @@ function SignIn() {
                     <div className="w-full px-3">
                       <div className="flex justify-between">
                         <label className="block text-gray-800 text-sm font-medium mb-1" htmlFor="password">Password</label>
-                        <Link to="reset-password" className="text-sm font-medium text-blue-600 hover:underline">Having trouble signing in?</Link>
+                        <Link to="/reset-password" className="text-sm font-medium text-blue-600 hover:underline">Having trouble signing in?</Link>
                       </div>
                       <input id="password" type="password" className="form-input w-full text-gray-800" placeholder="Enter your password" required />
                     </div>
