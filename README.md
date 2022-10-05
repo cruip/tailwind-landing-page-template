@@ -60,7 +60,8 @@ For more information about what support covers, please see our (FAQs)[https://cr
 
 ## Credits
 
-- [Nucleo](https://nucleoapp.com/)
+- Very thanks [Nucleo](https://nucleoapp.com/)
+
 
 ## Terms and License
 
