@@ -65,3 +65,18 @@ function Newsletter() {
 }
 
 export default Newsletter;
+<div className="text-center pb-12 md:pb-16">
+
+  <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
+    <div>
+      {/* <Link to={cv} target="_blank" download> */}
+      <button className="btn px-0 text-white bg-blue-600 hover:bg-blue-800 w-full mb-4 sm:w-auto sm:mb-0">
+
+        <span className="flex-auto pl-8 pr-8 -ml-0">Download my Resume</span>
+      </button>
+      {/* </Link> */}
+      {/* <a className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" href="../images/james_owen.pdf">Download my Resume</a> */}
+    </div>
+
+  </div>
+</div>

@@ -5,6 +5,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+
       colors: {
         gray: {
           100: '#FBFBFB',
@@ -27,6 +28,7 @@ module.exports = {
           700: '#0064DA',
           800: '#0059C2',
           900: '#004391',
+          910: '#1DA1F2'
         },
         teal: {
           100: '#E6FFFA',
@@ -112,7 +114,7 @@ module.exports = {
         '98': '.98'
       },
       animation: {
-        float: 'float 3s ease-in-out infinite',
+        float: 'float 3s ease-in-out infinite', 'spin-slow': 'spin 15s linear infinite'
       },
       keyframes: {
         float: {
