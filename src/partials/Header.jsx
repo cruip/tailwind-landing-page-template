@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import Egypt from '../egypt.svg'
+
 function Header() {
 
   const [top, setTop] = useState(true);

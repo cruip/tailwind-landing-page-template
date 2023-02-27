@@ -69,7 +69,7 @@ function Features() {
                                 >
                                     <div>
                                         <div className="font-bold leading-snug tracking-tight mb-1">Technologies</div>
-                                        <div className="text-gray-600">AWS, Unix shell, Azure, Databricks, SQL server, </div>
+                                        <div className="text-gray-600">AWS, Unix shell, Azure, Databricks, SQL server, Brownie, Web3.py, MySQL, YAML templating, API consumption </div>
                                     </div>
 
                                 </a>
