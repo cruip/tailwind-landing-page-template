@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [1.3.3] - 2023-03-28
+
+- Fix video
+
 ## [1.3.2] - 2023-03-28
 
 - Add self-hosted video
