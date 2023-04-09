@@ -8,33 +8,27 @@ import Testimonials from '../partials/Testimonials';
 import Newsletter from '../partials/Newsletter';
 import Footer from '../partials/Footer';
 import Banner from '../partials/Banner';
+import WithHeader from '../hocs/WithHeader';
 
 function Home() {
-  return (
-    <div className="flex flex-col min-h-screen overflow-hidden">
+	return (
+		<div className='flex flex-col min-h-screen overflow-hidden'>
+			{/*  Page content */}
+			<main className='flex-grow'>
+				{/*  Page sections */}
+				<HeroHome />
+				<FeaturesHome />
+				<FeaturesBlocks />
+				<Testimonials />
+				<Newsletter />
+			</main>
 
-      {/*  Site header */}
-      <Header />
+			<Banner />
 
-      {/*  Page content */}
-      <main className="flex-grow">
-
-        {/*  Page sections */}
-        <HeroHome />
-        <FeaturesHome />
-        <FeaturesBlocks />
-        <Testimonials />
-        <Newsletter />
-
-      </main>
-
-      <Banner />
-
-      {/*  Site footer */}
-      <Footer />
-
-    </div>
-  );
+			{/*  Site footer */}
+			<Footer />
+		</div>
+	);
 }
 
-export default Home;
+export default WithHeader(Home);
