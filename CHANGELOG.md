@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [2.0.0] - 2023-03-31
+
+Conversion to Next.js
+
 ## [1.3.3] - 2023-03-28
 
 - Fix video
