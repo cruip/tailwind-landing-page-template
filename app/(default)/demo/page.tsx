@@ -1,9 +1,18 @@
+import Head from 'next/head'
+import { Button, message, Steps, theme } from 'antd';
+import React, { useState } from 'react';
+
+import Owner from './components/Owner';
+import Hospital from './components/Hospital';
+import Verifier from './components/Verifiers';
+import demoPage from './components/Demo';
+import Demo from './components/Demo';
+
 export const metadata = {
   title: "Sign In - Simple",
   description: "Page description",
 };
 
-import Link from "next/link";
 
 export default function SignIn() {
   return (
@@ -14,8 +23,7 @@ export default function SignIn() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h1 className="h1">Fact Fortress Demo</h1>
           </div>
-
-          <div className="max-w-sm mx-auto text-center">PUT CARUSEL HERE</div>
+          <Demo />
         </div>
       </div>
     </section>

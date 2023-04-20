@@ -1,0 +1,97 @@
+{
+    "name": "risk",
+    "description": "computes the average risk scores of a population",
+    "statement": 75,
+    "authorities": {
+        "auth_1": {
+            "name": "Hospital_A",
+            "pub_key_x": "0x0d4f7aee67aba91913a457a7f259aca240f3833f9d0f4199caf6fc33a32a753a",
+            "pub_key_y": "0x17834430c9982ace4404aeb400d2c0be015bc250544d4306aaf9ce60aa31b45e",
+            "private_key": "6b403868f46f5f34f1438926f8452ff533f9ad281aea898c31f1e21dec80503e"
+        }
+    },
+    "data": {
+        "d1": {
+            "name": "Alleles_HA",
+            "description": "Alleles of individuals from Hospital A",
+            "provider": "Hospital_A",
+            "values": [
+                1,
+                0,
+                2,
+                1,
+                0,
+                1,
+                0,
+                1,
+                1,
+                1,
+                0,
+                1,
+                2,
+                0,
+                1,
+                0,
+                2,
+                0,
+                0,
+                1,
+                2,
+                2,
+                0,
+                2,
+                1,
+                2,
+                2,
+                2,
+                2,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                1,
+                2,
+                0,
+                0,
+                2,
+                0,
+                0,
+                1,
+                0,
+                2,
+                0,
+                0,
+                0,
+                1,
+                1
+            ],
+            "type": "int",
+            "format": "u8",
+            "shape": [
+                5,
+                10
+            ]
+        },
+        "d2": {
+            "name": "Beta_HA",
+            "description": "Beta values of heart conditions from Hospital A",
+            "provider": "Hospital_A",
+            "values": [
+                2,
+                9,
+                19,
+                25,
+                25
+            ],
+            "type": "double",
+            "precision": 2,
+            "format": "u8",
+            "shape": [
+                5,
+                1
+            ]
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "name": "simple",
+    "description": "simple example",
+    "statement": 0,
+    "authorities": {
+        "auth_1": {
+            "name": "Provider_A",
+            "pub_key_x": "0x1bfd7fdd71b0b9e5df567ebfac053ca573a4b3d219fe70afd474332fff59524c",
+            "pub_key_y": "0x1d72a215d03f3290e6eea3983aea923377fa83933d3421dd1c84e1f003cfea2b",
+            "private_key": "5b1389358839657e3079262b761533cc2231222a47050539b669a9cac095801e"
+        }
+    },
+    "data": {
+        "d1": {
+            "name": "data_A_1",
+            "description": "Sample data description 1",
+            "provider": "Provider_A",
+            "values": [
+                1,
+                2
+            ],
+            "type": "int",
+            "format": "u8",
+            "shape": [
+                2,
+                1
+            ]
+        },
+        "d2": {
+            "name": "data_A_2",
+            "description": "Sample data description 2",
+            "provider": "Provider_A",
+            "values": [
+                3,
+                4
+            ],
+            "type": "double",
+            "precision": 1,
+            "format": "u8",
+            "shape": [
+                2,
+                1
+            ]
+        }
+    }
+}
