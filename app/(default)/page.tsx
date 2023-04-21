@@ -1,22 +1,13 @@
 export const metadata = {
-  title: 'Home - Simple',
+  title: 'Fact Fortress — On-Chain Zero-Knowledge Proof Solution to Data Integrity',
   description: 'Page description',
 }
 
-import Hero from '@/components/hero'
-import Features from '@/components/features'
-import FeaturesBlocks from '@/components/features-blocks'
-import Testimonials from '@/components/testimonials'
-import Newsletter from '@/components/newsletter'
-
+import FactFortress from '@/components/fact-fortress'
 export default function Home() {
   return (
     <>
-      <Hero />
-      <Features />
-      <FeaturesBlocks />
-      <Testimonials />
-      <Newsletter />
+      <FactFortress />
     </>
   )
 }
