@@ -16,7 +16,8 @@ const { TextArea } = Input;
 export default function Dapp() {
   const [form] = Form.useForm();
   const [researcherAccounts, setResearcherAccounts] = useState<any[]>([]);
-  const [account, setAcount] = useState('Researcher A');
+  const [account, setAcount] = useState(['Researcher A', 0]);
+  const [tags, setTags] = useState([]);
 
   const [key, setKey] = useState({});
   const [compute, setCompute] = useState<string>("");
@@ -98,6 +99,7 @@ export default function Dapp() {
 
   const handleAccountChange = (e: RadioChangeEvent) => {
     setAcount(e.target.value);
+    setTags(researcherAccounts[e.target.value[1]]['access_policies'])
   };
 
   const handleSelect = (value: any) => {
@@ -166,6 +168,7 @@ export default function Dapp() {
     console.log('Finish:', values);
   };
 
+
   const columnsInner = [
     {
       title: 'Name',
@@ -219,8 +222,11 @@ export default function Dapp() {
         setFunctions(res.data)
       })
   }, [])
+
   console.log(researcherAccounts)
-  console.log(computeRes)
+  console.log(account)
+  console.log(tags)
+  // console.log(researcherAccounts[account[1]]['access_policies'])
   const colors = ["blue", "green", "magenta", "purple"];
 
   return (
@@ -233,11 +239,21 @@ export default function Dapp() {
       {researcherAccounts.length > 0 && functions.length > 0 &&
             <div>
                 <Radio.Group value={account} onChange={handleAccountChange} style={{ height: '100%', margin: 10 }}>
-                    {researcherAccounts.map((val) => 
-                        <Radio.Button value={val['account_name']}>{val['account_name']}</Radio.Button>
+                    {researcherAccounts.map((val, i) => 
+                        <Radio.Button value={[val['account_name'], i]}>{val['account_name']}</Radio.Button>
                     )}
                 </Radio.Group>
-          <Card title={account} style={{ height: '90%',  overflow: 'scroll', margin: 10}}  bordered={false}>
+          <Card title={account[0]} style={{ height: '90%',  overflow: 'scroll', margin: 10}}  bordered={false}>
+          
+          <div style={{ width: '100%', fontWeight: 'bold' }}>
+                  Granted Access Policies
+                  <p/>
+          {researcherAccounts[account[1]][Object.keys(researcherAccounts[account[1]])[3]] != undefined && researcherAccounts[account[1]][Object.keys(researcherAccounts[account[1]])[3]].map((tag, i) => 
+                
+                  <Tag bordered={false} color={colors[(i % colors.length)]}>{tag}</Tag>
+
+            )}
+            </div>
           <h4>Select Function</h4>
             <Space 
               direction="vertical"
@@ -245,6 +261,7 @@ export default function Dapp() {
                 display: 'flex',
               }}
             >
+
             <Form form={form} name="horizontal_login" layout="vertical" onFinish={onFinish}>
               <Form.Item >
                   {/* <Select

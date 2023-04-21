@@ -137,7 +137,8 @@ export default function Owner() {
                 },
             })
             .then((res) => {
-                setHospitalAccounts(res.data)
+                // setHospitalAccounts(res.data)
+                console.log(res.data)
             })
             .catch(function (error) {
                 Notiflix.Report.failure('Error', 'The Fact Fortress backend is not up and running. To run it: `pnpm backend` and wait for the message `server started on port 3000`', 'Ok');
