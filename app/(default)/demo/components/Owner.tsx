@@ -129,10 +129,16 @@ export default function Owner() {
     useEffect(() => {
         // reset
         axios
-            .get('http://localhost:3000/reset_accounts')
+            .get('http://localhost:3000/reset_accounts', {
+                headers: {
+                    "Content-Type": "application/json",
+                    from: "owner",
+                },
+            })
             .then((res) => {
                 setHospitalAccounts(res.data)
             })
+
 
         // get all accounts
         axios
@@ -410,7 +416,7 @@ export default function Owner() {
                         </Form.Item>
                         <Form.Item>
                             <Button type="primary" htmlType="submit" block>
-                               Authorize
+                                Authorize
                             </Button>
                         </Form.Item>
                     </Form>
