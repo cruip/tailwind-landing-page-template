@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Fact Fortress — On-Chain Zero-Knowledge Proof Solution to Data Integrity',
+  title: 'Fact Fortress — On-Chain Zero-Knowledge Proof Solution to Fact Checking',
   description: 'Page description',
 }
 
