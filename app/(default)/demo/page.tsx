@@ -9,8 +9,7 @@ import demoPage from './components/Demo';
 import Demo from './components/Demo';
 
 export const metadata = {
-  title: "Sign In - Simple",
-  description: "Page description",
+  title: "Fact Fortress — Demo",
 };
 
 

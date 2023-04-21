@@ -12,7 +12,7 @@ export default function Demo() {
   const [current, setCurrent] = useState(0);
   const steps = [
     {
-      title: 'Mint',
+      title: 'Authorize',
       content: <Owner />,
     },
     {
@@ -20,7 +20,7 @@ export default function Demo() {
       content: <Hospital />,
     },
     {
-      title: 'Data Analyis',
+      title: 'Data Analysis',
       content: <Dapp />,
     },
     {

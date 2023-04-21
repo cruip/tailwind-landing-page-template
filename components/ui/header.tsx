@@ -27,7 +27,8 @@ export default function Header() {
         !top ? "bg-white backdrop-blur-sm shadow-lg" : ""
       }`}
     >
-      <div className="max-w-6xl mx-auto px-5 sm:px-6">
+
+<div className="max-w-6xl mx-auto px-5 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Site branding */}
           <div className="shrink-0 mr-4">
@@ -68,6 +69,7 @@ export default function Header() {
           <MobileMenu />
         </div>
       </div>
+
     </header>
   );
 }
