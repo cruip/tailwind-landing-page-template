@@ -1,5 +1,6 @@
 "use client";
 import { ChangeEvent, useEffect, useState } from 'react';
+import Notiflix from 'notiflix';
 
 import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 
@@ -138,7 +139,9 @@ export default function Owner() {
             .then((res) => {
                 setHospitalAccounts(res.data)
             })
-
+            .catch(function (error) {
+                Notiflix.Report.failure('Error', 'The Fact Fortress backend is not up and running. To run it: `pnpm backend` and wait for the message `server started on port 3000`', 'Ok');
+            })
 
         // get all accounts
         axios
