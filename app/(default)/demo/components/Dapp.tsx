@@ -1,7 +1,7 @@
 "use client";
 import { ChangeEvent, useEffect, useState } from 'react';
 
-import { Card, Col, Row, Space, Divider, Button, Input, Select, Form, message, Radio, QRCode, Upload, Table, Spin } from 'antd';
+import { Card, Col, Row, Space, Divider, Button, Input, Select, Form, message, Radio, QRCode, Upload, Table, Tag } from 'antd';
 import { InboxOutlined, LoadingOutlined } from '@ant-design/icons';
 import type { UploadProps, SelectProps, RadioChangeEvent } from 'antd';
 import axios from 'axios';
@@ -219,8 +219,9 @@ export default function Dapp() {
         setFunctions(res.data)
       })
   }, [])
-  console.log(dataRes)
+  console.log(researcherAccounts)
   console.log(computeRes)
+  const colors = ["blue", "green", "magenta", "purple"];
 
   return (
 <div 

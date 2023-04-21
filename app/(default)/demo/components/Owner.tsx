@@ -138,7 +138,6 @@ const onFinish = async (values: any) => {
       axios
       .get('http://localhost:3000/all_access_policies')
       .then((res) => {
-        console.log(res.data)
         let temp: any = []
         for (let i = 0; i < res.data['accessPolicies'].length; i++) {
             temp.push({
