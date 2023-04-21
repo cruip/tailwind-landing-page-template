@@ -21,7 +21,7 @@ export default function Owner() {
     const [hospitalAccounts, setHospitalAccounts] = useState<any[]>([]);
     const [researcherAccounts, setResearcherAccounts] = useState<any[]>([]);
     const [from, setFrom] = useState<CheckboxValueType[]>([]);
-    const [success, setSuccess] = useState(false)
+    const [success, setSuccess] = useState(true)
     const [options, setOptions] = useState([]);
     const [messageApi, contextHolder] = message.useMessage();
     const { Option } = Select;
@@ -50,11 +50,13 @@ export default function Owner() {
         }
 
         apiCall()
-            .then(async response =>
-                response.data
-                // await setMint([...mint, response.data])
-            ).then(json => setMint(prev => [...prev, json]))
+            .then(response => {
+                // setMint([...mint, response.data])
+                setMint((prev) => [...prev, response.data])
+                setSuccess(success && true)
+            })
             .catch(error => {
+                setSuccess(false)
                 console.log(error);
             });
     }
@@ -71,9 +73,9 @@ export default function Owner() {
                 }
             )
             .then(async (response) => {
-                response.data
-                // await setMint([...mint, response.data])
-            }).then(json => setMint(prev => [...prev, json]))
+                setMint((prev) => [...prev, response.data])
+                setSuccess(success && true)
+            })
             .catch((error) => {
                 console.error(error);
                 setSuccess(false)
@@ -94,7 +96,7 @@ export default function Owner() {
         console.log('Finish:', values);
 
         for (let i = 0; i < hospitalAccounts.length; i++) {
-            handleMint(hospitalAccounts[i]['address'])
+            await handleMint(hospitalAccounts[i]['address'])
         }
         // // let types = values['default-type']
         // // if (values['default-type'] == undefined) {
@@ -113,10 +115,10 @@ export default function Owner() {
 
         for (let i = 0; i < researcherAccounts.length; i++) {
             if (values[researcherAccounts[i]['account_name'] + 'type'] == undefined) {
-                handleMintResearcher(researcherAccounts[i]['address'], researcherAccounts[i]['access_types'])
+                await handleMintResearcher(researcherAccounts[i]['address'], researcherAccounts[i]['access_types'])
             } else {
-                console.log(values[researcherAccounts[i]['account_name'] + 'type'])
-                handleMintResearcher(researcherAccounts[i]['address'], values[researcherAccounts[i]['account_name'] + 'type'])
+                // console.log(values[researcherAccounts[i]['account_name'] + 'type'])
+                await handleMintResearcher(researcherAccounts[i]['address'], values[researcherAccounts[i]['account_name'] + 'type'])
             }
         }
         // console.log(promiseArray)
@@ -137,7 +139,6 @@ export default function Owner() {
                 },
             })
             .then((res) => {
-                // setHospitalAccounts(res.data)
                 console.log(res.data)
             })
             .catch(function (error) {
@@ -169,9 +170,7 @@ export default function Owner() {
                 setOptions(temp)
             })
     }, [])
-
-    console.log(researcherAccounts)
-    console.log(hospitalAccounts)
+    console.log(mint)
 
     return (
         <div
@@ -424,9 +423,9 @@ export default function Owner() {
                             </Button>
                         </Form.Item>
                     </Form>
-                    {mint.length > 0 &&
+                    {mint.length > 4 &&
                         <div style={{ width: '100%', fontWeight: 'bold' }}>
-                            {<TextArea rows={6} style={{ color: 'black' }} defaultValue={mint.map((token) => (JSON.stringify(token)))} />}
+                            {<TextArea rows={5} style={{ color: 'black' }} defaultValue={mint.map((token) => (JSON.stringify(token)))} />}
                             {/* <Card bodyStyle={{overflowWrap: 'break-word'}}>{JSON.stringify(key_a)}</Card> */}
                             {/* <textarea readOnly={true} defaultValue={JSON.stringify(key_a)} style={{width: '100%', maxWidth: '100%', fontWeight: 'bold'}} /> */}
                         </div>

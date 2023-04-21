@@ -223,9 +223,6 @@ export default function Dapp() {
       })
   }, [])
 
-  console.log(researcherAccounts)
-  console.log(account)
-  console.log(tags)
   // console.log(researcherAccounts[account[1]]['access_policies'])
   const colors = ["blue", "green", "magenta", "purple"];
 
