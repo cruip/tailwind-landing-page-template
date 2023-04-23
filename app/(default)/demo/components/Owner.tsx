@@ -41,7 +41,7 @@ export default function Owner() {
     const handleMint = async (recipient: any) => {
         // let address = getAddress(recipient);
         const apiCall = () => {
-            return axios.get('http://localhost:3000/authorize_provider?recipient=' + recipient, {
+            return axios.get('http://localhost:3000/authorize_provider?address=' + recipient, {
                 headers: {
                     'from': 'owner'
                 }
@@ -63,7 +63,7 @@ export default function Owner() {
     const handleMintResearcher = async (recipient: string, accessTypes: any) => {
         axios
             .post(
-                `http://localhost:3000/authorize_analyzer?recipient=${recipient}`,
+                `http://localhost:3000/authorize_analyzer?address=${recipient}`,
                 { access_policies: accessTypes },
                 {
                     headers: {
@@ -161,10 +161,10 @@ export default function Owner() {
             .then((res) => {
                 console.log(res.data)
                 let temp: any = []
-                for (let i = 0; i < res.data['accessPolicies'].length; i++) {
+                for (let i = 0; i < res.data['access_policies'].length; i++) {
                     temp.push({
-                        value: res.data['accessPolicies'][i],
-                        label: res.data['accessPolicies'][i]
+                        value: res.data['access_policies'][i],
+                        label: res.data['access_policies'][i]
                     })
                 }
                 setOptions(temp)
@@ -295,7 +295,7 @@ export default function Owner() {
                             <Select
                                 mode="tags"
                                 placeholder="select access policy"
-                                defaultValue={options.map((val: any) => val['label'])}
+                                defaultValue={Array.from(new Set(options.map((val: any) => val['label'])))}
                                 onChange={handleOptionChange}
                                 optionLabelProp="label"
                                 options={options}

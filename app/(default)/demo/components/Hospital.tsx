@@ -165,10 +165,10 @@ export default function Hospital() {
             .then((res) => {
                 console.log(res.data)
                 let temp: any = []
-                for (let i = 0; i < res.data['accessPolicies'].length; i++) {
+                for (let i = 0; i < res.data['access_policies'].length; i++) {
                     temp.push({
-                        value: res.data['accessPolicies'][i],
-                        label: res.data['accessPolicies'][i]
+                        value: res.data['access_policies'][i],
+                        label: res.data['access_policies'][i]
                     })
                 }
                 setOptions(temp)
@@ -293,13 +293,13 @@ export default function Hospital() {
                                 style={{ flex: 1 }}
                                 required={true}
                             >
-                                {options.map((val: any, i) =>
+                                {new Set(options.map((val: any, i) =>
                                     <Checkbox defaultChecked={true} disabled={val['label'] == 'default_policy'}>
                                         <Tag bordered={false} color={colors[(i % colors.length)]}>
                                             {val['label']}
                                         </Tag>
                                     </Checkbox>
-                                )}
+                                ))}
                             </Form.Item>
                             <Form.Item >
                                 <Button
