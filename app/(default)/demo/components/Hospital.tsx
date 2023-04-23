@@ -25,7 +25,7 @@ export default function Hospital() {
     const [message_a, setMessage_a] = useState<string>(JSON.stringify(data, null, 2));
     const [message_b, setMessage_b] = useState<string>(JSON.stringify(data_b, null, 2));
     const [messageApi, contextHolder] = message.useMessage();
-    const [account, setAcount] = useState('Hospital A');
+    const [account, setAcount] = useState('Provider A');
     const [loading, setLoading] = useState(true);
     const [next_a, setNext_a] = useState(false);
     const [loading_b, setLoading_b] = useState(true);
@@ -211,7 +211,7 @@ export default function Hospital() {
                                     justifyContent: "center",
                                 }}
                             >
-                                <b>Authorize authorities to upload their public keys on-chain</b>
+                                <b>Authorize data providers to upload their public keys on-chain</b>
                             </div>
 
                             <br></br>
@@ -337,7 +337,7 @@ export default function Hospital() {
     )
 }
 
-//  <Card title="Hospital A" style={{ overflow: 'scroll', maxHeight: '45%', margin: 10 }}>
+//  <Card title="Provider A" style={{ overflow: 'scroll', maxHeight: '45%', margin: 10 }}>
 //             <Form form={form} name="horizontal_login" layout="vertical" onFinish={onFinish}>
 //                 <Form.Item
 //                     name="recipient1"
@@ -374,7 +374,7 @@ export default function Hospital() {
 //                     <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Name" />
 //                 }
 //                  {JSON.stringify(key_a) != '{}' &&
-//                     <TextArea rows={1} style={{ color: 'black'}}  defaultValue={'Hospital A'} disabled={true} />
+//                     <TextArea rows={1} style={{ color: 'black'}}  defaultValue={'Provider A'} disabled={true} />
 //                 }
 //                 </Form.Item>
 //                 <Form.Item
@@ -449,7 +449,7 @@ export default function Hospital() {
 //             </Form>
 //         </Card>
 //         <Divider />
-//             <Card title="Hospital B" style={{ overflow: 'scroll', maxHeight: '45%', margin: 10}} >
+//             <Card title="Provider B" style={{ overflow: 'scroll', maxHeight: '45%', margin: 10}} >
 //             <Form form={form} name="horizontal_login" layout="vertical" onFinish={onFinish}>
 //                 <Form.Item
 //                     name="recipient1b"
@@ -484,7 +484,7 @@ export default function Hospital() {
 //                     <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Name" />
 //                 }
 //                  {JSON.stringify(key_b) != '{}' &&
-//                     <TextArea rows={1} style={{ color: 'black'}}  defaultValue={'Hospital B'} disabled={true} />
+//                     <TextArea rows={1} style={{ color: 'black'}}  defaultValue={'Provider B'} disabled={true} />
 //                 }
 //                 </Form.Item>
 //                 <Form.Item

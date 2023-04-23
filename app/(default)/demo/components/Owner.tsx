@@ -41,7 +41,7 @@ export default function Owner() {
     const handleMint = async (recipient: any) => {
         // let address = getAddress(recipient);
         const apiCall = () => {
-            return axios.get('http://localhost:3000/authorize_authority?recipient=' + recipient, {
+            return axios.get('http://localhost:3000/authorize_provider?recipient=' + recipient, {
                 headers: {
                     'from': 'owner'
                 }
@@ -63,7 +63,7 @@ export default function Owner() {
     const handleMintResearcher = async (recipient: string, accessTypes: any) => {
         axios
             .post(
-                `http://localhost:3000/authorize_researcher?recipient=${recipient}`,
+                `http://localhost:3000/authorize_analyzer?recipient=${recipient}`,
                 { access_policies: accessTypes },
                 {
                     headers: {
@@ -187,7 +187,7 @@ export default function Owner() {
                             justifyContent: "center",
                         }}
                     >
-                        <b>Authorize authorities to upload their public keys on-chain</b>
+                        <b>Authorize data providers to upload their public keys on-chain</b>
                     </div>
                     <Form form={form} name="horizontal_login" layout="vertical" onFinish={onFinish} >
                         <Form.Item
@@ -219,7 +219,7 @@ export default function Owner() {
                                 style={{flex: 1}}
                                 name={['default', 'first']}
                             >
-                                <Input defaultValue="Hospital A Wallet" disabled={true}/>
+                                <Input defaultValue="Provider A Wallet" disabled={true}/>
                             </Form.Item>
                             <Form.Item
                                 label='Address'
@@ -235,7 +235,7 @@ export default function Owner() {
                             name={['default', 'first']}
                             style={{flex: 1}}
                             >
-                                <Input defaultValue="Hospital B Wallet" disabled={true}/>
+                                <Input defaultValue="Provider B Wallet" disabled={true}/>
                             </Form.Item>
                             <Form.Item
                             label='Address'
@@ -285,7 +285,7 @@ export default function Owner() {
                                 justifyContent: "center",
                             }}
                         >
-                            <b>Define how researchers should access the data</b>
+                            <b>Define how data analyzers should access the data</b>
                         </div>
                         <Form.Item
                             label='Available Access Policies'
@@ -302,7 +302,7 @@ export default function Owner() {
                             />
                         </Form.Item>
                         <Form.Item
-                            label='Data Consumer'
+                            label='Data Analyzers'
                             name="recipient4"
                         >
                             {researcherAccounts.map((val) =>

@@ -16,7 +16,7 @@ const { TextArea } = Input;
 export default function Dapp() {
   const [form] = Form.useForm();
   const [researcherAccounts, setResearcherAccounts] = useState<any[]>([]);
-  const [account, setAcount] = useState(['Researcher A', 0]);
+  const [account, setAcount] = useState(['Analyzer A', 0]);
   const [tags, setTags] = useState([]);
 
   const [key, setKey] = useState({});
