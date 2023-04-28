@@ -63,7 +63,7 @@ export default function Owner() {
     const handleMintResearcher = async (recipient: string, accessTypes: any) => {
         axios
             .post(
-                `http://localhost:3000/authorize_analyzer?address=${recipient}`,
+                `http://localhost:3000/authorize_analyst?address=${recipient}`,
                 { access_policies: accessTypes },
                 {
                     headers: {
@@ -152,7 +152,7 @@ export default function Owner() {
                 setHospitalAccounts(res.data)
             })
         axios
-            .get('http://localhost:3000/accounts?account_type=data_analyzers')
+            .get('http://localhost:3000/accounts?account_type=data_analysts')
             .then((res) => {
                 setResearcherAccounts(res.data)
             })
@@ -285,7 +285,7 @@ export default function Owner() {
                                 justifyContent: "center",
                             }}
                         >
-                            <b>Define how data analyzers should access the data</b>
+                            <b>Define how data analysts should access the data</b>
                         </div>
                         <Form.Item
                             label='Available Access Policies'
@@ -302,7 +302,7 @@ export default function Owner() {
                             />
                         </Form.Item>
                         <Form.Item
-                            label='Data Analyzers'
+                            label='Data Analysts'
                             name="recipient4"
                         >
                             {researcherAccounts.map((val) =>

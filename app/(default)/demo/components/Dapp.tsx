@@ -16,7 +16,7 @@ const { TextArea } = Input;
 export default function Dapp() {
   const [form] = Form.useForm();
   const [researcherAccounts, setResearcherAccounts] = useState<any[]>([]);
-  const [account, setAcount] = useState(['Analyzer A', 0]);
+  const [account, setAcount] = useState(['Analyst A', 0]);
   const [tags, setTags] = useState([]);
 
   const [key, setKey] = useState({});
@@ -211,7 +211,7 @@ export default function Dapp() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3000/accounts?account_type=data_analyzers')
+      .get('http://localhost:3000/accounts?account_type=data_analysts')
       .then((res) => {
         setResearcherAccounts(res.data)
       })
