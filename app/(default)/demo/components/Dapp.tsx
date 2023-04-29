@@ -16,6 +16,7 @@ const { TextArea } = Input;
 export default function Dapp() {
   const [form] = Form.useForm();
   const [researcherAccounts, setResearcherAccounts] = useState<any[]>([]);
+  const [accessTypes, setAccessTypes] = useState<any[]>([]);
   const [account, setAcount] = useState(['Analyst A', 0]);
   const [tags, setTags] = useState([]);
 
@@ -59,9 +60,15 @@ export default function Dapp() {
     })
   }
 
+  const handleMessage = (mess: boolean) => {
+    if (mess) {
+        message.success(`Successfully Generated Proof!`);
+    } else {
+        message.error(`Failed to Generate Proof`);
+    }
+}
 
   const handleGenerate = async () => {
-    // let address = getAddress(recipient);
     console.log(localStorage.getItem('myStorage'))
     setLoading(true)
     const apiCall2 = () => {return axios.post('http://localhost:3000/generate_proof', JSON.parse(localStorage.getItem('myStorage')))}
@@ -71,9 +78,11 @@ export default function Dapp() {
         setProof(response.data)
         setLoading(false)
         setDone(true)
+        handleMessage(true)
       })
       .catch(error => {
         console.log(error);
+        handleMessage(false)
       });
   }
   const rowSelection = {
@@ -209,11 +218,30 @@ export default function Dapp() {
     },
   ];
 
+  function handleAccessTypes(address: string) {
+    return new Promise(function (resolve, reject) {
+      axios.get('http://localhost:3000/access_policies?address=' + address)
+      .then((response) => {
+        console.log(response.data)
+        resolve(response.data)
+      }).catch((error) => {
+        console.log(error)
+      })
+    })
+}
+
   useEffect(() => {
     axios
       .get('http://localhost:3000/accounts?account_type=data_analysts')
-      .then((res) => {
+      .then(async (res) => {
         setResearcherAccounts(res.data)
+
+        let temp: any[] = []
+        for (let i = 0; i < res.data.length; i++) {
+          let type = await handleAccessTypes(res.data[i]['address'])
+          temp.push(type)
+        }
+        setAccessTypes(temp)
       })
       axios
       .get('http://localhost:3000/available_functions')
@@ -223,17 +251,17 @@ export default function Dapp() {
       })
   }, [])
 
-  // console.log(researcherAccounts[account[1]]['access_policies'])
+  console.log(accessTypes)
+  console.log(researcherAccounts)
   const colors = ["blue", "green", "magenta", "purple"];
 
   return (
-<div 
-  // class="h-14 bg-gradient-to-r from-zinc-400 to-slate-900"
-  style={{
-  height: '100%', margin: 0, 'boxSizing': 'border-box' }}
->
+  <div 
+    style={{
+    height: '100%', margin: 0, 'boxSizing': 'border-box' }}
+  >
       {contextHolder}
-      {researcherAccounts.length > 0 && functions.length > 0 &&
+      {researcherAccounts.length > 0 && functions.length > 0 && 
             <div>
                 <Radio.Group value={account} onChange={handleAccountChange} style={{ height: '100%', margin: 10 }}>
                     {researcherAccounts.map((val, i) => 
@@ -245,10 +273,17 @@ export default function Dapp() {
           <div style={{ width: '100%', fontWeight: 'bold' }}>
                   Granted Access Policies
                   <p/>
-          {researcherAccounts[account[1]][Object.keys(researcherAccounts[account[1]])[3]] != undefined && researcherAccounts[account[1]][Object.keys(researcherAccounts[account[1]])[3]].map((tag, i) => 
-                
-                  <Tag bordered={false} color={colors[(i % colors.length)]}>{tag}</Tag>
-
+          {researcherAccounts[account[1]]['address'] != undefined && accessTypes.map((tag) => {
+            if (tag['address'] == researcherAccounts[account[1]]['address']) {
+              return (
+                <div>
+                  {tag['access_policies'].map((type, i) =>  
+                    <Tag bordered={false} color={'blue'}>{type}</Tag>
+                  )}
+                </div>
+              )
+            }
+          }
             )}
             </div>
           <h4>Select Function</h4>
@@ -261,14 +296,6 @@ export default function Dapp() {
 
             <Form form={form} name="horizontal_login" layout="vertical" onFinish={onFinish}>
               <Form.Item >
-                  {/* <Select
-                    defaultValue="Select Function"
-                    style={{
-                      width: 300,
-                    }}
-                    onChange={handleSelect}
-                    options={populate_options()}
-                  /> */}
                   <Table 
                 rowSelection={{
                   type: 'radio',

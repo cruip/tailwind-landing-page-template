@@ -52,7 +52,7 @@ export default function Verifier() {
   }
   const handleVerifyProof = async () => {
     // console.log(JSON.parse(uploadFile)['proof'])
-    const apiCall = () => {return axios.post('http://localhost:3000/verify_proof?health_function=proof_of_provenance', 
+    const apiCall = () => {return axios.post('http://localhost:3000/verify_proof?statement_function=proof_of_provenance', 
         JSON.parse(uploadFile)['proof']
         )}
 

@@ -7,7 +7,7 @@ import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 import { Card, Col, Row, Space, Divider, Button, Input, Form, Select, message, QRCode, Upload, Checkbox } from 'antd';
 import { UserOutlined, PlusOutlined, MinusCircleOutlined } from '@ant-design/icons';
 import type { UploadProps } from 'antd';
-import axios from 'axios';
+import axios, { all } from 'axios';
 import React from 'react';
 import SizeContext from 'antd/es/config-provider/SizeContext';
 import { stringify } from 'querystring';
@@ -38,8 +38,7 @@ export default function Owner() {
     };
 
 
-    const handleMint = async (recipient: any) => {
-        // let address = getAddress(recipient);
+    function handleMint(recipient: any) {
         const apiCall = () => {
             return axios.get('http://localhost:3000/authorize_provider?address=' + recipient, {
                 headers: {
@@ -48,20 +47,23 @@ export default function Owner() {
             }
             )
         }
-
-        apiCall()
+        return new Promise(function (resolve, reject) {
+            apiCall()
             .then(response => {
-                // setMint([...mint, response.data])
                 setMint((prev) => [...prev, response.data])
                 setSuccess(success && true)
+                resolve(true)
             })
             .catch(error => {
                 setSuccess(false)
                 console.log(error);
+                resolve(false)
             });
+        })
     }
-    const handleMintResearcher = async (recipient: string, accessTypes: any) => {
-        axios
+    function handleMintResearcher(recipient: string, accessTypes: any) {
+        return new Promise(function (resolve, reject) {
+            axios
             .post(
                 `http://localhost:3000/authorize_analyst?address=${recipient}`,
                 { access_policies: accessTypes },
@@ -72,62 +74,79 @@ export default function Owner() {
                     },
                 }
             )
-            .then(async (response) => {
+            .then((response) => {
                 setMint((prev) => [...prev, response.data])
                 setSuccess(success && true)
+                resolve(true)
             })
             .catch((error) => {
                 console.error(error);
                 setSuccess(false)
+                resolve(false)
             });
+        })
     }
 
-    const goToNextPage = () => {
-        window.scrollTo({
-            top: 1000,
-            behavior: "smooth",
-        });
-    };
+    function handleSetAccessTypes(accessTypes: any) {
+        return new Promise(function (resolve, reject) {
+            axios
+            .post(
+                `http://localhost:3000/all_access_policies`,
+                { access_policies: accessTypes },
+                {
+                    headers: {
+                        "Content-Type": "application/json",
+                        from: "owner",
+                    },
+                }
+            )
+            .then((response) => {
+                resolve(true)
+            })
+            .catch((error) => {
+                setSuccess(false)
+                resolve(false)
+            });
+        })
+    }
+
     const onChange = (checkedValues: CheckboxValueType[]) => {
         console.log('checked = ', checkedValues);
     };
 
     const onFinish = async (values: any) => {
         console.log('Finish:', values);
-
+        let tracker = []
         for (let i = 0; i < hospitalAccounts.length; i++) {
-            await handleMint(hospitalAccounts[i]['address'])
+            let finished = await handleMint(hospitalAccounts[i]['address'])
+            tracker.push(finished)
         }
-        // // let types = values['default-type']
-        // // if (values['default-type'] == undefined) {
-        // //     types = ['access_type_a']
-        // // }
-        // // let researchers = [["0xac46159C08f103f7fF87ED138CFf7e389aac0550", types]]
-        // // if (values['researchers'] != undefined) {
-        // //     for (let i = 0; i < values['researchers'].length; i++) {
-        // //         let curr_types = values['researchers'][i]['default-type']
-        // //         if (curr_types == undefined) {
-        // //             curr_types = ['access_type_a']
-        // //         }
-        // //         researchers.concat([values['researchers'][i]['last'], curr_types])
-        // //     }
-        // // }
 
+        let all_access_policies: never[] = []
+        for (let i = 0; i < options.length; i++) {
+            all_access_policies.push(options[i]['value'])
+        }
+        let finished = await handleSetAccessTypes(all_access_policies)
+        tracker.push(finished)
         for (let i = 0; i < researcherAccounts.length; i++) {
             if (values[researcherAccounts[i]['account_name'] + 'type'] == undefined) {
-                await handleMintResearcher(researcherAccounts[i]['address'], researcherAccounts[i]['access_types'])
+                let res = await handleMintResearcher(researcherAccounts[i]['address'], researcherAccounts[i]['access_types'])
+                tracker.push(res)
             } else {
-                // console.log(values[researcherAccounts[i]['account_name'] + 'type'])
-                await handleMintResearcher(researcherAccounts[i]['address'], values[researcherAccounts[i]['account_name'] + 'type'])
+                let res = await handleMintResearcher(researcherAccounts[i]['address'], values[researcherAccounts[i]['account_name'] + 'type'])
+                tracker.push(res)
             }
         }
-        // console.log(promiseArray)
-        // Promise.allSettled(promiseArray).then(tokens => {
-        //     console.log(tokens)
-        //     setMint(tokens)
-        // })
-
+        handleMessage(tracker.every(v => v === true))
     };
+
+    const handleMessage = (mess: boolean) => {
+        if (mess) {
+            message.success(`Successfully Minted All Tokens!`);
+        } else {
+            message.error(`Failed to Mint`);
+        }
+    }
 
     useEffect(() => {
         // reset
@@ -150,11 +169,13 @@ export default function Owner() {
             .get('http://localhost:3000/accounts?account_type=data_providers')
             .then((res) => {
                 setHospitalAccounts(res.data)
+                console.log(res.data)
             })
         axios
             .get('http://localhost:3000/accounts?account_type=data_analysts')
             .then((res) => {
                 setResearcherAccounts(res.data)
+                console.log(res.data)
             })
         axios
             .get('http://localhost:3000/all_access_policies')
@@ -177,7 +198,7 @@ export default function Owner() {
             // class="h-14 bg-gradient-to-r from-emerald-500 to-green-900"
             style={{ margin: 0, height: '100%' }}
         >
-            {hospitalAccounts.length > 0 && researcherAccounts.length > 0 && options.length > 0 &&
+            {hospitalAccounts.length > 0 && researcherAccounts.length > 0 &&
                 <Card
                     style={{ margin: 40, height: '90%' }}
                 >
@@ -423,7 +444,7 @@ export default function Owner() {
                             </Button>
                         </Form.Item>
                     </Form>
-                    {mint.length > 4 &&
+                    {mint.length > 4 && 
                         <div style={{ width: '100%', fontWeight: 'bold' }}>
                             {<TextArea rows={5} style={{ color: 'black' }} defaultValue={mint.map((token) => (JSON.stringify(token)))} />}
                             {/* <Card bodyStyle={{overflowWrap: 'break-word'}}>{JSON.stringify(key_a)}</Card> */}

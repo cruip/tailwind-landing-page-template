@@ -59,15 +59,6 @@ export default function Hospital() {
                 setLoading(false)
                 setKey_a(response.data)
                 handleUpload(response.data['public_key'])
-                // if (hospital == 'A') {
-                //     setLoading(false)
-                //     setKey_a(response.data)
-                //     handleUpload(response.data['public_key'])
-                // } else {
-                //     setLoading_b(false)
-                //     setKey_b(response.data)
-                //     handleUpload_B(response.data['public_key'])
-                // }
             })
             .catch(error => {
                 console.log(error);
@@ -79,8 +70,12 @@ export default function Hospital() {
         setMessage_a(e.target.value)
     }
 
-    const handleDataChangeB = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        setMessage_b(e.target.value)
+    const handleMessage = (mess: boolean) => {
+        if (mess) {
+            message.success(`Successfully Signed With Private Key!`);
+        } else {
+            message.error(`Failed to Sign`);
+        }
     }
 
     const handleUpload = async (pub: string) => {
@@ -91,7 +86,6 @@ export default function Hospital() {
         })
             .then(response => {
                 setNext_a(true)
-                console.log(response.data)
             }).catch(error => {
                 console.log(error)
             })
@@ -109,38 +103,12 @@ export default function Hospital() {
                 temp["health_function"] = "proof_of_provenance"
                 temp['public_key'] = key_a['public_key']
                 localStorage.setItem('myStorage', JSON.stringify(temp));
+                handleMessage(true)
             }).catch(error => {
                 console.log(error)
+                handleMessage(false)
             })
     }
-
-    // const handleHSU_B = async () => {
-    //     axios.post('http://localhost:3000/sign_message' ,
-    //             {
-    //                 'private_key': key_b['private_key'],
-    //                 message: message_b
-    //             })
-    //     .then(response => {
-    //         console.log(response.data)
-    //         setHash_b(response.data)
-    //     }).catch(error => {
-    //         console.log(error)
-    //     })
-    // }
-
-    // const handleUpload_B = async (pub: string) => {
-    //     axios.put('http://localhost:3000/publickey?name=' + 'HospitalB&public_key=' + pub, null, {
-    //         headers: {
-    //           'from': 'hospitalB'
-    //         }
-    //         })
-    //     .then(response => {
-    //         setNext_b(true)
-    //         console.log(response.data)
-    //     }).catch(error => {
-    //         console.log(error)
-    //     })
-    // }
 
     const goToNextPage = () => {
         window.scrollTo({
