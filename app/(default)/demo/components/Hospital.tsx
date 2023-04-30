@@ -131,13 +131,16 @@ export default function Hospital() {
         axios
             .get('http://localhost:3000/all_access_policies')
             .then((res) => {
-                console.log(res.data)
                 let temp: any = []
+                let seen = new Set()
                 for (let i = 0; i < res.data['access_policies'].length; i++) {
-                    temp.push({
-                        value: res.data['access_policies'][i],
-                        label: res.data['access_policies'][i]
-                    })
+                    if (!seen.has(res.data['access_policies'][i])) {
+                        temp.push({
+                            value: res.data['access_policies'][i],
+                            label: res.data['access_policies'][i]
+                        })
+                        seen.add(res.data['access_policies'][i])
+                    }
                 }
                 setOptions(temp)
             })

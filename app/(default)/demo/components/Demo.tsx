@@ -37,6 +37,10 @@ export default function Demo() {
     setCurrent(current - 1);
   };
 
+  const handleReset = () => {
+    window.location.reload();
+  }
+
   const items = steps.map((item) => ({ key: item.title, title: item.title }));
 
   const contentStyle: React.CSSProperties = {
@@ -58,8 +62,8 @@ export default function Demo() {
           </Button>
         )}
         {current === steps.length - 1 && (
-          <Button type="primary" onClick={() => message.success('Processing complete!')}>
-            Done
+          <Button type="primary" onClick={handleReset}>
+            Reset
           </Button>
         )}
         {current > 0 && (

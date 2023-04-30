@@ -56,12 +56,12 @@ export default function Header() {
                 </Link>
               </h4>
               <h4>
-                <Link
-                  href="/demo"
+                <a
+                  href="./demo"
                   className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
                 >
                   <span>Demo</span>
-                </Link>
+                </a>
               </h4>
             </ul>
           </nav>
