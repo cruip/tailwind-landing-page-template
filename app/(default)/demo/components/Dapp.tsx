@@ -1,14 +1,10 @@
 "use client";
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { Card, Col, Row, Space, Divider, Button, Input, Select, Form, message, Radio, QRCode, Upload, Table, Tag } from 'antd';
-import { InboxOutlined, LoadingOutlined } from '@ant-design/icons';
-import type { UploadProps, SelectProps, RadioChangeEvent } from 'antd';
+import { Card, Space, Divider, Button, Input, Form, message, Radio, QRCode, Upload, Table, Tag } from 'antd';
+import type { RadioChangeEvent } from 'antd';
 import axios from 'axios';
 import React from 'react';
-import { stringify } from 'querystring';
-import hashSignature from '../data_example/hash.json'
-import { previewData } from 'next/dist/client/components/headers';
 
 
 const { TextArea } = Input;
@@ -17,14 +13,20 @@ export default function Dapp() {
   const [form] = Form.useForm();
   const [researcherAccounts, setResearcherAccounts] = useState<any[]>([]);
   const [accessTypes, setAccessTypes] = useState<any[]>([]);
-  const [account, setAcount] = useState(['Analyst A', 0]);
-  const [tags, setTags] = useState([]);
+  const [account, setAcount] = useState({
+    name: 'Analyst A', 
+    index: 0
+  });
 
-  const [key, setKey] = useState({});
-  const [compute, setCompute] = useState<string>("");
-  const [computeRes, setComputeRes] = useState({});
-  const [dataRes, setDataRes] = useState({});
-  const [functions, setFunctions] = useState([]);
+  const [computeRes, setComputeRes] = useState({
+    'name': "",
+    'data': []
+  });
+  const [dataRes, setDataRes] = useState({
+    'name': "",
+    'description': ''
+  });
+  const [functions, setFunctions] = useState<any[]>([]);
   const [proof, setProof] = useState([]);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -34,7 +36,7 @@ export default function Dapp() {
  
   const consoleRef = React.createRef()
 
-  const downloadFile = ({ data, fileName, fileType }) => {
+  const downloadFile = (data: any, fileName: any, fileType: any ) => {
     // Create a blob with the data we want to download as a file
     const blob = new Blob([data], { type: fileType })
     // Create an anchor element and dispatch a click event on it
@@ -51,13 +53,13 @@ export default function Dapp() {
     a.remove()
   }
 
-  const exportToJson = e => {
+  const exportToJson = (e: any)=> {
     e.preventDefault()
-    downloadFile({
-      data: JSON.stringify(createJSON()),
-      fileName: 'proof.json',
-      fileType: 'text/json',
-    })
+    downloadFile(
+      JSON.stringify(createJSON()),
+      'proof.json',
+      'text/json'
+    )
   }
 
   const handleMessage = (mess: boolean) => {
@@ -71,7 +73,7 @@ export default function Dapp() {
   const handleGenerate = async () => {
     console.log(localStorage.getItem('myStorage'))
     setLoading(true)
-    const apiCall2 = () => {return axios.post('http://localhost:3000/generate_proof', JSON.parse(localStorage.getItem('myStorage')))}
+    const apiCall2 = () => {return axios.post('http://localhost:3000/generate_proof', JSON.parse(localStorage.getItem('myStorage') || '{}'))}
 
     apiCall2()
       .then(async response => {
@@ -107,33 +109,12 @@ export default function Dapp() {
   };
 
   const handleAccountChange = (e: RadioChangeEvent) => {
-    setAcount(e.target.value);
-    setTags(researcherAccounts[e.target.value[1]]['access_policies'])
-  };
-
-  const handleSelect = (value: any) => {
-    setCompute(functions[value]['function'])
-    let temp = functions[value]['data']
-    for (let i = 0; i < functions[value]['data'].length; i++) {
-      temp[i] = {...functions[value]['data'][i], key: i}
+    let temp = {
+      name: e.target.value[0],
+      index: e.target.value[1]
     }
-    setData(temp)
-    console.log(value)
-  }
-
-  const successMess = () => {
-    messageApi.open({
-      type: 'success',
-      content: 'Successfully verified',
-    });
+    setAcount(temp);
   };
-
-  const errorMess = () => {
-    messageApi.open({
-      type: 'error',
-      content: 'Error',
-    });
-  }
 
   const { Dragger } = Upload;
 
@@ -201,7 +182,7 @@ export default function Dapp() {
       title: 'Data',
       dataIndex: 'data',
       key: 'data',
-      render: (text: any) => <div style={{margin: 5}}><Table columns={columnsInner} dataSource={text} pagination={{ position: ['none', 'none'] }} bordered={true}/></div>
+      render: (text: any) => <div style={{margin: 5}}><Table columns={columnsInner} dataSource={text} pagination={{ position: [] }} bordered={true}/></div>
     },
   ];
 
@@ -246,14 +227,9 @@ export default function Dapp() {
       axios
       .get('http://localhost:3000/available_functions')
       .then((res) => {
-        console.log(res.data)
         setFunctions(res.data)
       })
   }, [])
-
-  console.log(accessTypes)
-  console.log(researcherAccounts)
-  const colors = ["blue", "green", "magenta", "purple"];
 
   return (
   <div 
@@ -262,22 +238,22 @@ export default function Dapp() {
   >
       {contextHolder}
       {researcherAccounts.length > 0 && functions.length > 0 && 
-            <div>
-                <Radio.Group value={account} onChange={handleAccountChange} style={{ height: '100%', margin: 10 }}>
-                    {researcherAccounts.map((val, i) => 
-                        <Radio.Button value={[val['account_name'], i]}>{val['account_name']}</Radio.Button>
-                    )}
-                </Radio.Group>
-          <Card title={account[0]} style={{ height: '90%',  overflow: 'scroll', margin: 10}}  bordered={false}>
+          <div>
+            <Radio.Group value={account} onChange={handleAccountChange} style={{ height: '100%', margin: 10 }}>
+                {researcherAccounts.map((val, i) => 
+                    <Radio.Button value={[val['account_name'], i]}>{val['account_name']}</Radio.Button>
+                )}
+            </Radio.Group>
+            <Card title={account['name']} style={{ height: '90%',  overflow: 'scroll', margin: 10}}  bordered={false}>
           
-          <div style={{ width: '100%', fontWeight: 'bold' }}>
-                  Granted Access Policies
-                  <p/>
-          {researcherAccounts[account[1]]['address'] != undefined && accessTypes.map((tag) => {
-            if (tag['address'] == researcherAccounts[account[1]]['address']) {
-              return (
+            <div style={{ width: '100%', fontWeight: 'bold' }}>
+                    Granted Access Policies
+                    <p/>
+            {researcherAccounts[account['index']]['address'] != undefined && accessTypes.map((tag) => {
+              if (tag['address'] == researcherAccounts[account['index']]['address']) {
+                return (
                 <div>
-                  {tag['access_policies'].map((type, i) =>  
+                  {tag['access_policies'].map((type: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal | null | undefined, i: any) =>  
                     <Tag bordered={false} color={'blue'}>{type}</Tag>
                   )}
                 </div>
@@ -302,7 +278,7 @@ export default function Dapp() {
                   ...rowSelection
                 }} 
                 columns={columnsFunc} dataSource={populate_options()} 
-                pagination={{ position: ['none', 'none'] }}
+                pagination={{ position: [] }}
                 />
               
               <p/>
@@ -312,7 +288,7 @@ export default function Dapp() {
                   type: 'radio',
                   ...rowSelectionFunc
                 }} columns={columns} dataSource={populate_data()}
-                pagination={{ position: ['none', 'none'] }}
+                pagination={{ position: [] }}
                  />
               </Form.Item>
               <Button block type='primary' onClick={handleGenerate} disabled={(JSON.stringify(computeRes) == '{}' || JSON.stringify(dataRes) == '{}')}>Generate Proof!</Button>

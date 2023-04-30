@@ -1,15 +1,13 @@
 "use client";
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Notiflix from 'notiflix';
 
 import type { CheckboxValueType } from 'antd/es/checkbox/Group';
 
-import { Card, Col, Row, Space, Divider, Button, Input, Form, Select, message, QRCode, Upload, Checkbox } from 'antd';
-import { UserOutlined, PlusOutlined, MinusCircleOutlined } from '@ant-design/icons';
-import type { UploadProps } from 'antd';
-import axios, { all } from 'axios';
+import { Card, Button, Input, Form, Select, message } from 'antd';
+import { PlusOutlined, MinusCircleOutlined } from '@ant-design/icons';
+import axios from 'axios';
 import React from 'react';
-import SizeContext from 'antd/es/config-provider/SizeContext';
 import { stringify } from 'querystring';
 
 const { TextArea } = Input;
@@ -20,10 +18,8 @@ export default function Owner() {
     const [mint, setMint] = useState<any[]>([]);
     const [hospitalAccounts, setHospitalAccounts] = useState<any[]>([]);
     const [researcherAccounts, setResearcherAccounts] = useState<any[]>([]);
-    const [from, setFrom] = useState<CheckboxValueType[]>([]);
     const [success, setSuccess] = useState(true)
     const [options, setOptions] = useState([]);
-    const [messageApi, contextHolder] = message.useMessage();
     const { Option } = Select;
 
     const handleChange = (value: string[]) => {
@@ -110,10 +106,6 @@ export default function Owner() {
         })
     }
 
-    const onChange = (checkedValues: CheckboxValueType[]) => {
-        console.log('checked = ', checkedValues);
-    };
-
     const onFinish = async (values: any) => {
         console.log('Finish:', values);
         let tracker = []
@@ -195,11 +187,9 @@ export default function Owner() {
                 setOptions(temp)
             })
     }, [])
-    console.log(mint)
 
     return (
         <div
-            // class="h-14 bg-gradient-to-r from-emerald-500 to-green-900"
             style={{ margin: 0, height: '100%' }}
         >
             {hospitalAccounts.length > 0 && researcherAccounts.length > 0 &&
@@ -238,38 +228,6 @@ export default function Owner() {
                                 </div>
 
                             )}
-                            {/* <div style={{ display: "inline-flex", gap: "8px", width: '100%' }}>
-                            <Form.Item
-                                label='Name'
-                                style={{flex: 1}}
-                                name={['default', 'first']}
-                            >
-                                <Input defaultValue="Provider A Wallet" disabled={true}/>
-                            </Form.Item>
-                            <Form.Item
-                                label='Address'
-                                name={['default', 'address']}
-                                style={{flex: 1}}
-                            >
-                                <Input style={{width: '100%'}} defaultValue="0x98526c571e324028250B0f5f247Ca4F1b575fadB" disabled={true} />
-                            </Form.Item>
-                    </div>
-                    <div style={{ display: "inline-flex", gap: "8px", width: '100%' }}>
-                            <Form.Item
-                            label='Name'
-                            name={['default', 'first']}
-                            style={{flex: 1}}
-                            >
-                                <Input defaultValue="Provider B Wallet" disabled={true}/>
-                            </Form.Item>
-                            <Form.Item
-                            label='Address'
-                            style={{flex: 1}}
-                                name={['default', 'address']}
-                            >
-                                <Input defaultValue="0x99eBB39932f6F697194EA70115762d4c06D1A9c9" disabled={true} />
-                            </Form.Item>
-                    </div> */}
 
                             <Form.List name="hospitals">
                                 {(fields, { add, remove }) => (
@@ -363,36 +321,7 @@ export default function Owner() {
                                 </div>
 
                             )}
-                            {/* <div style={{ display: "inline-flex", gap: "8px", width: '100%' }}>
-                            <Form.Item
-                                name={'default-name'}
-                                label='Name'
-                                style={{flex: 1}}
-                            >
-                                <Input defaultValue="Wallet_Name_Researcher_1" disabled={true}/>
-                            </Form.Item>
-                            <Form.Item
-                                name={'default-address'}
-                                label='Address'
-                                style={{flex: 1}}
-                            >
-                                <Input defaultValue="0xac46159C08f103f7fF87ED138CFf7e389aac0550" disabled={true} />
-                            </Form.Item>
-                            <Form.Item
-                                name={'default-type'}
-                                label='Access Types'
-                                style={{flex: 1}}
-                            >
-                                <Select
-                                    mode="multiple"
-                                    placeholder="select type"
-                                    defaultValue={['access_type_a']}
-                                    onChange={handleChange}
-                                    optionLabelProp="label"
-                                    options={options}
-                                />
-                            </Form.Item>
-                        </div> */}
+
                             <Form.List name="researchers">
                                 {(fields, { add, remove }) => (
                                     <>
@@ -451,8 +380,6 @@ export default function Owner() {
                     {mint.length > 4 && 
                         <div style={{ width: '100%', fontWeight: 'bold' }}>
                             {<TextArea rows={5} style={{ color: 'black' }} defaultValue={mint.map((token) => (JSON.stringify(token)))} />}
-                            {/* <Card bodyStyle={{overflowWrap: 'break-word'}}>{JSON.stringify(key_a)}</Card> */}
-                            {/* <textarea readOnly={true} defaultValue={JSON.stringify(key_a)} style={{width: '100%', maxWidth: '100%', fontWeight: 'bold'}} /> */}
                         </div>
                     }
                 </Card>
