@@ -27,7 +27,6 @@ export default function RootLayout({
         <div className="Simpleflex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
           <Header />
           {children}
-          <Banner />
         </div>
       </body>
     </html>

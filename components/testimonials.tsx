@@ -27,9 +27,9 @@ export default function Testimonials() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h2 className="h2 mb-4">Trusted by over 20,000 companies all over the world</h2>
-            <p className="text-xl text-gray-600" data-aos="zoom-y-out">Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis
-              blandit libero cursus mattis.</p>
+            <h2 className="h2 mb-4">Reconnu par plus de 20 000 entreprises dans le monde entier</h2>
+            {/* <p className="text-xl text-gray-600" data-aos="zoom-y-out">Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis
+              blandit libero cursus mattis.</p> */}
           </div>
 
           {/* Items */}
@@ -85,7 +85,7 @@ export default function Testimonials() {
                   <Image className="relative rounded-full" src={TestimonialImage} width={96} height={96} alt="Testimonial 01" />
                 </div>
                 <blockquote className="text-xl font-medium mb-4">
-                  “ I love this product and would recommend it to anyone. Could be not easier to use, and our multiple websites are wonderful. We get nice comments all the time. “
+                  “ J'adore ce nouveau téléphone portable et je le recommanderais à tout le monde en Tunisie. Cela ne pourrait pas être plus facile à utiliser, et les multiples fonctionnalités sont merveilleuses. Nous recevons tout le temps de bons commentaires sur la qualité de l'appareil et la performance du réseau. “
                 </blockquote>
                 <cite className="block font-bold text-lg not-italic mb-1">Darya Finger</cite>
                 <div className="text-gray-600">
