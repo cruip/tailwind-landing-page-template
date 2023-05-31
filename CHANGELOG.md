@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [2.2.0] - 2023-05-31
+
+Update dependencies and fix some issues
+
 ## [2.1.0] - 2023-05-07
 
 Modal video improvements
