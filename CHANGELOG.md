@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [2.2.1] - 2023-06-13
+
+Fix minor issue
+
 ## [2.2.0] - 2023-05-31
 
 Update dependencies and fix some issues
