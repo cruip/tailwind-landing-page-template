@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [2.3.0] - 2023-06-20
+
+Fix issue with Google Fonts
+
 ## [2.2.1] - 2023-06-13
 
 Fix minor issue
