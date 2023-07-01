@@ -13,7 +13,7 @@ export default function Header() {
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
-    window.pageYOffset > 10 ? setTop(false) : setTop(true)
+    window.scrollY > 10 ? setTop(false) : setTop(true)
   }  
 
   useEffect(() => {
