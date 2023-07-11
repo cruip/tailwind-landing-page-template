@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import TestimonialImage from '@/public/images/testimonial.jpg'
+import Link from 'next/link'
 
 export default function Testimonials() {
   return (
@@ -89,7 +90,7 @@ export default function Testimonials() {
                 </blockquote>
                 <cite className="block font-bold text-lg not-italic mb-1">Darya Finger</cite>
                 <div className="text-gray-600">
-                  <span>CEO & Co-Founder</span> <a className="text-blue-600 hover:underline" href="#0">@Dropbox</a>
+                  <span>CEO & Co-Founder</span> <Link className="text-blue-600 hover:underline" href="#0">@Dropbox</Link>
                 </div>
               </div>
 

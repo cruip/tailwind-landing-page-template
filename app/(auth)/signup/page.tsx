@@ -43,7 +43,7 @@ export default function SignUp() {
                 </div>
               </div>
               <div className="text-sm text-gray-500 text-center mt-3">
-                By creating an account, you agree to the <a className="underline" href="#0">terms & conditions</a>, and our <a className="underline" href="#0">privacy policy</a>.
+                By creating an account, you agree to the <Link className="underline" href="#0">terms & conditions</Link>, and our <Link className="underline" href="#0">privacy policy</Link>.
               </div>
             </form>
             <div className="flex items-center my-6">

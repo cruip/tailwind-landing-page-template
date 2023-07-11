@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Transition } from '@headlessui/react'
+import Link from 'next/link'
 
 type DropdownProps = {
   children: React.ReactNode
@@ -23,7 +24,7 @@ export default function Dropdown({
       onFocus={() => setDropdownOpen(true)}
       onBlur={() => setDropdownOpen(false)}
     >
-      <a
+      <Link
         className="text-gray-600 hover:text-gray-900 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
         href="#0"
         aria-expanded={dropdownOpen}
@@ -33,7 +34,7 @@ export default function Dropdown({
         <svg className="w-3 h-3 fill-current text-gray-500 cursor-pointer ml-1 shrink-0" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
           <path d="M10.28 4.305L5.989 8.598 1.695 4.305A1 1 0 00.28 5.72l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z" />
         </svg>
-      </a>
+      </Link>
       <Transition
         show={dropdownOpen}
         as="ul"
