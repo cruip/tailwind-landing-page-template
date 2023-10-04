@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## [2.3.2] - 2023-10-04
+
+Update Twitter icon
+Update dependencies
+
 ## [2.3.0] - 2023-06-20
 
 Fix issue with Google Fonts
