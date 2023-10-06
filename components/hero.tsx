@@ -29,7 +29,7 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="text-center pb-12 md:pb-16">
-            <h1 className="text-5xl md:text-5xl font-semibold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">
+            <h1 className="text-5xl md:text-5xl font-semibold leading-tighter tracking-tighter text-gray-1000 mb-4" data-aos="zoom-y-out">
               More than flashcards. <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Your comprehensive study companion.
               </span>
@@ -41,7 +41,7 @@ export default function Hero() {
                   <a className="btn bg-purple-400 text-white font-bold rounded mb-2 focus:outline-none hover:bg-[#483285]" href="https://app.onestudy.io/referral">Start free trial</a>
                 </div>
                 <div>
-                  <a className="btn text-purple font-bold border-2 border-purple-400 hover:bg-[#EDE9FE] w-full sm:w-auto sm:ml-4" href="https://www.notion.so/one-study/Help-Center-228b0bb8fbb543c88c2cb7c3672cfcd6">Learn more</a>
+                  <a className="btn text-purple font-bold border-1 border-purple-400 hover:bg-[#EDE9FE] w-full sm:w-auto sm:ml-4" href="https://www.notion.so/one-study/Help-Center-228b0bb8fbb543c88c2cb7c3672cfcd6">Learn more</a>
                 </div>
               </div>
             </div>
