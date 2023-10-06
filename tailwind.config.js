@@ -18,6 +18,7 @@ module.exports = {
           700: '#4C4C4C',
           800: '#333333',
           900: '#191919',
+          1000: '262f40',
         },
         blue: {
           100: '#E6F0FD',
@@ -29,6 +30,7 @@ module.exports = {
           700: '#0064DA',
           800: '#0059C2',
           900: '#004391',
+          1000: '#5098fe',
         },
         teal: {
           100: '#E6FFFA',
@@ -41,7 +43,14 @@ module.exports = {
           800: '#285E61',
           900: '#234E52',
         },
+        purple: {
+          400: '#6C48FF',
+        },
       },
+        textColor: {
+          'purple': '#6C48FF',
+          'blue': '#5098fe',
+        },
       boxShadow: {
         xs: '0 0 0 1px rgba(0, 0, 0, 0.16)',
         sm: '0 1px 2px 0 rgba(0, 0, 0, 0.16)',
@@ -71,7 +80,7 @@ module.exports = {
         '2xl': '1.5rem',
         '3xl': '2rem',
         '4xl': '2.625rem',
-        '5xl': '3.25rem',
+        '5xl': '3.5rem',
         '6xl': '5.5rem',
       },
       inset: {
