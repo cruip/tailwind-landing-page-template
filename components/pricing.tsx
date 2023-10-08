@@ -1,4 +1,4 @@
-export default function Privacy() {
+export default function Pricing() {
     return (
         <section className="relative">
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -9,7 +9,7 @@ export default function Privacy() {
                 {/* Section header */}
                 <div className="text-center pb-12 md:pb-16">
                     <h1 className="text-5xl md:text-5xl font-semibold text-gray-1000 mb-4">
-                        Privacy
+                        Pricing
                     </h1>
                     <div className="max-w-3xl mx-auto">
                         <p>blah blah</p>

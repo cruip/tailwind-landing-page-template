@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
+import Footer from '@/components/ui/footer'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -26,7 +27,8 @@ export default function RootLayout({
       <body className={`${inter.variable} font-inter antialiased bg-white text-gray-900 tracking-tight`}>
         <div className="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
           <Header />
-          {children}          
+          {children}   
+          <Footer />       
         </div>
       </body>
     </html>
