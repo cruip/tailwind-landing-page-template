@@ -1,4 +1,4 @@
-import VideoThumb from '@/public/images/hero-image.png'
+import VideoThumb from '@/public/images/OneStudy-hero.svg'
 import ModalVideo from '@/components/modal-video'
 
 export default function Hero() {

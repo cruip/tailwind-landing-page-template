@@ -46,10 +46,10 @@ export default function Footer() {
             <h6 className="text-gray-800 font-medium mb-2">Legal</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Terms</a>
+                <a href="/terms" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Terms</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Privacy</a>
+                <a href="/privacy" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Privacy</a>
               </li>              
             </ul>
           </div>
