@@ -20,10 +20,10 @@ export default function Footer() {
             <h6 className="text-gray-800 font-medium mb-2">Company</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Home</a>
+                <a href="/" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Home</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Pricing</a>
+                <a href="/pricing" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Pricing</a>
               </li>              
             </ul>
           </div>
@@ -33,7 +33,7 @@ export default function Footer() {
             <h6 className="text-gray-800 font-medium mb-2">Resources</h6>
             <ul className="text-sm">
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Documentation</a>
+                <a href="https://www.notion.so/one-study/Help-Center-228b0bb8fbb543c88c2cb7c3672cfcd6" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Documentation</a>
               </li>
               <li className="mb-2">
                 <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Blog</a>
