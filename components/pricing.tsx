@@ -11,7 +11,7 @@ export default function Pricing() {
                     </span>
                 </h1>
               <div className="max-w-3xl mx-auto">
-                <p className="text-xl text-gray-1000 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Save time, tears, and torment for the price of 3 starbucks coffees.</p>
+                <p className="text-xl text-gray-1000 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Save time, tears, and torment for the price of 3 Starbucks coffees.</p>
               </div>
             </div>
           </div>
