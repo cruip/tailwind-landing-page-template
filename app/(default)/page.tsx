@@ -16,6 +16,7 @@ export default function Home() {
       <Head>
         <meta property="og:image" content="/images/OneStudy-social.png"></meta>
         <meta name="twitter:image" content="/images/OneStudy-social.png"></meta>
+        <link rel="icon" href="public/favicon.ico" />
       </Head>
       <Hero />
       <Features />
