@@ -35,8 +35,8 @@ export default function Features() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 font-semibold text-white mb-4">How it works</h1>
-            <p className="text-lg md:text-xl text-white">Instantly create dynamic and personalized study materials using your PDFs. 
-            <br/> Make studying a delight with our user-friendly app. </p>
+            <p className="text-lg md:text-xl text-white mb-0">Automatically create decks of flashcards by simply uploading your PDFs. 
+            <br/> Make studying magical with our user-friendly app and features. </p>
           </div>
 
           {/* Section content */}
@@ -58,7 +58,7 @@ export default function Features() {
                   <div>
                     <span className="font-bold mb-1 leading-snug bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Upload your material.
                     </span>                    
-                    <div className="text-gray-1000 text-base">Create study materials from the text and images within your lectures, notes, presentations, and more.</div>
+                    <div className="text-gray-1000 text-base">Automatically create study materials from text and images within your lectures, notes, presentations, and more.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +74,7 @@ export default function Features() {
                   <div>
                     <span className="font-bold mb-1 leading-snug bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Create decks with a single click.
                     </span>                  
-                    <div className="text-gray-1000 text-base">Instantly create personalized text, multiple choice, and/or image occluded flashcards. Manually add or edit cards as desired.</div>
+                    <div className="text-gray-1000 text-base">Instantly create text, multiple choice, and/or image occlusion flashcards. Manually add or edit cards as desired.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">                      
@@ -88,9 +88,9 @@ export default function Features() {
                   onClick={(e) => { e.preventDefault(); setTab(3); }}
                 >
                   <div>
-                    <span className="font-bold mb-1 leading-snug bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Start studying.
+                    <span className="font-bold mb-1 leading-snug bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Start studying - intelligently.
                     </span>                    
-                    <div className="text-gray-1000 text-base">Leverage semantic analysis, recall, multiple choice, spaced repetition, and more to keep studying fresh and help you master topics quickly.</div>
+                    <div className="text-gray-1000 text-base">Utilize scientifically-proven memory techniques, such as spaced repetition. Study using semantic analysis, recall, multiple choice, and more. All in a user-friendly app.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">

@@ -11,7 +11,7 @@ export default function Pricing() {
                     </span>
                 </h1>
               <div className="max-w-3xl mx-auto">
-                <p className="text-xl text-gray-1000 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Save time, tears, and torment for the price of 3 Starbucks coffees.</p>
+                <p className="text-xl text-gray-1000 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Save yourself from time, tears, and torment for the price of 3 Starbucks coffees.</p>
               </div>
             </div>
           </div>
@@ -26,7 +26,7 @@ export default function Pricing() {
                 <h3 className="mb-4 text-3xl font-semibold">Monthly Plan</h3>
                 <p className="text-gray-1000 sm:text-lg font-light dark:text-gray-1000 text-lg">7-day free trial. No credit card required.</p>
                 <div className="flex justify-center items-baseline my-8">
-                  <span className="mr-2 text-4xl md:text-5l text-purple font-bold">$19.99</span>
+                  <span className="mr-2 text-4xl md:text-5l text-purple font-bold">$14.99</span>
                   <span className="text-purple text-4xl dark:text-purple">/month</span>
                 </div>
                 <ul role="list" className="mb-8 space-y-4 text-left">
