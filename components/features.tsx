@@ -36,7 +36,7 @@ export default function Features() {
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 font-semibold text-white mb-4">How it works</h1>
             <p className="text-lg md:text-xl text-white mb-0">Automatically create decks of flashcards by simply uploading your PDFs. 
-            <br/> Make studying enjoyable with our user-friendly app and features. </p>
+            <br/> Make studying magical with our user-friendly app and features. </p>
           </div>
 
           {/* Section content */}
