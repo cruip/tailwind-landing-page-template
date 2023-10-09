@@ -36,7 +36,7 @@ export default function Footer() {
                 <a href="https://www.notion.so/one-study/Help-Center-228b0bb8fbb543c88c2cb7c3672cfcd6" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Documentation</a>
               </li>
               <li className="mb-2">
-                <a href="#0" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Blog</a>
+                <a href="https://medium.com/@onestudy" className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out">Blog</a>
               </li>              
             </ul>
           </div>
