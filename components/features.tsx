@@ -3,8 +3,10 @@
 import { useState, useRef, useEffect } from 'react'
 import { Transition } from '@headlessui/react'
 import Image from 'next/image'
-import FeaturesBg from '@/public/images/features-bg.png'
-import FeaturesElement from '@/public/images/features-element.png'
+import FeaturesBg from '@/public/images/browser-background1.svg'
+import FeaturesElement from '@/public/images/CreateCards.png'
+import FeaturesElement1 from '@/public/images/CreateDeck.png'
+import FeaturesElement2 from '@/public/images/StudyCard.png'
 
 export default function Features() {
   
@@ -24,16 +26,17 @@ export default function Features() {
     <section className="relative">
 
       {/* Section background (needs .relative class on parent and next sibling elements) */}
-      <div className="absolute inset-0 bg-gray-100 pointer-events-none mb-16" aria-hidden="true"></div>
-      <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-gray-200 transform -translate-y-1/2"></div>
+      <div className="absolute inset-0 bg-blue-1100 pointer-events-none mb-16" aria-hidden="true"></div>
+      <div className="absolute left-0 right-0 m-auto w-px p-px h-20 bg-blue-1100 transform -translate-y-1/2"></div>
 
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-12 md:pt-20">
+      <div className="relative bg-blue-1100 rounded-xl max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="pt-12 bg-blue-1100 md:pt-20">
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Explore the solutions</h1>
-            <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+            <h1 className="h2 font-semibold text-white mb-4">How it works</h1>
+            <p className="text-lg md:text-xl text-white">Instantly create dynamic and personalized study materials using your PDFs. 
+            <br/> Make studying a delight with our user-friendly app. </p>
           </div>
 
           {/* Section content */}
@@ -42,19 +45,20 @@ export default function Features() {
             {/* Content */}
             <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6" data-aos="fade-right">
               <div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
-                <h3 className="h3 mb-3">Powerful suite of tools</h3>
-                <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.</p>
+                <h3 className="h3 font-semibold text-white mb-3">Modern tool for modern times</h3>
+                <p className="text-lg text-white">Anki was created nearly 17 years ago, and while you may tolerate Anki…you deserve much more.</p>
               </div>
               {/* Tabs buttons */}
               <div className="mb-8 md:mb-0">
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 1 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-white border-transparent'}`}
                   href="#0"
                   onClick={(e) => { e.preventDefault(); setTab(1); }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Building the Simple ecosystem</div>
-                    <div className="text-gray-600">Take collaboration to the next level with security and administrative features built for teams.</div>
+                    <span className="font-bold mb-1 leading-snug bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Upload your material.
+                    </span>                    
+                    <div className="text-gray-1000 text-base">Create study materials from the text and images within your lectures, notes, presentations, and more.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -63,28 +67,30 @@ export default function Features() {
                   </div>
                 </a>
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 2 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 2 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-white border-transparent'}`}
                   href="#0"
                   onClick={(e) => { e.preventDefault(); setTab(2); }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Building the Simple ecosystem</div>
-                    <div className="text-gray-600">Take collaboration to the next level with security and administrative features built for teams.</div>
+                    <span className="font-bold mb-1 leading-snug bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Create decks with a single click.
+                    </span>                  
+                    <div className="text-gray-1000 text-base">Instantly create personalized text, multiple choice, and/or image occluded flashcards. Manually add or edit cards as desired.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
-                    <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">                      
                       <path d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z" fillRule="nonzero" />
                     </svg>
                   </div>
                 </a>
                 <a
-                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${tab !== 3 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-gray-200 border-transparent'}`}
+                  className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-6 ${tab !== 3 ? 'bg-white shadow-md border-gray-200 hover:shadow-lg' : 'bg-white border-transparent'}`}
                   href="#0"
                   onClick={(e) => { e.preventDefault(); setTab(3); }}
                 >
                   <div>
-                    <div className="font-bold leading-snug tracking-tight mb-1">Building the Simple ecosystem</div>
-                    <div className="text-gray-600">Take collaboration to the next level with security and administrative features built for teams.</div>
+                    <span className="font-bold mb-1 leading-snug bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Start studying.
+                    </span>                    
+                    <div className="text-gray-1000 text-base">Leverage semantic analysis, recall, multiple choice, spaced repetition, and more to keep studying fresh and help you master topics quickly.</div>
                   </div>
                   <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
                     <svg className="w-3 h-3 fill-current" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
@@ -96,7 +102,7 @@ export default function Features() {
             </div>
 
             {/* Tabs items */}
-            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1">
+            <div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-5 lg:col-span-6 mb-8 md:mb-0 md:order-1 flex justify-center items-center">
               <div className="transition-all">
                 <div className="relative flex flex-col text-center lg:text-right" data-aos="zoom-y-out" ref={tabs}>
                   {/* Item 1 */}
@@ -113,10 +119,18 @@ export default function Features() {
                     beforeEnter={() => heightFix()}
                     unmount={false}                     
                   >
-                    <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height="462" alt="Features bg" />
-                      <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height="44" alt="Element" style={{ top: '30%' }} />
+                    <div className="relative">
+                      {/* FeaturesBg (Outer Container) */}
+                      <div className="w-full h-[335px] md:max-w-none mx-auto rounded overflow-hidden">
+                        <Image src={FeaturesBg} width={600} height={462} alt="OneStudy features bg" />
+                      </div>
+
+                      {/* Centered FeaturesElement */}
+                      <div className="absolute inset-0 flex justify-center items-center">
+                        <Image src={FeaturesElement} width={250} height={250} alt="Element" className="rounded-lg shadow-xl" />
+                      </div>
                     </div>
+
                   </Transition>
                   {/* Item 2 */}
                   <Transition
@@ -132,9 +146,16 @@ export default function Features() {
                     beforeEnter={() => heightFix()}
                     unmount={false}                     
                   >
-                    <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height="462" alt="Features bg" />
-                      <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height="44" alt="Element" style={{ top: '30%' }} />
+                    <div className="relative">
+                      {/* FeaturesBg (Outer Container) */}
+                      <div className="w-full h-[335px] md:max-w-none mx-auto rounded overflow-hidden">
+                        <Image src={FeaturesBg} width={600} height={462} alt="OneStudy features bg" />
+                      </div>
+
+                      {/* Centered FeaturesElement */}
+                      <div className="absolute inset-0 flex justify-center items-center">
+                        <Image src={FeaturesElement1} width={250} height={250} alt="Element" className="rounded-lg shadow-xl"/>
+                      </div>
                     </div>
                   </Transition>
                   {/* Item 3 */}
@@ -151,9 +172,16 @@ export default function Features() {
                     beforeEnter={() => heightFix()}
                     unmount={false}                     
                   >
-                    <div className="relative inline-flex flex-col">
-                      <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height="462" alt="Features bg" />
-                      <Image className="md:max-w-none absolute w-full left-0 transform animate-float" src={FeaturesElement} width={500} height="44" alt="Element" style={{ top: '30%' }} />
+                    <div className="relative">
+                      {/* FeaturesBg (Outer Container) */}
+                      <div className="w-full h-[335px] md:max-w-none mx-auto rounded overflow-hidden">
+                        <Image src={FeaturesBg} width={600} height={462} alt="OneStudy features bg" />
+                      </div>
+
+                      {/* Centered FeaturesElement */}
+                      <div className="absolute inset-0 flex justify-center items-center">                        
+                        <Image src={FeaturesElement2} width={350} height={350} alt="Element" className="rounded-lg shadow-xl" />
+                      </div>
                     </div>
                   </Transition>
                 </div>

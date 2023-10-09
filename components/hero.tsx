@@ -1,4 +1,4 @@
-import VideoThumb from '@/public/images/hero-image.png'
+import VideoThumb from '@/public/images/OneStudy-hero.svg'
 import ModalVideo from '@/components/modal-video'
 
 export default function Hero() {
@@ -10,9 +10,9 @@ export default function Hero() {
         <svg width="1360" height="578" viewBox="0 0 1360 578" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="illustration-01">
-              <stop stopColor="#FFF" offset="0%" />
-              <stop stopColor="#EAEAEA" offset="77.402%" />
-              <stop stopColor="#DFDFDF" offset="100%" />
+              <stop stopColor="#F6F3FF" offset="0%" />
+              <stop stopColor="#A590FF" offset="77.402%" />
+              <stop stopColor="#92BEFF" offset="100%" />
             </linearGradient>
           </defs>
           <g fill="url(#illustration-01)" fillRule="evenodd">
@@ -29,15 +29,19 @@ export default function Hero() {
 
           {/* Section header */}
           <div className="text-center pb-12 md:pb-16">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tighter tracking-tighter mb-4" data-aos="zoom-y-out">Make your website <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400">wonderful</span></h1>
+            <h1 className="text-3xl md:text-5xl font-semibold leading-tighter tracking-tighter text-gray-1000 mb-4" data-aos="zoom-y-out">
+              More than flashcards. <br />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Your comprehensive study companion.
+              </span>
+            </h1>
             <div className="max-w-3xl mx-auto">
-              <p className="text-xl text-gray-600 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+              <p className="text-md md:text-xl text-gray-1000 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Meet OneStudy, your personalized study platform that automatically transforms your notes and lectures into customized study materials to accelerate your learning.</p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
-                  <a className="btn text-white bg-blue-600 hover:bg-blue-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Start free trial</a>
+                  <a className="btn bg-purple-400 text-white font-bold rounded mb-2 focus:outline-none hover:bg-[#483285] sm:w-auto" href="https://app.onestudy.io/referral">Start free trial</a>
                 </div>
                 <div>
-                  <a className="btn text-white bg-gray-900 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">Learn more</a>
+                  <a className="btn text-purple font-bold border-purple-400 hover:bg-[#EDE9FE] sm:ml-4" href="https://www.notion.so/one-study/Help-Center-228b0bb8fbb543c88c2cb7c3672cfcd6">Learn more</a>
                 </div>
               </div>
             </div>
