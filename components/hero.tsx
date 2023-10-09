@@ -35,7 +35,7 @@ export default function Hero() {
               </span>
             </h1>
             <div className="max-w-3xl mx-auto">
-              <p className="text-md md:text-xl text-gray-1000 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Meet OneStudy, your personalized study platform that automatically transforms your notes and lectures into customized study materials to accelerate your learning.</p>
+              <p className="text-md md:text-xl text-gray-1000 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Instantly turns your notes and lectures into personalized study materials at the click of a button, all within minutes.</p>
               <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out" data-aos-delay="300">
                 <div>
                   <a className="btn bg-purple-400 text-white font-bold rounded mb-2 focus:outline-none hover:bg-[#483285] sm:w-auto" href="https://app.onestudy.io/referral">Start free trial</a>
