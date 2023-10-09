@@ -7,11 +7,11 @@ export default function Pricing() {
             {/* Section header */}
             <div className="text-center pb-8 md:pb-4">
                 <h1 className="text-4xl md:text-5xl font-semibold leading-tighter tracking-tighter text-gray-1000 mb-4" data-aos="zoom-y-out">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Simple straightforward pricing.
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-1000">Simple, straightforward pricing.
                     </span>
                 </h1>
               <div className="max-w-3xl mx-auto">
-                <p className="text-xl text-gray-1000 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Start for free, and scale with your success.</p>
+                <p className="text-xl text-gray-1000 mb-8" data-aos="zoom-y-out" data-aos-delay="150">Save time, tears, and torment for the price of 3 starbucks coffees.</p>
               </div>
             </div>
           </div>
@@ -22,11 +22,11 @@ export default function Pricing() {
           <div className="py-4 px-2 mx-auto max-w-screen-xl lg:py-8 lg:px-4 mb-12">
             <div className="space-y-4 lg:grid lg:grid-cols-1 sm:gap-4 xl:gap-10 lg:space-y-0">
               {/* Pricing Card 1 */}
-              <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-1000 font-semibold mb-4 rounded-lg border-2 border-gray-100 shadow-2xl shadow-gray-500">
+              <div className="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-1000 font-semibold mb-4 rounded-lg border-2 border-gray-100 shadow-xl shadow-gray-500">
                 <h3 className="mb-4 text-3xl font-semibold">Monthly Plan</h3>
-                <p className="text-gray-1000 sm:text-lg font-light dark:text-gray-1000 text-lg">7 day free trial. No credit card required.</p>
+                <p className="text-gray-1000 sm:text-lg font-light dark:text-gray-1000 text-lg">7-day free trial. No credit card required.</p>
                 <div className="flex justify-center items-baseline my-8">
-                  <span className="mr-2 text-5xl text-purple font-bold">$19</span>
+                  <span className="mr-2 text-4xl md:text-5l text-purple font-bold">$19.99</span>
                   <span className="text-purple text-4xl dark:text-purple">/month</span>
                 </div>
                 <ul role="list" className="mb-8 space-y-4 text-left">

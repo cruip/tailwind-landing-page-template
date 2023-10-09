@@ -37,6 +37,9 @@ export default function Header() {
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
+                <a href="/pricing" className="font-medium text-gray-1000 hover:text-purple px-5 py-3 flex items-center transition duration-150 ease-in-out mr-2">Pricing</a>
+              </li>
+              <li>
                 <a href="https://app.onestudy.io/sign-in" className="font-medium text-gray-1000 hover:text-purple px-5 py-3 flex items-center transition duration-150 ease-in-out">Sign in</a>
               </li>
               <li>

@@ -35,7 +35,7 @@ export default function Features() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 font-semibold text-white mb-4">How it works</h1>
-            <p className="text-xl text-white">Instantly create dynamic and personalized study materials using your PDFs. 
+            <p className="text-lg md:text-xl text-white">Instantly create dynamic and personalized study materials using your PDFs. 
             <br/> Make studying a delight with our user-friendly app. </p>
           </div>
 

@@ -64,6 +64,9 @@ export default function MobileMenu() {
           leaveTo="opacity-0"
         >
           <ul className="px-5 py-2">
+          <li>
+              <a href="/pricing" className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>Pricing</a>
+            </li>
             <li>
               <a href="https://app.onestudy.io/sign-in" className="flex font-medium w-full text-gray-600 hover:text-gray-900 py-2 justify-center" onClick={() => setMobileNavOpen(false)}>Sign in</a>
             </li>
