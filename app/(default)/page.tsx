@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Home - Simple',
+  title: 'OneStudy.io',
   description: 'Page description',
 }
 
@@ -8,16 +8,10 @@ import Features from '@/components/features'
 import FeaturesBlocks from '@/components/features-blocks'
 import Testimonials from '@/components/testimonials'
 import Newsletter from '@/components/newsletter'
-import Head from 'next/head'
 
 export default function Home() {
   return (
-    <>      
-      <Head>
-        <meta property="og:image" content="/images/OneStudy-social.png"></meta>
-        <meta name="twitter:image" content="/images/OneStudy-social.png"></meta>
-        <link rel="icon" href="public/favicon.ico" />
-      </Head>
+    <>
       <Hero />
       <Features />
       <FeaturesBlocks />      
