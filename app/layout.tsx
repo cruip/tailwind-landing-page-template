@@ -5,14 +5,11 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/ui/header'
 import Banner from '@/components/banner'
 import Footer from '@/components/ui/footer'
-<<<<<<< HEAD
 import Script from 'next/script'
-
-const GTM_ID = 'GTM-8EWQSRB8MD';
-=======
 import Head from 'next/head'
 import { Analytics } from '@vercel/analytics/react';
->>>>>>> main
+
+const GTM_ID = 'GTM-8EWQSRB8MD';
 
 const inter = Inter({
   subsets: ['latin'],
