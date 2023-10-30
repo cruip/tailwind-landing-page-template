@@ -10,6 +10,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import ResetPassword from "./pages/ResetPassword";
 import Coupler from "./pages/Coupler";
+import Monten from "./pages/Monten";
 import { Helmet } from "react-helmet";
 
 function App() {
@@ -51,6 +52,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/platform" element={<Coupler />} />
+        <Route path="/monten" element={<Monten />} />
       </Routes>
     </>
   );
