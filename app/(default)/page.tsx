@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Home - Simple',
-  description: 'Page description',
+  title: 'Aplos Creative | Software Agency',
+  description: 'Transform your ideas into digital reality',
 }
 
 import Hero from '@/components/hero'
