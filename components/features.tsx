@@ -7,7 +7,7 @@ import FeaturesBg from '@/public/images/features-bg.png'
 import FeaturesElement from '@/public/images/features-element.png'
 
 export default function Features() {
-  
+
   const [tab, setTab] = useState<number>(1)
 
   const tabs = useRef<HTMLDivElement>(null)
@@ -18,7 +18,7 @@ export default function Features() {
 
   useEffect(() => {
     heightFix()
-  }, []) 
+  }, [])
 
   return (
     <section className="relative">
@@ -33,7 +33,9 @@ export default function Features() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
             <h1 className="h2 mb-4">Explore the solutions</h1>
-            <p className="text-xl text-gray-600">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat.</p>
+            <p className="text-xl text-gray-600">
+              At Aplos, we're dedicated to crafting bespoke software solutions that empower your business to thrive in the digital age. Discover our services today.
+            </p>
           </div>
 
           {/* Section content */}
@@ -111,7 +113,7 @@ export default function Features() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 -translate-y-16"
                     beforeEnter={() => heightFix()}
-                    unmount={false}                     
+                    unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
                       <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height="462" alt="Features bg" />
@@ -130,7 +132,7 @@ export default function Features() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 -translate-y-16"
                     beforeEnter={() => heightFix()}
-                    unmount={false}                     
+                    unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
                       <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height="462" alt="Features bg" />
@@ -149,7 +151,7 @@ export default function Features() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 -translate-y-16"
                     beforeEnter={() => heightFix()}
-                    unmount={false}                     
+                    unmount={false}
                   >
                     <div className="relative inline-flex flex-col">
                       <Image className="md:max-w-none mx-auto rounded" src={FeaturesBg} width={500} height="462" alt="Features bg" />
