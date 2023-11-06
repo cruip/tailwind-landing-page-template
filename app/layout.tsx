@@ -28,7 +28,7 @@ export default function RootLayout({
           <Header />
           {children}
           {/*<Banner />*/}
-        </div>
+        </div>`
       </body>
     </html>
   )
