@@ -2,6 +2,34 @@ import Image from 'next/image'
 import TestimonialImage from '@/public/images/testimonial.jpg'
 
 export default function Testimonials() {
+  const partners = [
+    {
+      href: 'https://www.apchh.com/',
+      src: 'images/partners/apc.PNG',
+      alt: 'APC Homemaker services logo'
+    },
+    {
+      href: 'https://valware.com/',
+      src: 'images/partners/valware.PNG',
+      alt: 'Valware inc logo'
+    },
+    {
+      href: 'https://cymez.com/',
+      src: 'images/partners/cymez.PNG',
+      alt: 'Cymez SA de CV logo'
+    },
+    {
+      href: 'https://www.senecatransportation.com/',
+      src: 'images/partners/seneca.PNG',
+      alt: 'Seneca Transportation Logo'
+    },
+    {
+      href: 'https://phonomenalfoods.com/',
+      src: 'images/partners/phonmenal.PNG',
+      alt: 'Phonomenal Foods logo'
+    },
+  ];
+
   return (
     <section className="relative">
 
@@ -27,9 +55,7 @@ export default function Testimonials() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h2 className="h2 mb-4">Trusted by over 20,000 companies all over the world</h2>
-            <p className="text-xl text-gray-600" data-aos="zoom-y-out">Arcu cursus vitae congue mauris rhoncus viverra nibh cras pulvinar mattis
-              blandit libero cursus mattis.</p>
+            <h2 className="h2 mb-4">Our Partners</h2>
           </div>
 
           {/* Items */}
