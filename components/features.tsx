@@ -32,9 +32,9 @@ export default function Features() {
 
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4">Explore the solutions</h1>
+            <h1 className="h2 mb-4">Providing an array of Technology Services</h1>
             <p className="text-xl text-gray-600">
-              At Aplos, we're dedicated to crafting bespoke software solutions that empower your business to thrive in the digital age. Discover our services today.
+              With over a decade of experience in mobile and web app development, we enable businesses to bolster their digital presence in the fiercely competitive global market.
             </p>
           </div>
 
