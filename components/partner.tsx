@@ -1,7 +1,6 @@
 import Link from 'next/link'
-import PropTypes from "prop-types";
 
-function Partner({ href, src, alt }: any) {
+function Partner({ href, src, alt, imgClass }: any) {
     return (
         <Link
             href={href}
@@ -9,16 +8,10 @@ function Partner({ href, src, alt }: any) {
             aria-label="aplos-partner">
             <img
                 src={src}
-                className="h-10"
+                className={imgClass ?? 'h-10'}
                 alt={alt} />
         </Link>
     )
-}
-
-Partner.propTypes = {
-    href: PropTypes.string,
-    src: PropTypes.string,
-    alt: PropTypes.string
 }
 
 export default Partner
