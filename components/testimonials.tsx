@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import TestimonialImage from '@/public/images/testimonial.jpg'
+import TestimonialImage from '@/public/images/testimonial.jpeg'
 import Partner from "@/components/partner";
 
 export default function Testimonials() {
@@ -88,11 +88,11 @@ export default function Testimonials() {
                   <Image className="relative rounded-full" src={TestimonialImage} width={96} height={96} alt="Testimonial 01" />
                 </div>
                 <blockquote className="text-xl font-medium mb-4">
-                  “ I love this product and would recommend it to anyone. Could be not easier to use, and our multiple websites are wonderful. We get nice comments all the time. “
+                  “ The team's technical expertise, attention to detail, and unwavering commitment to our success have streamlined our operations, improved efficiency, and saved us valuable time and resources. “
                 </blockquote>
-                <cite className="block font-bold text-lg not-italic mb-1">Darya Finger</cite>
+                <cite className="block font-bold text-lg not-italic mb-1">Andrea Ceron</cite>
                 <div className="text-gray-600">
-                  <span>CEO & Co-Founder</span> <a className="text-blue-600 hover:underline" href="#0">@Dropbox</a>
+                  <span>CEO & Co-Founder</span> <a className="text-blue-600 hover:underline" href="#0">@SenecaTransportation</a>
                 </div>
               </div>
 
