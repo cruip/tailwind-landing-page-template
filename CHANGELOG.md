@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## [2.4.0] - 2023-12-08
+
+Update to Next.js 14
+Update dependencies
+
 ## [2.3.2] - 2023-10-04
 
 Update Twitter icon
