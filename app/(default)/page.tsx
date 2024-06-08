@@ -15,8 +15,8 @@ export default function Home() {
       <Hero />
       <Features />
       <FeaturesBlocks />
-      <Testimonials />
-      <Newsletter />
+      {/* <Testimonials />
+      <Newsletter /> */}
     </>
   )
 }
