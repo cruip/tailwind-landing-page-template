@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [3.0.0] - 2024-06-18
+
+- Redesign the entire template
+
 ## [2.4.0] - 2023-12-08
 
 Update to Next.js 14

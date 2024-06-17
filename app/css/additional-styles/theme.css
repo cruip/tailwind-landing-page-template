@@ -1,7 +1,3 @@
-html {
-    scroll-behavior: smooth;
-}
-
 .form-input:focus,
 .form-textarea:focus,
 .form-multiselect:focus,
@@ -11,84 +7,9 @@ html {
     @apply ring-0;
 }
 
-/* Hamburger button */
-.hamburger svg>*:nth-child(1),
-.hamburger svg>*:nth-child(2),
-.hamburger svg>*:nth-child(3) {
-    transform-origin: center;
-    transform: rotate(0deg);
-}
-
-.hamburger svg>*:nth-child(1) {
-    transition: y 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), opacity 0.1s ease-in;
-}
-
-.hamburger svg>*:nth-child(2) {
-    transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-.hamburger svg>*:nth-child(3) {
-    transition: y 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), width 0.1s 0.25s ease-in;
-}
-
-.hamburger.active svg>*:nth-child(1) {
-    opacity: 0;
-    y: 11;
-    transform: rotate(225deg);
-    transition: y 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.1s 0.12s ease-out;
-}
-
-.hamburger.active svg>*:nth-child(2) {
-    transform: rotate(225deg);
-    transition: transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-.hamburger.active svg>*:nth-child(3) {
-    y: 11;
-    transform: rotate(135deg);
-    transition: y 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.1s ease-out;
-}
-
-/* Pulsing animation */
-@keyframes pulseLoop {
-    0% { opacity: .15; transform: scale(1) translateZ(0); }
-    30% { opacity: .15; }
-    60% { opacity: 0; }
-    80% { opacity: 0; transform: scale(1.8) translateZ(0); }
-}
-@keyframes pulseMiniLoop {
-    0% { opacity: 0; transform: scale(1) translateZ(0); }
-    30% { opacity: .3; }
-    50% { opacity: .3; }
-    80% { opacity: 0; transform: scale(3) translateZ(0); }
-}
-.pulse {
-    transform: scale(1);
-    opacity: 0;
-    transform-origin: center;
-    animation: pulseLoop 10000ms linear infinite;                                   
-}
-.pulse-mini {
-    animation: pulseMiniLoop 6000ms linear infinite;                                   
-}
-.pulse-1 {
-    animation-delay: -3000ms;
-}
-.pulse-2 {
-    animation-delay: -6000ms;
-}
-
-/* Animations delay */
-.animation-delay-500 {
-    animation-delay: 500ms !important;
-}
-
-.animation-delay-1000 {
-    animation-delay: 1000ms !important;
-}
-
-.translate-z-0 {
-    transform: translateZ(0);
+/* Scrollspy links */
+[data-scrollspy-link].scrollspy-active {
+    @apply text-blue-500 font-medium;
 }
 
 /* Custom AOS animations */
@@ -99,83 +20,101 @@ html {
 }
 
 @media screen {
-    html:not(.no-js) body [data-aos=fade-up] {
+    html:not(.no-js) [data-aos=fade-up] {
         -webkit-transform: translate3d(0, 10px, 0);
         transform: translate3d(0, 10px, 0);
     }
 
-    html:not(.no-js) body [data-aos=fade-down] {
+    html:not(.no-js) [data-aos=fade-down] {
         -webkit-transform: translate3d(0, -10px, 0);
         transform: translate3d(0, -10px, 0);
     }
 
-    html:not(.no-js) body [data-aos=fade-right] {
+    html:not(.no-js) [data-aos=fade-right] {
         -webkit-transform: translate3d(-10px, 0, 0);
         transform: translate3d(-10px, 0, 0);
     }
 
-    html:not(.no-js) body [data-aos=fade-left] {
+    html:not(.no-js) [data-aos=fade-left] {
         -webkit-transform: translate3d(10px, 0, 0);
         transform: translate3d(10px, 0, 0);
     }
 
-    html:not(.no-js) body [data-aos=fade-up-right] {
+    html:not(.no-js) [data-aos=fade-up-right] {
         -webkit-transform: translate3d(-10px, 10px, 0);
         transform: translate3d(-10px, 10px, 0);
     }
 
-    html:not(.no-js) body [data-aos=fade-up-left] {
+    html:not(.no-js) [data-aos=fade-up-left] {
         -webkit-transform: translate3d(10px, 10px, 0);
         transform: translate3d(10px, 10px, 0);
     }
 
-    html:not(.no-js) body [data-aos=fade-down-right] {
+    html:not(.no-js) [data-aos=fade-down-right] {
         -webkit-transform: translate3d(-10px, -10px, 0);
         transform: translate3d(-10px, -10px, 0);
     }
 
-    html:not(.no-js) body [data-aos=fade-down-left] {
+    html:not(.no-js) [data-aos=fade-down-left] {
         -webkit-transform: translate3d(10px, -10px, 0);
         transform: translate3d(10px, -10px, 0);
     }
 
-    html:not(.no-js) body [data-aos=zoom-in-up] {
+    html:not(.no-js) [data-aos=zoom-in-up] {
         -webkit-transform: translate3d(0, 10px, 0) scale(.6);
         transform: translate3d(0, 10px, 0) scale(.6);
     }
 
-    html:not(.no-js) body [data-aos=zoom-in-down] {
+    html:not(.no-js) [data-aos=zoom-in-down] {
         -webkit-transform: translate3d(0, -10px, 0) scale(.6);
         transform: translate3d(0, -10px, 0) scale(.6);
     }
 
-    html:not(.no-js) body [data-aos=zoom-in-right] {
+    html:not(.no-js) [data-aos=zoom-in-right] {
         -webkit-transform: translate3d(-10px, 0, 0) scale(.6);
         transform: translate3d(-10px, 0, 0) scale(.6);
     }
 
-    html:not(.no-js) body [data-aos=zoom-in-left] {
+    html:not(.no-js) [data-aos=zoom-in-left] {
         -webkit-transform: translate3d(10px, 0, 0) scale(.6);
         transform: translate3d(10px, 0, 0) scale(.6);
     }
 
-    html:not(.no-js) body [data-aos=zoom-out-up] {
+    html:not(.no-js) [data-aos=zoom-out-up] {
         -webkit-transform: translate3d(0, 10px, 0) scale(1.2);
         transform: translate3d(0, 10px, 0) scale(1.2);
     }
 
-    html:not(.no-js) body [data-aos=zoom-out-down] {
+    html:not(.no-js) [data-aos=zoom-out-down] {
         -webkit-transform: translate3d(0, -10px, 0) scale(1.2);
         transform: translate3d(0, -10px, 0) scale(1.2);
     }
 
-    html:not(.no-js) body [data-aos=zoom-out-right] {
+    html:not(.no-js) [data-aos=zoom-out-right] {
         -webkit-transform: translate3d(-10px, 0, 0) scale(1.2);
         transform: translate3d(-10px, 0, 0) scale(1.2);
     }
 
-    html:not(.no-js) body [data-aos=zoom-out-left] {
+    html:not(.no-js) [data-aos=zoom-out-left] {
         -webkit-transform: translate3d(10px, 0, 0) scale(1.2);
         transform: translate3d(10px, 0, 0) scale(1.2);
     }
+}
+
+[data-rehype-pretty-code-figure] pre {
+    @apply !bg-gray-900 p-5 rounded-2xl;
+}
+
+[data-rehype-pretty-code-figure] code {
+    @apply grid min-w-full break-words rounded-none border-none bg-transparent p-0 text-sm text-gray-900;
+    counter-reset: line;
+    box-decoration-break: clone;
+}
+
+[data-rehype-pretty-code-title] {
+    @apply px-4 py-3 font-mono text-xs border rounded-t-lg text-gray-200 border-gray-800 bg-gray-900;
+}
+
+[data-rehype-pretty-code-title]+pre {
+    @apply mt-0 rounded-t-none border-t-0;
 }

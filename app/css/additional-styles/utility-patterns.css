@@ -1,52 +1,32 @@
-/* Typography */
-.h1 {
-    @apply text-4xl font-extrabold leading-tight tracking-tighter;
-}
-
-.h2 {
-    @apply text-3xl font-extrabold leading-tight tracking-tighter;
-}
-
-.h3 {
-    @apply text-3xl font-bold leading-tight;
-}
-
-.h4 {
-    @apply text-2xl font-bold leading-snug tracking-tight;
-}
-
-@screen md {
-    .h1 {
-        @apply text-5xl;
-    }
-
-    .h2 {
-        @apply text-4xl;
-    }
-}
-
 /* Buttons */
 .btn,
 .btn-sm {
-    @apply font-medium inline-flex items-center justify-center border border-transparent rounded leading-snug transition duration-150 ease-in-out;
+    @apply text-sm font-medium inline-flex items-center justify-center border border-transparent rounded-lg whitespace-nowrap transition-all;
 }
 
 .btn {
-    @apply px-8 py-3 shadow-lg;
+    @apply px-4 py-2.5 shadow-lg;
 }
 
 .btn-sm {
-    @apply px-4 py-2 shadow;
+    @apply px-3 py-1 shadow;
 }
 
 /* Forms */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
 .form-input,
 .form-textarea,
 .form-multiselect,
 .form-select,
 .form-checkbox,
 .form-radio {
-    @apply bg-white border border-gray-300 focus:border-gray-500;
+    @apply bg-white border border-gray-200 focus:border-blue-300;
 }
 
 .form-input,
@@ -54,19 +34,19 @@
 .form-multiselect,
 .form-select,
 .form-checkbox {
-    @apply rounded;
+    @apply rounded-lg;
 }
 
 .form-input,
 .form-textarea,
 .form-multiselect,
 .form-select {
-    @apply py-3 px-4;
+    @apply text-sm py-2.5 px-4 shadow-sm;
 }
 
 .form-input,
 .form-textarea {
-    @apply placeholder-gray-500;
+    @apply placeholder-gray-400;
 }
 
 .form-select {

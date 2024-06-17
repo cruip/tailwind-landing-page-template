@@ -3,20 +3,20 @@ export const metadata = {
   description: 'Page description',
 }
 
-import Hero from '@/components/hero'
-import Features from '@/components/features'
-import FeaturesBlocks from '@/components/features-blocks'
-import Testimonials from '@/components/testimonials'
-import Newsletter from '@/components/newsletter'
+import Hero from '@/components/hero-home'
+import BusinessCategories from '@/components/business-categories'
+import FeaturesPlanet from '@/components/features-planet'
+import LargeTestimonial from '@/components/large-testimonial'
+import Cta from '@/components/cta'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Features />
-      <FeaturesBlocks />
-      <Testimonials />
-      <Newsletter />
+      <BusinessCategories />
+      <FeaturesPlanet />
+      <LargeTestimonial />
+      <Cta />
     </>
   )
 }
