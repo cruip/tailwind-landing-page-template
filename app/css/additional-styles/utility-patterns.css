@@ -1,15 +1,15 @@
 /* Buttons */
 .btn,
 .btn-sm {
-    @apply text-sm font-medium inline-flex items-center justify-center border border-transparent rounded-lg whitespace-nowrap transition-all;
+  @apply inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-all;
 }
 
 .btn {
-    @apply px-4 py-2.5 shadow-lg;
+  @apply px-4 py-[11px] shadow-lg;
 }
 
 .btn-sm {
-    @apply px-3 py-1 shadow;
+  @apply px-3 py-[5px] shadow;
 }
 
 /* Forms */
@@ -26,7 +26,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-select,
 .form-checkbox,
 .form-radio {
-    @apply bg-white border border-gray-200 focus:border-blue-300;
+  @apply border border-gray-200 bg-white focus:border-blue-300;
 }
 
 .form-input,
@@ -34,26 +34,26 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-multiselect,
 .form-select,
 .form-checkbox {
-    @apply rounded-lg;
+  @apply rounded-lg;
 }
 
 .form-input,
 .form-textarea,
 .form-multiselect,
 .form-select {
-    @apply text-sm py-2.5 px-4 shadow-sm;
+  @apply px-4 py-2.5 text-sm shadow-sm;
 }
 
 .form-input,
 .form-textarea {
-    @apply placeholder-gray-400;
+  @apply placeholder-gray-400;
 }
 
 .form-select {
-    @apply pr-10;
+  @apply pr-10;
 }
 
 .form-checkbox,
 .form-radio {
-    @apply text-gray-800 rounded-sm;
+  @apply rounded-sm text-gray-800;
 }

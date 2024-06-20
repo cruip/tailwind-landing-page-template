@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [3.0.1] - 2024-06-20
+
+- Minor styling changes + Prettify code
+
 ## [3.0.0] - 2024-06-18
 
 - Redesign the entire template
