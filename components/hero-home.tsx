@@ -1,4 +1,7 @@
+'use client';
+
 import Image from "next/image";
+import React, { useState, useEffect, useRef } from 'react';
 import PageIllustration from "@/components/page-illustration";
 import Avatar01 from "@/public/images/avatar-01.jpg";
 import Avatar02 from "@/public/images/avatar-02.jpg";
@@ -8,6 +11,29 @@ import Avatar05 from "@/public/images/avatar-05.jpg";
 import Avatar06 from "@/public/images/avatar-06.jpg";
 
 export default function HeroHome() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    // Auto play the video when component mounts
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  }, []);
+
   return (
     <section className="relative">
       <PageIllustration />
@@ -15,72 +41,49 @@ export default function HeroHome() {
         {/* Hero content */}
         <div className="pb-12 pt-32 md:pb-20 md:pt-40">
           {/* Section header */}
-          <div className="pb-12 text-center md:pb-16">
-            <div
-              className="mb-6 border-y [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]"
-              data-aos="zoom-y-out"
-            >
-              <div className="-mx-0.5 flex justify-center -space-x-3">
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar01}
-                  width={32}
-                  height={32}
-                  alt="Avatar 01"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar02}
-                  width={32}
-                  height={32}
-                  alt="Avatar 01"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar03}
-                  width={32}
-                  height={32}
-                  alt="Avatar 02"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar04}
-                  width={32}
-                  height={32}
-                  alt="Avatar 03"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar05}
-                  width={32}
-                  height={32}
-                  alt="Avatar 04"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar06}
-                  width={32}
-                  height={32}
-                  alt="Avatar 05"
-                />
-              </div>
-            </div>
+          <div className=" pb-12 text-center md:pb-16 grid justify-items-center">
+            
             <h1
-              className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl"
+              className="mb-5 border-y text-4xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-6xl"
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              The website builder you're <br className="max-lg:hidden" />
-              looking for
+              Hi! I'm Lynn Tang <br className="max-lg:hidden" />
+              
             </h1>
+            <div className="mb-[0.5em] grid justify-items-center ">
+              <video
+                ref={videoRef}
+                className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg border-transparent w-full max-w-[10em] md:max-w-[14em]"
+                src="/images/ava.mp4"
+                data-aos="zoom-y-out"
+                autoPlay
+                muted
+                loop
+              />
+              {!isPlaying && (
+                <button
+                  className="absolute inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 text-white text-[1.5em]"
+                  onClick={togglePlay}
+                >
+                </button>
+              )}
+            </div>
+
             <div className="mx-auto max-w-3xl">
               <p
-                className="mb-8 text-lg text-gray-700"
+                className="mb-5 text-xl text-gray-700"
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                Simple is a modern website builder powered by AI that changes
-                how companies create user interfaces together.
+                Final Year Student @NTU, Singapore
+              </p>
+              <p
+                className="mb-8 text-lg text-gray-500 max-w-4xl"
+                data-aos="zoom-y-out"
+                data-aos-delay={300}
+              >
+                Crafting beautiful and functional web applications is my passion. As a full-stack developer, I bring together my skills in front-end and back-end development to create seamless user experiences.
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
                 <div
@@ -93,7 +96,7 @@ export default function HeroHome() {
                     href="#0"
                   >
                     <span className="relative inline-flex items-center">
-                      Start Free Trial{" "}
+                      About Me{" "}
                       <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
                         -&gt;
                       </span>
@@ -101,9 +104,9 @@ export default function HeroHome() {
                   </a>
                   <a
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="#0"
+                    href="#1"
                   >
-                    Learn More
+                    My Resume
                   </a>
                 </div>
               </div>
@@ -147,6 +150,69 @@ export default function HeroHome() {
               </div>
             </div>
           </div>
+          {/* Bottom section */}
+          <div
+            className="mx-auto max-w-3xl text-center py-3"
+            data-aos="zoom-y-out"
+            data-aos-delay={600}
+          >
+          <h1 className="custom-font mb-[1em] text-[1.5em] md:text-[2em] px-[1em] font-semibold box-decoration-clone bg-gradient-to-r from-indigo-600 to-pink-500 text-white px-2">
+        MY ASPIRATION
+      </h1>
+      <h1 className="custom-font mb-[1em] text-[1.5em] md:text-[2em] font-semibold">
+        Creator - Coding - Community
+      </h1>
+      <div className="relative z-[-1] flex flex-row gap-[1em] place-items-center justify-center before:absolute before:h-[1000px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[300px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-300 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[440px] before:lg:h-[460px]">
+        <div className="relative w-full sm:w-auto px-[1em]">
+          <video
+            ref={videoRef}
+            className="w-full max-w-md relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg border-transparent"
+            src="/images/il.mp4"
+            autoPlay
+            muted
+            loop
+          />
+          {!isPlaying && (
+            <button
+              className="absolute inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 text-white text-2xl"
+              onClick={togglePlay}
+            />
+          )}
+        </div>
+        <div className="relative w-full sm:w-auto px-[1em]">
+          <video
+            ref={videoRef}
+            className="w-full max-w-md relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg border-transparent"
+            src="/images/coding.mp4"
+            autoPlay
+            muted
+            loop
+          />
+          {!isPlaying && (
+            <button
+              className="absolute inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 text-white text-2xl"
+              onClick={togglePlay}
+            />
+          )}
+        </div>
+        <div className="relative w-full sm:w-auto px-[1em]">
+          <video
+            ref={videoRef}
+            className="w-full max-w-md relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] rounded-lg border-transparent"
+            src="/images/com.mp4"
+            autoPlay
+            muted
+            loop
+          />
+          {!isPlaying && (
+            <button
+              className="absolute inset-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50 text-white text-2xl"
+              onClick={togglePlay}
+            />
+          )}
+        </div>
+      </div>
+      </div>
         </div>
       </div>
     </section>
