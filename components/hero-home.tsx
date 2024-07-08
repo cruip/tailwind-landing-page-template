@@ -152,7 +152,7 @@ export default function HeroHome() {
           </div>
           {/* Bottom section */}
           <div
-            className="mx-auto max-w-3xl text-center py-3"
+            className="mx-auto max-w-3xl text-center py-3 flex flex-wrap flex-col items-center p-[1em] md:p-[1.5em]" 
             data-aos="zoom-y-out"
             data-aos-delay={600}
           >
@@ -160,9 +160,9 @@ export default function HeroHome() {
         MY ASPIRATION
       </h1>
       <h1 className="custom-font mb-[1em] text-[1.5em] md:text-[2em] font-semibold">
-        Creator - Coding - Community
+              Creator - Coding - Community
       </h1>
-      <div className="relative z-[-1] flex flex-row gap-[1em] place-items-center justify-center before:absolute before:h-[1000px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[300px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-300 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[440px] before:lg:h-[460px]">
+      <div className="relative flex flex-row gap-[1em] place-items-center sm:justify-center before:absolute before:h-[1000px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[300px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-300 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[440px] before:lg:h-[460px]">
         <div className="relative w-full sm:w-auto px-[1em]">
           <video
             ref={videoRef}
