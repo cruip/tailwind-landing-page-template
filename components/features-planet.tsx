@@ -17,7 +17,7 @@ export default function FeaturesPlanet() {
       About Me
     </h2>
   </div>
-  <div className="flex flex-col items-center md:flex-row md:justify-center">
+  <div className="flex flex-col items-center md:px-4 md:flex-row md:justify-center">
     {/* Planet */}
     <div className="pb-16 md:pb-20 md:w-1/2 md:flex-shrink-0" data-aos="zoom-y-out">
       <div className="text-center">
@@ -72,9 +72,9 @@ export default function FeaturesPlanet() {
       </div>
     </div>
     {/* Grid */}
-    <div className="grid gap-5 grid-cols-3 md:w-1/2 lg:flex lg:flex-col lg:justify-center lg:space-y-4">
-    <div className="grid gap-5 grid-cols-3 md:w-1/2 lg:flex lg:flex-col lg:justify-center lg:space-y-4">
-      <div className="group rounded-lg border border-transparent p-[0.5em] md:p-[1em] shadow-sm transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
+    
+      <div className="group rounded-lg border cursor-pointer border-transparent p-[0.5em] md:p-[1em] shadow-sm transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
         <div className="flex p-[0.5em] dark:drop-shadow-[0_0_0.8rem_#ffffff70] items-center">
           <h3 className="font-semibold ml-[0.5em] text-sm md:text-base bg-gradient-to-r bg-clip-text text-transparent from-pink-400 via-purple-500 to-indigo-500 animate-text">
             Experience
@@ -104,7 +104,7 @@ export default function FeaturesPlanet() {
           4+ Company
         </p>
       </div>
-    </div>
+    
   </div>
     {/* <div className="grid overflow-hidden grid-cols-3 sm:grid-cols-3 md:grid-cols-3 md:w-1/2 lg:flex lg:flex-col lg:justify-center lg:space-y-4 [&>*]:relative [&>*]:p-6 [&>*]:before:absolute [&>*]:before:bg-gray-800 [&>*]:before:[block-size:100vh] [&>*]:before:[inline-size:1px] [&>*]:before:[inset-block-start:0] [&>*]:before:[inset-inline-start:-1px] [&>*]:after:absolute [&>*]:after:bg-gray-800 [&>*]:after:[block-size:1px] [&>*]:after:[inline-size:100vw] [&>*]:after:[inset-block-start:-1px] [&>*]:after:[inset-inline-start:0] md:[&>*]:p-10">
       <article>
