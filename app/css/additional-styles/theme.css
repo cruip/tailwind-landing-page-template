@@ -9,7 +9,7 @@
 
 /* Scrollspy links */
 [data-scrollspy-link].scrollspy-active {
-  @apply font-medium text-blue-500;
+  @apply font-medium text-pink-500;
 }
 
 /* Custom AOS animations */
