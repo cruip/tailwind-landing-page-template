@@ -72,7 +72,7 @@ export default function FeaturesPlanet() {
       </div>
     </div>
     {/* Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
     
       <div className="group rounded-lg border cursor-pointer border-transparent p-[0.5em] md:p-[1em] shadow-sm transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
         <div className="flex p-[0.5em] dark:drop-shadow-[0_0_0.8rem_#ffffff70] items-center">
