@@ -90,7 +90,7 @@ export default function FeaturesPlanet() {
     {/* Grid + Skill*/}
     <div className="flex flex-col">
     {/*Grid */}
-    <div className="grid grid-cols-3 md:gap-5 gap-2 text-center px-2 mx-auto my-auto">
+    <div className="grid grid-cols-3 md:gap-5 gap-2 text-center px-2 mx-auto my-auto" data-aos="zoom-y-out">
     
       <div className="group rounded-lg border border-transparent p-[0.5em] md:p-[1em] shadow-sm transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
         <div className="flex dark:drop-shadow-[0_0_0.8rem_#ffffff70] items-center">
@@ -124,10 +124,11 @@ export default function FeaturesPlanet() {
       </div>
     
   </div>
+
   {/*Skills */}
   <div>
     {viewportHeight > 600 && (
-      <div className="mx-auto max-w-[30em] mt-[0.25em] px-[1.5em] sm:max-w-[30em] md:max-w-[34em] md:px-[2em] lg:px-[1em] sm:py-[1em] md:py-[0.5em]">
+      <div className="mx-auto max-w-[30em] mt-[0.25em] px-[1.5em] sm:max-w-[30em] md:max-w-[34em] md:px-[2em] lg:px-[1em] sm:py-[1em] md:py-[0.5em]" data-aos="zoom-y-out">
             <h3 className="text-center text-[0.5em] md:text-[0.75em] font-semibold text-gray-500 uppercase">Works with different technologies</h3>
              <div className="mx-auto mt-[1em] grid max-w-[20em] items-center gap-x-[1em] gap-y-[1em] sm:max-w-[24em] sm:gap-x-[1.5em] lg:mx-0 lg:max-w-none sm:grid-cols-8 grid-cols-4 sm:justify-center">
 
