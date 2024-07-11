@@ -46,8 +46,9 @@ const CompanyBar: React.FC = () => {
 
         {selectedCompanyIndex !== null && (
           <div className="flex w-full mt-5 flex-wrap">
-            <div className="flex w-full mb-10">
-               <div className="w-full md:w-1/2 pr-4">
+            <div className="flex flex-col lg:flex-row justify-center items-center lg:px-4">
+              {/* Left side - Image Proj */}
+               <div className="w-full lg:w-1/2 lg:flex-shrink-0 mx-auto px-2" data-aos="zoom-y-out">
                 <div className="relative rounded-xl mr-auto md:mr-0 md:ml-auto shadow-xl flex bg-slate-800 h-[20rem] sm:max-h-[none] sm:rounded-xl lg:h-[25rem] xl:h-auto xl:max-h-[25rem] dark:bg-primary/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 col-start-6 col-end-10 target target-show">
                   <div className="relative w-full flex flex-col z-10">
 
@@ -89,7 +90,8 @@ const CompanyBar: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 pl-4">
+              {/* Right side - Job info */}
+              <div className="w-full lg:w-1/2 my-auto mx-auto ">
                 <div className="flex flex-col py-3">
                   <p className="text-sm text-secondary font-medium text-purple-500">{companies[selectedCompanyIndex].role}</p>
                   <dt className="text-2xl font-semibold leading-7 text-gray-100 mt-2">{companies[selectedCompanyIndex].proj_name}</dt>
