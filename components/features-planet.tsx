@@ -12,12 +12,12 @@ export default function FeaturesPlanet() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
   {/* Section header */}
-  <div className="mx-auto max-w-3xl pb-14 text-center md:pb-20">
+  <div className="mx-auto max-w-3xl pb-14 text-center md:pb-15">
     <h2 className="text-3xl font-bold text-gray-200 md:text-4xl">
       About Me
     </h2>
   </div>
-  <div className="flex flex-col items-center md:px-4 md:flex-row md:justify-center">
+  <div className="flex flex-col items-center lg:px-4 lg:flex-row lg:justify-center">
     {/* Planet */}
     <div className="pb-16 md:pb-20 md:w-1/2 md:flex-shrink-0" data-aos="zoom-y-out">
       <div className="text-center">
@@ -59,48 +59,48 @@ export default function FeaturesPlanet() {
                 height={56}
                 alt="Tag 03"
               />
-              <Image
+              {/* <Image
                 className="absolute bottom-32 left-64 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-80 transition-opacity duration-500"
                 src={PlanetTagImg04}
                 width={251}
                 height={56}
                 alt="Tag 04"
-              />
+              /> */}
             </div>
           </div>
         </div>
       </div>
     </div>
     {/* Grid */}
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 gap-3 text-center px-2 mx-auto">
+    <div className="grid grid-cols-3 md:gap-5 gap-2 text-center px-2 mx-auto">
     
-      <div className="group rounded-lg border cursor-pointer border-transparent p-[0.5em] md:p-[1em] shadow-sm transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-        <div className="flex p-[0.5em] dark:drop-shadow-[0_0_0.8rem_#ffffff70] items-center">
-          <h3 className="font-semibold ml-[0.5em] text-sm md:text-base bg-gradient-to-r bg-clip-text text-transparent from-pink-400 via-purple-500 to-indigo-500 animate-text">
+      <div className="group rounded-lg border border-transparent p-[0.5em] md:p-[1em] shadow-sm transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+        <div className="flex dark:drop-shadow-[0_0_0.8rem_#ffffff70] items-center">
+          <h3 className="font-semibold ml-[0.5em] text-xs sm:text-sm md:text-base bg-gradient-to-r bg-clip-text text-transparent from-pink-400 via-purple-500 to-indigo-500 animate-text">
             Experience
           </h3>
         </div>
-        <p className="custom-font rounded-xl px-[1em] py-[0.5em] md:px-[1.4em] md:py-[0.6em] md:text-lg text-center text-[1em] transition-all hover:text-black hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-500">
+        <p className="custom-font mt-2 rounded-xl px-[0.5em] text-sm py-[0.5em] md:px-[1.4em] md:py-[0.6em] md:text-lg text-center transition-all hover:text-black hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-500">
           1 Year
         </p>
       </div>
       <div className="group rounded-lg border border-transparent p-[0.5em] md:p-[1em] shadow-sm transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-        <div className="flex p-[0.5em] dark:drop-shadow-[0_0_0.8rem_#ffffff70] items-center">
-          <h3 className="font-semibold ml-[0.5em] text-sm md:text-base bg-gradient-to-r bg-clip-text text-transparent from-pink-400 via-purple-500 to-indigo-500 animate-text">
+        <div className="flex dark:drop-shadow-[0_0_0.8rem_#ffffff70] items-center">
+          <h3 className="font-semibold ml-[0.5em] text-xs sm:text-sm md:text-base bg-gradient-to-r bg-clip-text text-transparent from-pink-400 via-purple-500 to-indigo-500 animate-text">
             Completed
           </h3>
         </div>
-        <p className="custom-font rounded-xl px-[1em] py-[0.5em] md:px-[1.4em] md:py-[0.6em] md:text-lg text-center text-[1em] transition-all hover:text-black hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-500">
+        <p className="custom-font mt-2 rounded-xl px-[0.5em] py-[0.5em] text-sm md:px-[1.4em] md:py-[0.6em] md:text-lg text-center transition-all hover:text-black hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-500">
           10+ Projects
         </p>
       </div>
       <div className="group rounded-lg border border-transparent p-[0.5em] md:p-[1em] shadow-sm transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-        <div className="flex p-[0.5em] dark:drop-shadow-[0_0_0.8rem_#ffffff70] items-center">
-          <h3 className="font-semibold ml-[0.5em] text-sm md:text-base bg-gradient-to-r bg-clip-text text-transparent from-pink-400 via-purple-500 to-indigo-500 animate-text">
+        <div className="flex dark:drop-shadow-[0_0_0.8rem_#ffffff70] items-center">
+          <h3 className="font-semibold ml-[0.5em] text-xs sm:text-sm md:text-base bg-gradient-to-r bg-clip-text text-transparent from-pink-400 via-purple-500 to-indigo-500 animate-text">
             Worked in
           </h3>
         </div>
-        <p className="custom-font rounded-xl px-[1em] py-[0.5em] md:px-[1.4em] md:py-[0.6em] md:text-lg text-center text-[1em] transition-all hover:text-black hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-500">
+        <p className="custom-font mt-2 rounded-xl px-[0.5em] py-[0.5em] text-sm md:px-[1.4em] md:py-[0.6em] md:text-lg text-center transition-all hover:text-black hover:bg-gradient-to-r hover:from-indigo-500 hover:via-purple-500 hover:to-indigo-500">
           4+ Company
         </p>
       </div>
