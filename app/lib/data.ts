@@ -30,7 +30,7 @@ export const companies: Company[] = [
     image: '/images/st.jpeg',
     method: ['FastAPI','Spicy.stats','Tensorflow','Scikit-Learn','numpy','Dataiku'],
     display: ['mlops', 'data_quality','alert'],
-    proj_img: ['/mlops.jpg','/datamlops.jpg']
+    proj_img: ['/images/mlops.jpg','/images/datamlops.jpg']
   },
   {
     name: 'TUMAsia',
