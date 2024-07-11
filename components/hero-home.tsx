@@ -128,9 +128,9 @@ export default function HeroHome() {
                 <span className="animate-[code-1_10s_infinite] text-gray-200">
                   Creator
                 </span>{" "}
-                <span className="animate-[code-2_10s_infinite]">
+                {/* <span className="animate-[code-2_10s_infinite]">
                   ...
-                </span>
+                </span> */}
                 <br />
                 <span className="animate-[code-2_10s_infinite]">
                   content is life
@@ -155,7 +155,7 @@ export default function HeroHome() {
                 <br />
                 <span className="animate-[code-5_10s_infinite]">
                   Come for Software
-                </span>
+                </span>{" "}
                 <span className="animate-[code-6_10s_infinite]">
                   Stay for Community
                 </span>
