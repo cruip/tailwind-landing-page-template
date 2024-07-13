@@ -15,6 +15,11 @@ export default function BusinessCategories() {
   return (
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="mx-auto max-w-3xl py-10 text-center md:pb-15">
+          <h2 className="text-3xl font-bold md:text-4xl">
+            Work Experience
+          </h2>
+        </div>
         <CompanyBar />
         <div className="pb-12 md:pb-20">
           {/* Tab panels */}

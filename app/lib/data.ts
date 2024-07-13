@@ -1,4 +1,4 @@
-import { Company } from './definition'
+import { Company, TimelineSection } from './definition'
 
 export const companies: Company[] = [
   {
@@ -53,4 +53,38 @@ export const companies: Company[] = [
     proj_img: ['/comm.png','/girl.png']
   },
   // Add more companies as needed
+];
+
+
+export const TimelineData: TimelineSection[] = [
+  {
+    title: '.    T R A I N I N G  .',
+    items: ['Computer Vision', 'Design Database', 'AWS Collaboration'],
+    img: ['hehe', 'hihi', 'hoho']
+  },
+  {
+    title: '.    C O M M U N I T Y  .',
+    items: ['MLDA Maincommitee', 'GL FOC-VNNTU', 'Chief Prog Enitio Camp'],
+    img: ['hehe', 'hihi', 'hoho']
+
+  },
+  {
+    title: '.  C R E A T I V E .',
+    items: ['Vlog', 'TikTok', 'Blog'],
+    img: ['hehe', 'hihi', 'hoho']
+
+  },
+  {
+    title: 'C O N T I N U E  S T U D Y  .',
+    items: [
+      'AWS Cloud',
+      'Google Business Intelligence',
+      'Database Specialization',
+      'Machine Learning',
+      'Web Development',
+      'UI/UX Design'
+    ],
+    img: ['hehe', 'hihi', 'hoho']
+
+  },
 ];

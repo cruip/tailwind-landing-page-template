@@ -6,6 +6,19 @@
 .form-radio:focus {
   @apply ring-0;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #000;
+  background-color: #fff;
+}
+
+[data-theme="dark"] body {
+  background-color: #000;
+  color: #fff;
+}
 
 /* Scrollspy links */
 [data-scrollspy-link].scrollspy-active {

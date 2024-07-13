@@ -2,6 +2,9 @@ import "./css/style.css";
 
 import { Inter } from "next/font/google";
 
+import ThemeProvider from "@/app/css/theme-provider"; 
+
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -23,9 +26,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} bg-gray-50 font-inter tracking-tight text-gray-900 antialiased`}
       >
-        <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
-          {children}
-        </div>
+        <ThemeProvider>
+          <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

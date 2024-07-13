@@ -1,10 +1,59 @@
 import Image from "next/image";
+import React from "react";
 import TestimonialImg from "@/public/images/large-testimonial.jpg";
+import styles from "@/app/css/additional-styles/beyond-coding.module.css";
+import { TimelineData } from "@/app/lib/data";
 
 export default function LargeTestimonial() {
+  const calculateRotation = (index: number) => {
+    const baseRotation = 25; // Starting rotation for the middle card
+    const separationAngle = 20; // Angle separation between cards
+    const middleIndex = Math.floor(TimelineData.length / 2);
+
+    // Calculate rotation based on the index relative to the middle card
+    return (index - middleIndex) * separationAngle + baseRotation;
+  };
   return (
     <section>
-      <div className="mx-auto max-w-2xl px-4 sm:px-6">
+      <div className="mx-auto full-w px-4 sm:px-6">
+        <div className={styles.containerr}>
+          <div className={styles.staticContent}>
+            {/* Left static content */}
+            <h1>Beyond Coding</h1>
+            <p>Static content on the left side.</p>
+          </div>
+          {/* <div className={styles.divider}></div> */}
+          <div className={styles.timeline}>
+            {/* Right scrollable timeline */}
+            {TimelineData.map((section, index) => (
+              <div key={index} className={`grid grid-cols-3 sm:grid-cols-5 ${styles.timelineSection}`}>
+                <h2 className={`text-xl ${styles.timelineTitle}`}>{section.title}</h2>
+                <div className={`grid grid-cols-3 ${styles.cardContainer}`}>
+                  {section.items.map((item, idx) => {
+                    const rotation = calculateRotation(idx);
+                    return (
+                      <div
+                        key={idx}
+                        className={styles.glass}
+                        style={
+                          {
+                            '--r': `${rotation}deg`, // Use units
+                            transform: `rotate(${rotation}deg)`
+                          } as React.CSSProperties
+                        }
+                        data-text={item}
+                      >
+                        <div className={styles.glassContent}>
+                          <p>{item}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="py-12 md:py-20">
           <div className="space-y-3 text-center">
             <div className="relative inline-flex">

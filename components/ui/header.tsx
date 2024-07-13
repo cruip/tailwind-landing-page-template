@@ -4,9 +4,14 @@ import { useState, useEffect } from "react";
 
 import Link from "next/link";
 import Logo from "./logo";
+import ThemeProvider from "@/app/css/theme-provider";
+import { useTheme } from "next-themes";
 
 export default function Header() {
   const [top, setTop] = useState<boolean>(true);
+
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   // detect whether user has scrolled the page down by 10px
   const scrollHandler = () => {
@@ -19,6 +24,18 @@ export default function Header() {
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [top]);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
+  const handleThemeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTheme(event.target.checked ? "dark" : "light");
+  };
+
   return (
     <header className="fixed top-2 z-30 w-full md:top-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -30,9 +47,9 @@ export default function Header() {
 
           {/* Desktop sign in links */}
           <ul className="flex flex-1 items-center justify-end">
-            <div className="toggle-switch">
+            <div className="toggle-switch" >
               <label className="switch-label">
-                <input type="checkbox" className="checkbox" />
+                <input type="checkbox" className="checkbox"/>
                 <span className="slider"></span>
               </label>
             </div>
