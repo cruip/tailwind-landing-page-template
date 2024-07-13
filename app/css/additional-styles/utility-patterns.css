@@ -126,3 +126,21 @@ input[type="search"]::-webkit-search-results-decoration {
   /* Adjust the padding to set the border width */
   border-radius: 50%;
 }
+
+@media (max-width: 768px) {
+  .flex-col {
+    flex-direction: column !important;
+  }
+
+  .w-full {
+    width: 100% !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .mt-3 {
+    margin-top: 1rem !important;
+  }
+}
