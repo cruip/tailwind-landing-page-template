@@ -119,3 +119,10 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
+.gradient-border {
+  background: linear-gradient(to right, #ec4899, #8b5cf6, #6366f1);
+  padding: 3px;
+  /* Adjust the padding to set the border width */
+  border-radius: 50%;
+}

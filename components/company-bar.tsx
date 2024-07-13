@@ -17,6 +17,7 @@ const CompanyBar: React.FC = () => {
     return (
         <section>
     <div className="mx-auto  flex flex-col px-3 items-center">
+      {/* Top bar: Company images and names center, small width can scroll and images size smaller */}
         <div className="container mx-auto">
             <div className="w-full overflow-x-auto md:justify-center">
                 <div className="flex space-x-2 md:space-x-8 py-4 sm:justify-center">
@@ -44,11 +45,12 @@ const CompanyBar: React.FC = () => {
             </div>
         </div>
 
+        {/* Bottom bar: Left side - Image Proj; Right side - Job info if small width, else center fit */}
         {selectedCompanyIndex !== null && (
           <div className="mx-auto flex flex-wrap flex-col w-full justify-center items-center p-2 md:p-4">
             <div className=" flex flex-col md:flex-row justify-center mx-auto items-center px-2 lg:px-4">
-              {/* Left side - Image Proj */}
-              
+
+              {/* Big width: Left side - Image Proj; Phone width: Center fit*/}
                <div className="w-full flex flex-col md:w-1/2 grid px-2 lg:px-4 lg:flex-shrink-0 mx-auto" data-aos="zoom-y-out">
                 <div className="relative rounded-xl mr-auto md:mr-0 md:ml-auto shadow-xl flex bg-slate-800 h-[20rem] sm:max-h-[none] sm:rounded-xl lg:h-[25rem] xl:h-auto xl:max-h-[25rem] dark:bg-primary/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 col-start-6 col-end-10 mt-3 target target-show">
                 <div className="relative w-full flex flex-col z-10">
@@ -100,7 +102,7 @@ const CompanyBar: React.FC = () => {
                 </div>
               </div>
               </div>
-              {/* Right side - Job info */}
+              {/* Big width: Right side - Job info; Phone width: Center fit*/}
               <div className="w-full md:w-1/2 my-auto mx-auto px-2">
                 <div className="flex flex-col py-3">
                   <p className="text-sm text-secondary font-medium text-purple-500">{companies[selectedCompanyIndex].role}</p>
