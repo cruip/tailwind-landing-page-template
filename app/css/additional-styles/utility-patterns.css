@@ -119,3 +119,28 @@ input[type="search"]::-webkit-search-results-decoration {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+
+.gradient-border {
+  background: linear-gradient(to right, #ec4899, #8b5cf6, #6366f1);
+  padding: 3px;
+  /* Adjust the padding to set the border width */
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .flex-col {
+    flex-direction: column !important;
+  }
+
+  .w-full {
+    width: 100% !important;
+  }
+
+  .text-center {
+    text-align: center !important;
+  }
+
+  .mt-3 {
+    margin-top: 1rem !important;
+  }
+}
