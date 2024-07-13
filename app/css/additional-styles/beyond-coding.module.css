@@ -1,9 +1,48 @@
 /* BeyondCoding.module.css */
 .containerr {
-    padding-top: 50px;
+    padding-top: 30px;
     display: flex;
     overflow: hidden;
     height: 100vh;
+    flex-direction: row;
+}
+
+@media (max-width: 1024px) {
+    .containerr {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .staticContent {
+        width: 100%;
+        text-align: center;
+    }
+
+    .timeline {
+        width: 100%;
+        flex: none;
+    }
+
+    .timelineSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timelineTitle {
+        writing-mode: horizontal-tb;
+        text-orientation: initial;
+        margin: 0;
+        padding: 10px 0;
+        border: none;
+        background: none;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: initial;
+    }
+
+    .cardContainerWrapper {
+        justify-content: center;
+    }
 }
 
 .staticContent {
@@ -13,7 +52,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .divider {
@@ -23,16 +62,15 @@
 }
 
 .timeline {
-    flex: 4;
+    flex: 4 2;
     overflow-y: auto;
-    padding: 10px;
+    /* padding: 5px; */
 }
 
 .timelineSection {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .timelineTitle {
@@ -47,15 +85,24 @@
     -webkit-text-fill-color: transparent;
 }
 
+.cardContainerWrapper {
+    display: flex;
+    justify-content: center;
+    /* Center the card container */
+    width: 100%;
+    /* align-items: flex-end; */
+    /* align-items: baseline; */
+}
+
 .cardContainer {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:center;
     gap: 10px;
     transition: transform 0.5s ease;
     align-items: center;
-    padding-left: 10px;
+    /* padding-left: 10px; */
 }
 
 

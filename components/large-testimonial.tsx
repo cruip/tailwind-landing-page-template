@@ -16,8 +16,8 @@ export default function LargeTestimonial() {
   return (
     <section>
       <div className="mx-auto full-w px-4 sm:px-6">
-        <div className={styles.containerr}>
-          <div className={styles.staticContent}>
+        <div className={`flex overflow-hidden h-screen ${styles.containerr}`}>
+          <div className="flex-1 flex flex-col items-start justify-center p-2.5">
             {/* Left static content */}
             <h1>Beyond Coding</h1>
             <p>Static content on the left side.</p>
@@ -26,9 +26,10 @@ export default function LargeTestimonial() {
           <div className={styles.timeline}>
             {/* Right scrollable timeline */}
             {TimelineData.map((section, index) => (
-              <div key={index} className={`grid grid-cols-3 sm:grid-cols-5 ${styles.timelineSection}`}>
+              <div key={index} className={`${styles.timelineSection}`}>
                 <h2 className={`text-xl ${styles.timelineTitle}`}>{section.title}</h2>
-                <div className={`grid grid-cols-3 ${styles.cardContainer}`}>
+                <div className={styles.cardContainerWrapper}>
+                <div className={` ${styles.cardContainer}`}>
                   {section.items.map((item, idx) => {
                     const rotation = calculateRotation(idx);
                     return (
@@ -49,6 +50,7 @@ export default function LargeTestimonial() {
                       </div>
                     );
                   })}
+                </div>
                 </div>
               </div>
             ))}
