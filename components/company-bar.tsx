@@ -16,9 +16,9 @@ const CompanyBar: React.FC = () => {
   };
     return (
         <section>
-    <div className="mx-auto  flex flex-col px-3 items-center">
-      {/* Top bar: Company images and names center, small width can scroll and images size smaller */}
-        <div className="container mx-auto">
+        {/* <div className="mx-auto flex flex-col px-3 items-center"> */}
+        {/* Top bar: Company images and names center, small width can scroll and images size smaller */}
+        <div className="flex items-center flex-col container mx-auto max-w-6xl">
             <div className="w-full overflow-x-auto md:justify-center">
                 <div className="flex space-x-2 md:space-x-8 py-4 sm:justify-center">
                 {companies.map((company, index) => (
@@ -45,24 +45,26 @@ const CompanyBar: React.FC = () => {
             </div>
         </div>
 
-        {/* Bottom bar: Left side - Image Proj; Right side - Job info if small width, else center fit */}
+        {/* Bottom bar: Left side - Image Proj; Right side - Job info if small width: all items center flex col */}
         {selectedCompanyIndex !== null && (
-          <div className="mx-auto flex flex-wrap flex-col w-full justify-center items-center p-2 md:p-4">
-            <div className=" flex flex-col md:flex-row justify-center mx-auto items-center px-2 lg:px-4">
+          // <div className="mx-auto flex flex-wrap flex-col w-full justify-center items-center p-2 md:p-4">
+            <div className="flex flex-col md:flex-row justify-center mx-auto items-center ">
 
               {/* Big width: Left side - Image Proj; Phone width: Center fit*/}
-               <div className="w-full flex flex-col md:w-1/2 grid px-2 lg:px-4 lg:flex-shrink-0 mx-auto" data-aos="zoom-y-out">
-                <div className="relative rounded-xl mr-auto md:mr-0 md:ml-auto shadow-xl flex bg-slate-800 h-[20rem] sm:max-h-[none] sm:rounded-xl lg:h-[25rem] xl:h-auto xl:max-h-[25rem] dark:bg-primary/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 col-start-6 col-end-10 mt-3 target target-show">
-                <div className="relative w-full flex flex-col z-10">
-                  <div className="flex-none border-b border-slate-500/30">
-                    <div className="flex items-center h-8 space-x-1.5 px-3">
+              <div className="flex flex-col sm:w-1/2 px-2 md:px-4 lg:px-6 lg:flex-shrink-2 mx-auto" data-aos="zoom-y-out">
+                <div className="relative flex flex-col rounded-xl shadow-lg bg-slate-800 h-auto sm:rounded-xl dark:bg-primary/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 mt-3">
+                {/* <div className="relative  flex flex-col z-10"> */}
+                  {/* Bar */}
+                  <div className="border-b border-slate-500/30">
+                    <div className="flex flex-row items-center h-8 space-x-1.5 px-3">
                       <div className="w-2.5 h-2.5 bg-red-400 rounded-full"></div>
                       <div className="w-2.5 h-2.5 bg-yellow-400 rounded-full"></div>
                       <div className="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
                     </div>
                   </div>
-                  <div className="relative min-h-0 flex-auto flex flex-col">
-                    <div className="flex-none overflow-auto whitespace-nowrap flex" style={{ opacity: 1 }}>
+                  {/* <div className="relative flex flex-col"> */}
+                  {/* display slides */}
+                    <div className="flex-none overflow-hidden whitespace-nowrap flex" style={{ opacity: 1 }}>
                       <div className="relative flex-none min-w-full px-1">
                         <ul className="flex text-sm leading-6 text-slate-400">
                           {Array.isArray(companies[selectedCompanyIndex].display) &&
@@ -86,21 +88,23 @@ const CompanyBar: React.FC = () => {
                         <div className="absolute bottom-0 inset-x-0 h-px bg-slate-500/30"></div>
                       </div>
                     </div>
-                    <div className="w-full flex-auto flex min-h-0 ">
-                      <div className="w-full relative flex-auto rounded-xl">
+                    
+                    {/* <div className="flex-auto flex min-h-0 "> */}
+                  {/* image */}
+                      <div className="relative rounded-xl">
                         {selectedImageIndices[selectedCompanyIndex] !== undefined &&
                           selectedImageIndices[selectedCompanyIndex] < companies[selectedCompanyIndex].proj_img.length && (
                             <img
                               src={companies[selectedCompanyIndex].proj_img[selectedImageIndices[selectedCompanyIndex]]}
                               alt=""
-                              className="object-scale-down h-auto w-full sm:object-cover object-center"
+                              className="relative object-scale-down sm:object-cover object-center"
                             />
                           )}
                       </div>
-                    </div>
-                  </div>
+                    {/* </div> */}
+                  {/* </div> */}
+                {/* </div> */}
                 </div>
-              </div>
               </div>
               {/* Big width: Right side - Job info; Phone width: Center fit*/}
               <div className="w-full md:w-1/2 my-auto mx-auto px-2">
@@ -110,7 +114,7 @@ const CompanyBar: React.FC = () => {
                   <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-300">
                     <p className="flex-auto">{companies[selectedCompanyIndex].details}</p>
                   </dd>
-                  <div className="flex space-x-2 mt-3">
+                  <div className="flex flex-wrap gap-2 mt-3 ">
                     {Array.isArray(companies[selectedCompanyIndex].method) && companies[selectedCompanyIndex].method.map((method, idx) => (
                       <span key={idx} className="inline-flex bg-purple-400 items-center gap-x-1.5 rounded-md px-2 py-1 text-xs font-medium text-white ring-1 ring-inset ring-gray-800 bg-darkPrimary">
                         {method}
@@ -120,9 +124,9 @@ const CompanyBar: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          // </div>
         )}
-      </div>
+      {/* </div> */}
         </section>
     )
 }
