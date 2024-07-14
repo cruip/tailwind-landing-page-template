@@ -3,6 +3,7 @@ import React from "react";
 import TestimonialImg from "@/public/images/large-testimonial.jpg";
 import styles from "@/app/css/additional-styles/beyond-coding.module.css";
 import { TimelineData } from "@/app/lib/data";
+import Projects from "./projects";
 
 export default function LargeTestimonial() {
   const calculateRotation = (index: number) => {
@@ -95,6 +96,7 @@ export default function LargeTestimonial() {
             </div>
           </div>
         </div>
+        <Projects />
       </div>
     </section>
   );

@@ -104,5 +104,40 @@ export const projects: Project[] = [
     skills: ["Python", "Django", "PostgreSQL"],
     link: "http://example.com/project-two"
   },
+  {
+    title: "Project One",
+    image: "path/to/image1.jpg",
+    description: "A short description of Project One.",
+    skills: ["JavaScript", "TypeScript", "React"],
+    link: "http://example.com/project-one"
+  },
+  {
+    title: "Project Two",
+    image: "path/to/image2.jpg",
+    description: "A short description of Project Two.",
+    skills: ["Python", "Django", "PostgreSQL"],
+    link: "http://example.com/project-two"
+  },
+  {
+    title: "Project Two",
+    image: "path/to/image2.jpg",
+    description: "A short description of Project Two.",
+    skills: ["Python", "Django", "PostgreSQL"],
+    link: "http://example.com/project-two"
+  },
+  {
+    title: "Project One",
+    image: "path/to/image1.jpg",
+    description: "A short description of Project One.",
+    skills: ["JavaScript", "TypeScript", "React"],
+    link: "http://example.com/project-one"
+  },
+  {
+    title: "Project Two",
+    image: "path/to/image2.jpg",
+    description: "A short description of Project Two.",
+    skills: ["Python", "Django", "PostgreSQL"],
+    link: "http://example.com/project-two"
+  },
   // Add more projects as needed
 ];
