@@ -14,3 +14,11 @@ export interface TimelineSection {
   items: string[];
   img: string[];
 }
+
+export interface Project {
+  title: string;
+  image: string;
+  description: string;
+  skills: string[];
+  link: string;
+}

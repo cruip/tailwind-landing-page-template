@@ -1,4 +1,4 @@
-import { Company, TimelineSection } from './definition'
+import { Company, TimelineSection, Project } from './definition'
 
 export const companies: Company[] = [
   {
@@ -87,4 +87,22 @@ export const TimelineData: TimelineSection[] = [
     img: ['hehe', 'hihi', 'hoho']
 
   },
+];
+
+export const projects: Project[] = [
+  {
+    title: "Project One",
+    image: "path/to/image1.jpg",
+    description: "A short description of Project One.",
+    skills: ["JavaScript", "TypeScript", "React"],
+    link: "http://example.com/project-one"
+  },
+  {
+    title: "Project Two",
+    image: "path/to/image2.jpg",
+    description: "A short description of Project Two.",
+    skills: ["Python", "Django", "PostgreSQL"],
+    link: "http://example.com/project-two"
+  },
+  // Add more projects as needed
 ];
