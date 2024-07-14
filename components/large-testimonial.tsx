@@ -15,7 +15,7 @@ export default function LargeTestimonial() {
   };
   return (
     <section>
-      <div className="mx-auto full-w px-4 sm:px-6">
+      <div className="mx-auto full-w px-4 mt-4 sm:px-6">
         <div className={`flex overflow-hidden h-screen ${styles.containerr}`}>
           <div className="flex-1 flex flex-col items-start justify-center p-2.5">
             {/* Left static content */}
