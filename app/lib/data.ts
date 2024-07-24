@@ -9,7 +9,7 @@ export const companies: Company[] = [
     image: '/images/kmcc.png',
     method: ['Python','PyTorch','Hugging Face'],
     display: ['Kedro.py', 'TextClassification.py'],
-    proj_img: ['/kedro-pipeline (1).png','/girl.png']
+    proj_img: ['/images/work/kedro-pipeline (1).png','/images/work/girl.png']
   },
   {
     name: 'Mediacorp',
@@ -19,7 +19,7 @@ export const companies: Company[] = [
     image: '/images/mediacorp.jpeg',
     method: ['NodeJS','Vault','AWS','Docker','ExpressJS','Cognito','REST APIs'],
     display: ['dashboard.hbs', 'vault.ssh','CNA Fast'],
-    proj_img: ['/dashboard.png','/vault.png','/fast.png']
+    proj_img: ['/images/work/dashboard.png','/images/work/vault.png','/images/work/fast.png']
  // Replace with the actual image URL
   },
   {
@@ -40,7 +40,7 @@ export const companies: Company[] = [
     image: '/images/tum.png',
     method: ['Computer Vision','Python','OpenCV','FFmpeg','Excel'],
     display: ['vehicles', 'stat'],
-    proj_img: ['/tum.jpeg','/stats.png']
+    proj_img: ['/images/work/tum.jpeg','/images/work/stats.png']
   },
    {
     name: 'NTU@SG',
@@ -50,7 +50,7 @@ export const companies: Company[] = [
     image: '/images/ntu.jpeg',
     method: ['System Design','Management'],
     display: ['class', 'electrical'],
-    proj_img: ['/comm.png','/girl.png']
+    proj_img: ['/images/work/comm.png','/images/work/girl.png']
   },
   // Add more companies as needed
 ];
