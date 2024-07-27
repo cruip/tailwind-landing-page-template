@@ -51,7 +51,7 @@ const CompanyBar: React.FC = () => {
             <div className="flex flex-col md:flex-row justify-center mx-auto items-center ">
 
               {/* Big width: Left side - Image Proj; Phone width: Center fit*/}
-              <div className="flex flex-col sm:w-1/2 px-2 md:px-4 lg:px-6 lg:flex-shrink-2 mx-auto" data-aos="zoom-y-out">
+              <div className="flex flex-col md:w-1/2 px-2 md:px-4 lg:px-6 lg:flex-shrink-2 mx-auto" data-aos="zoom-y-out">
                 <div className="relative flex flex-col rounded-xl shadow-lg bg-slate-800 h-auto sm:rounded-xl dark:bg-primary/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 mt-3">
                 {/* <div className="relative  flex flex-col z-10"> */}
                   {/* Bar */}
@@ -91,13 +91,13 @@ const CompanyBar: React.FC = () => {
                     
                     {/* <div className="flex-auto flex min-h-0 "> */}
                   {/* image */}
-                      <div className="relative rounded-xl">
+                      <div className=" rounded-xl">
                         {selectedImageIndices[selectedCompanyIndex] !== undefined &&
                           selectedImageIndices[selectedCompanyIndex] < companies[selectedCompanyIndex].proj_img.length && (
                             <img
                               src={companies[selectedCompanyIndex].proj_img[selectedImageIndices[selectedCompanyIndex]]}
                               alt=""
-                              className="relative object-scale-down sm:object-cover object-center"
+                              className="object-center"
                             />
                           )}
                       </div>
