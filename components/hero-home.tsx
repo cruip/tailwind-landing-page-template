@@ -13,7 +13,7 @@ export default function HeroHome() {
       <PageIllustration />
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Hero content */}
-        <div className="pb-12 pt-32 md:pb-20 md:pt-40">
+        <div className="pb-12 pt-32 md:pb-20 md:pt-20">
           {/* Section header */}
           <div className="pb-12 text-center md:pb-16">
             <div
@@ -21,48 +21,13 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
             >
               <div className="-mx-0.5 flex justify-center -space-x-3">
-                <Image
+                <img
                   className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar01}
-                  width={32}
-                  height={32}
-                  alt="Avatar 01"
+                  width={402}
+                  height={102}
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiNAB2oIyYHfISxm3eYmMTDJFLALV8VVkKew7_fKPEo8ASDKzNrJWGDcXU9BnAHzMta2-OkmGJQRo5nErXvqnBADibQYUwgiatJ5Og2r64G6bYjtSGFeGTkIGnI9B-MFyOeT7aVCSYY_TKlPiMxqWJPWV2DOjXG9alM1a3G11dOMbeStqCez-lJ5johLFI/s1600/Green%20Graphic%20New%20Arrivals%20Website%20Homepage%20Banner%20%281%29.png"
                 />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar02}
-                  width={32}
-                  height={32}
-                  alt="Avatar 01"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar03}
-                  width={32}
-                  height={32}
-                  alt="Avatar 02"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar04}
-                  width={32}
-                  height={32}
-                  alt="Avatar 03"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar05}
-                  width={32}
-                  height={32}
-                  alt="Avatar 04"
-                />
-                <Image
-                  className="box-content rounded-full border-2 border-gray-50"
-                  src={Avatar06}
-                  width={32}
-                  height={32}
-                  alt="Avatar 05"
-                />
+                
               </div>
             </div>
             <h1
@@ -70,8 +35,8 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              The website builder you're <br className="max-lg:hidden" />
-              looking for
+              Todos los detalles para <br className="max-lg:hidden" />
+              tu gran dia.
             </h1>
             <div className="mx-auto max-w-3xl">
               <p
@@ -79,8 +44,7 @@ export default function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                Simple is a modern website builder powered by AI that changes
-                how companies create user interfaces together.
+                Invitaciones digitales, diseñadas para comunicar a tus invitados de manera elegante y eficiente.
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
                 <div
@@ -89,21 +53,18 @@ export default function HeroHome() {
                   data-aos-delay={450}
                 >
                   <a
-                    className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+                    className="btn group mb-4 w-full bg-gradient-to-t from-indigo-200 to-indigo-300 bg-[length:100%_100%] bg-[bottom] text-black shadow hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
                     href="#0"
                   >
                     <span className="relative inline-flex items-center">
-                      Start Free Trial{" "}
-                      <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                        -&gt;
-                      </span>
+                      Ver ejemplo
                     </span>
                   </a>
                   <a
                     className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
                     href="#0"
                   >
-                    Learn More
+                    Precios
                   </a>
                 </div>
               </div>
@@ -111,40 +72,110 @@ export default function HeroHome() {
           </div>
           {/* Hero image */}
           <div
-            className="mx-auto max-w-3xl"
+            className="mx-auto max-w-5xl"
             data-aos="zoom-y-out"
             data-aos-delay={600}
           >
-            <div className="relative aspect-video rounded-2xl bg-gray-900 px-5 py-3 shadow-xl before:pointer-events-none before:absolute before:-inset-5 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] after:absolute after:-inset-5 after:-z-10 after:border-x after:[border-image:linear-gradient(to_bottom,transparent,theme(colors.slate.300/.8),transparent)1]">
-              <div className="relative mb-8 flex items-center justify-between before:block before:h-[9px] before:w-[41px] before:bg-[length:16px_9px] before:[background-image:radial-gradient(circle_at_4.5px_4.5px,_theme(colors.gray.600)_4.5px,_transparent_0)] after:w-[41px]">
-                <span className="text-[13px] font-medium text-white">
-                  cruip.com
-                </span>
-              </div>
-              <div className="font-mono text-gray-500 [&_span]:opacity-0">
-                <span className="animate-[code-1_10s_infinite] text-gray-200">
-                  npm login
-                </span>{" "}
-                <span className="animate-[code-2_10s_infinite]">
-                  --registry=https://npm.pkg.github.com
-                </span>
-                <br />
-                <span className="animate-[code-3_10s_infinite]">
-                  --scope=@phanatic
-                </span>{" "}
-                <span className="animate-[code-4_10s_infinite]">
-                  Successfully logged-in.
-                </span>
-                <br />
-                <br />
-                <span className="animate-[code-5_10s_infinite] text-gray-200">
-                  npm publish
-                </span>
-                <br />
-                <span className="animate-[code-6_10s_infinite]">
-                  Package published.
-                </span>
-              </div>
+            <div className="relative aspect-video rounded-xl bg-indigo-200 px-5 py-3 shadow-xl before:pointer-events-none before:absolute before:-inset-5 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] after:absolute after:-inset-5 after:-z-10 after:border-x after:[border-image:linear-gradient(to_bottom,transparent,theme(colors.slate.300/.8),transparent)1]">
+              
+            <h1
+              className="mb-6 py-5 border-y text-4xl font-bold [border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1] md:text-4xl text-center text-black"
+              data-aos="zoom-y-out"
+              data-aos-delay={150}
+            >
+              Más allá del papel.
+            </h1>
+
+            <div className="grid overflow-hidden sm:grid-cols-2 lg:grid-cols-3 [&>*]:relative [&>*]:p-6 [&>*]:before:absolute [&>*]:before:bg-gray-800 [&>*]:before:[block-size:100vh] [&>*]:before:[inline-size:1px] [&>*]:before:[inset-block-start:0] [&>*]:before:[inset-inline-start:-1px] [&>*]:after:absolute [&>*]:after:bg-gray-800 [&>*]:after:[block-size:1px] [&>*]:after:[inline-size:100vw] [&>*]:after:[inset-block-start:-1px] [&>*]:after:[inset-inline-start:0] md:[&>*]:p-10">
+            <article>
+              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
+              <img
+                  className="box-content border-gray-50"
+                  width={60}
+                  height={60}
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgC5ZZHCj5iwJe0Ghbm0TtYMKEfrnRUan2ZA4FBcRq-dwMKfEzK6iVvyVi5L5EDK5Rb9qq-WDEugi9QrUt5rrFO0c82Tsl8pd6n3C2ykHphVsnlzsrZGPy9yW7MPQ20mUKBK3l6cLjB7zRejq_5bVr-IAXK0k8FTc5afFwAdOn02LY1QPNcJNESjdy3DgE/s1600/1%20%281%29.png"
+                />   
+                            
+                <p className="text-black text-2xl">Ahorra y disfruta más</p>
+              </h3>
+              <p className="text-[15px] text-black">
+              Una sola invitación, infinitas posibilidades.
+              </p>
+            </article>
+            <article>
+              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
+              <img
+                  className="box-content border-gray-50"
+                  width={60}
+                  height={60}
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9Mqz-QahOpcObNdjO8yq6NRzOXkrZqQxRidQxhiyIRVuRbltiE5XPZN5dcrD0fsGwFjQ16djQKIPEzsNpqi7dcDdLruBLo2161lwQzpIXKzqvANxK1yK8u5BiNIjecKU5dQUxOOBThcNSvTDCqMS-OzrMlATcmUHoGAKWn0LwkWDCl-S8ACsqcAz0OEs/s1600/1%20%282%29.png"
+                />   
+                
+                <p className="text-black text-2xl">Obra de arte</p>
+              </h3>
+              <p className="text-[15px] text-black">
+              Nos apasiona crear diseños impecables, únicos y a medida para cada cliente.
+              </p>
+            </article>
+            <article>
+              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
+              <img
+                  className="box-content border-gray-50"
+                  width={70}
+                  height={70}
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiuwPD1LRp7VV8xpp9TmgAnPpvBbT8eynm8yTqvoWxEQvhc5svzyBdRFHgVRI3D7sLDDCKAaBeOGQjy_VSWHukmhXQnSedQ90Iw7gGf2GMTdNQKVIUh_c2F5N6gTp9ojXjl9zyOIbR1LQ47mDl-S1Ftpn9SUmT9x4tN4gMWCSt9tl3LWqWozdbAuLxrLCs/s1600/1%20%283%29.png"
+                />   
+                <p className="text-black text-2xl">Entrega exprés</p>
+              </h3>
+              <p className="text-[15px] text-black">
+              Tu invitación, lista en 72 horas como máximo.
+                </p>
+            </article>
+            <article>
+              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
+              <img
+                  className="box-content border-gray-50"
+                  width={60}
+                  height={60}
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_nJXazAWCa2ZPIEveaxClatGZW6ZvzzprHCWsEsJr-7dFs22G6FAj_WOm_6oy-Tyoy-fsOO31T0BZpTdXb8q4_ZY5UieoCKawMRNfmHbqKXhyphenhypheneoqa0R9vjV02i5eOwxVMPmQ6qwsf1fRYmQyoEm7QCobraQM0tYgOXUEGQONMfkbnZhSaFk6agbpXTs0/s1600/1%20%284%29.png"
+                />   
+                <p className="text-black text-2xl">Altamente funcionales</p>
+              </h3>
+              <p className="text-[15px] text-black">
+              Incluye GPS, confirmación de asistencia y muchas herramientas más.
+                </p>
+            </article>
+            <article>
+            <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
+              <img
+                  className="box-content border-gray-50"
+                  width={60}
+                  height={60}
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhHY9kB3UNN96dKk7ZgTburum1hSypBj-d_lEhK5I58EUj3atflovZoGo3CEkk9BvwibKI6_XH_rBexdn_zAHFFOOabQ4V4PScfWCxDrBU6jTfsWZKEcd7t5Mm3Aw3u_fcOJJtqJiJcn0hmJXBKGb2nmo7x3GeTGk8u33bmcn__AKElBcH8D7Rnur0Ltqc/s1600/1%20%285%29.png"
+                />   
+                <p className="text-black text-2xl">En todo evento</p>
+              </h3>
+              <p className="text-[15px] text-black">
+              Desde un bautizo, XV, Fiestas Improvisadas, Bodas; Tenemos el diseño perfecto.
+                </p>
+            </article>
+            <article>
+              <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
+              <img
+                  className="box-content border-gray-50"
+                  width={60}
+                  height={60}
+                  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhKSQAV7Ei7lkLE00RtIJqSWIaUXtACSVruYcVmlrcCd3YJJzle6zMyILaunhyphenhyphen3zECFeFkfmC3BOWb9Yge0bJaadKE0AkNcY6UGcnRMCWzXNx2lFfoM-gYwNb-_b9qX2GFLGL1oSTbgt-SYGRNThgl-0CBIItEHPzA7WGLZjjegHgTJONDbZFs9a6mOpvY/s1600/1%20%287%29.png"
+                />   
+                <p className="text-black text-2xl">MiFiesta.com*</p>
+              </h3>
+              <p className="text-[15px] text-black">
+              Para tu ocasión especial con el nombre que siempre soñaste. 
+                </p>
+            </article>
+          </div>
+           
+              
             </div>
           </div>
         </div>
