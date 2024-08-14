@@ -78,13 +78,13 @@ export const TimelineData: TimelineSection[] = [
     title: 'C O N T I N U E  S T U D Y  .',
     items: [
       'AWS Cloud',
-      'Google Business Intelligence',
+      'Business Intelligence',
       'Database Specialization',
       'Machine Learning',
       'Web Development',
-      'UI/UX Design'
+      'Entrepreneurship'
     ],
-    img: ['/images/cca/', '/images/cca/', '/images/cca/']
+    img: ['/images/cert/aws.png', '/images/cert/biz.png', '/images/cert/db.png','/images/cert/ML.jpg','/images/cert/web.png','/images/cert/entr.png']
 
   },
 ];
