@@ -135,7 +135,10 @@
     backdrop-filter: blur(10px);
     margin: 0 -75px;
     transform: rotate(calc(var(--r) * 1deg));
+    color:black;
 }
+
+
 
 .glassContent {
     display: flex;
@@ -161,6 +164,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #ec4899;
     transition: transform 0.5s ease;
 }

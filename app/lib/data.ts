@@ -60,18 +60,18 @@ export const TimelineData: TimelineSection[] = [
   {
     title: '.    T R A I N I N G  .',
     items: ['Computer Vision', 'Design Database', 'AWS Collaboration'],
-    img: ['hehe', 'hihi', 'hoho']
+    img: ['/images/cca/cv.jpg', '/images/cca/db.jpg', '/images/cca/aws.jpg']
   },
   {
     title: '.    C O M M U N I T Y  .',
     items: ['MLDA Maincommitee', 'GL FOC-VNNTU', 'Chief Prog Enitio Camp'],
-    img: ['hehe', 'hihi', 'hoho']
+    img: ['/images/cca/maincom.jpg', '/images/cca/GL.jpg', '/images/cca/progs.jpg']
 
   },
   {
     title: '.  C R E A T I V E .',
     items: ['Vlog', 'TikTok', 'Blog'],
-    img: ['hehe', 'hihi', 'hoho']
+    img: ['/images/cca/vlog.png', '/images/cca/tiktok.jpg', '/images/cca/blog.png']
 
   },
   {
@@ -84,7 +84,7 @@ export const TimelineData: TimelineSection[] = [
       'Web Development',
       'UI/UX Design'
     ],
-    img: ['hehe', 'hihi', 'hoho']
+    img: ['/images/cca/', '/images/cca/', '/images/cca/']
 
   },
 ];

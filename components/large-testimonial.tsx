@@ -45,8 +45,16 @@ export default function LargeTestimonial() {
                         }
                         data-text={item}
                       >
+                        
                         <div className={styles.glassContent}>
-                          <p>{item}</p>
+                          {/* <p>{item}</p> */}
+                          <Image
+                              src={section.img[idx]} 
+                              width={200} // Fixed width
+                              height={150} 
+                              alt=""
+                              className="object-center"
+                            />
                         </div>
                       </div>
                     );
