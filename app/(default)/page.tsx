@@ -17,7 +17,7 @@ export default function Home() {
       <FeaturesPlanet />
       <BusinessCategories />
       <LargeTestimonial />
-      <Cta />
+      {/* <Cta /> */}
     </>
   );
 }

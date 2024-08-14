@@ -91,53 +91,88 @@ export const TimelineData: TimelineSection[] = [
 
 export const projects: Project[] = [
   {
-    title: "Project One",
-    image: "path/to/image1.jpg",
-    description: "A short description of Project One.",
-    skills: ["JavaScript", "TypeScript", "React"],
-    link: "http://example.com/project-one"
+    title: "Leveraging Language Models for Enhanced Company Performance Prediction",
+    image: "images/proj/llm.jpeg",
+    description: "By leveraging advanced natural language processing capabilities, this system aims to empower decision-makers with timely and relevant information, enabling them to make informed choices and anticipate market trends more effectively.",
+    skills: ["LLM", "Research"],
+    link: "https://wis.ntu.edu.sg/webexe/owa/FYP_EEE_STUDENT.show_project?p_proj_id=111270"
   },
   {
-    title: "Project Two",
-    image: "path/to/image2.jpg",
-    description: "A short description of Project Two.",
-    skills: ["Python", "Django", "PostgreSQL"],
-    link: "http://example.com/project-two"
+    title: "Data Analysis - Transformative Role of Electric Vehicles (EVs)",
+    image: "images/proj/ev.png",
+    description: "Data Analysis on Determinants for Successful Conversion. Potential impact of this EV conversion on addressing the climate crisis. It offers insights into both short-term and long-term outcomes of implementing EVs on a large scale.",
+    skills: ["Data Analysis", "SQL", "NoSQL","MongoDB"],
+    link: "https://drive.google.com/file/d/1XGVU7Csn3KWEPm0HDL0PVy0y_CWf8ZnL/view?usp=sharing"
   },
   {
-    title: "Project One",
-    image: "path/to/image1.jpg",
-    description: "A short description of Project One.",
-    skills: ["JavaScript", "TypeScript", "React"],
-    link: "http://example.com/project-one"
+    title: "Metadata Enrichment",
+    image: "images/proj/metadata.png",
+    description: "Using Docker and ECR of AWS to Deploy Object Detection Model to enhance Metadata of Video.",
+    skills: ["Python", "Docker", "CV2", "Torch", "ECR", "Object Detection"],
+    link: "https://github.com/tangminhanh/metadata_enrichment/tree/main/docker"
   },
   {
-    title: "Project Two",
-    image: "path/to/image2.jpg",
-    description: "A short description of Project Two.",
-    skills: ["Python", "Django", "PostgreSQL"],
-    link: "http://example.com/project-two"
+    title: "Game Development on Unity",
+    image: "images/proj/game.png",
+    description: "Develop an interesting game.",
+    skills: ["C#", "Unity", "Interface Design"],
+    link: "https://github.com/tangminhanh/minesweeper-unity"
   },
   {
-    title: "Project Two",
-    image: "path/to/image2.jpg",
-    description: "A short description of Project Two.",
-    skills: ["Python", "Django", "PostgreSQL"],
-    link: "http://example.com/project-two"
+    title: "My Portfolio",
+    image: "images/proj/tma.png",
+    description: "Built and deploy web with next.js and vercel",
+    skills: ["NextJS", "PostgreSQL"],
+    link: "https://github.com/tangminhanh/tailwind-landing-page-template"
   },
   {
-    title: "Project One",
-    image: "path/to/image1.jpg",
-    description: "A short description of Project One.",
-    skills: ["JavaScript", "TypeScript", "React"],
-    link: "http://example.com/project-one"
+    title: "Livestream Website",
+    image: "images/proj/live.png",
+    description: "A Livestream Website using HLS with OBS camera",
+    skills: ["NodeJS", "Express", "OBS","fs"],
+    link: "https://github.com/tangminhanh/livestreamtest/tree/main/template"
   },
   {
-    title: "Project Two",
-    image: "path/to/image2.jpg",
-    description: "A short description of Project Two.",
-    skills: ["Python", "Django", "PostgreSQL"],
-    link: "http://example.com/project-two"
+    title: "Fake Job Detection",
+    image: "images/proj/fakejob.png",
+    description: "Fine-tune a bert model for Multi-label text-classification",
+    skills: ["Data Science", "Machine Learning", "Streamlit"],
+    link: "https://github.com/tangminhanh/Fake-job-detection"
+  },
+  {
+    title: "Text Classification Fine-tune Bert Model",
+    image: "images/proj/ana.png",
+    description: "Fine-tune a bert model for Multi-label text-classification",
+    skills: ["Python", "Transformers", "Hugging Face"],
+    link: "https://github.com/tangminhanh/text-classification"
+  },
+  {
+    title: "OpenAI API",
+    image: "images/proj/openai.jpeg",
+    description: "Try out OpenAPI Project",
+    skills: ["OpenAI", "JavaScript"],
+    link: "https://github.com/tangminhanh/open_ai"
+  },
+  {
+    title: "Auto-Adaptive Traffic Light System ",
+    image: "images/proj/traffic.png",
+    description: "we refered to this paper 'Zero-VIRUS: Zero-shot VehIcle Route Understanding System for Intelligent Transportation', and used transfer learning to re-trained the model with our custom dataset.",
+    skills: ["Python", "C++", "transfer learning", "SUMO simulation"],
+    link: "https://github.com/tangminhanh/TrafficLightSystemRL-DLW2022-VAlly"
+  },
+  {
+    title: "Job Searching Platform",
+    image: "images/proj/1235.png",
+    description: "Integrated Web 3 techniques from Affinidi Pte. Ltd. to leverage Blockchain technology, ensuring data security and transparency in job postings and user interactions.",
+    skills: ["React", "TailwindCSS", "API", "Vite", "MySQL"],
+    link: "https://github.com/tangminhanh/poc_hackathon"
+  },
+  {
+    title: "RE-Station",
+    image: "images/proj/re.png",
+    description: "Integrated Web 3 techniques from Affinidi Pte. Ltd. to leverage Blockchain technology, ensuring data security and transparency in job postings and user interactions.",
+    skills: ["Android", "Dart", "Flutter", "ios-simulator"],
+    link: "https://github.com/tangminhanh/RE-Station"
   },
   // Add more projects as needed
 ];
