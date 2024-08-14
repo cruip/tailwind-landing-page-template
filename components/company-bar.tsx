@@ -110,8 +110,8 @@ const CompanyBar: React.FC = () => {
               <div className="w-full md:w-1/2 my-auto mx-auto px-2">
                 <div className="flex flex-col py-3">
                   <p className="text-sm text-secondary font-medium text-purple-500">{companies[selectedCompanyIndex].role}</p>
-                  <dt className="text-2xl font-semibold leading-7 text-gray-100 mt-2">{companies[selectedCompanyIndex].proj_name}</dt>
-                  <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                  <dt className="text-2xl font-semibold leading-7 text-gray-700 mt-2">{companies[selectedCompanyIndex].proj_name}</dt>
+                  <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-500">
                     <p className="flex-auto">{companies[selectedCompanyIndex].details}</p>
                   </dd>
                   <div className="flex flex-wrap gap-2 mt-3 ">

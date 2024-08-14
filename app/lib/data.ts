@@ -7,9 +7,9 @@ export const companies: Company[] = [
     proj_name: 'AI for Auto-Ticket Categorization',
     details: 'A comprehensive customer support solution with features such as dynamic fields and blocks, customizable workflows, SLA management, ticket templates, scheduled tickets, email templates, and email-to-ticket functionality.',
     image: '/images/kmcc.png',
-    method: ['Python','PyTorch','Hugging Face'],
-    display: ['Kedro.py', 'TextClassification.py'],
-    proj_img: ['/images/work/kedro-pipeline (1).png','/images/work/girl.png']
+    method: ['Python','PyTorch','Hugging Face','Fine-Tune','Data Pipeline','NextJS','LangChain'],
+    display: ['Kedro.py', 'TextClassification.py','Chat Bot'],
+    proj_img: ['/images/work/kedro-pipeline (1).png','/images/work/test.png','/images/work/girl.jpg']
   },
   {
     name: 'Mediacorp',
@@ -19,7 +19,7 @@ export const companies: Company[] = [
     image: '/images/mediacorp.jpeg',
     method: ['NodeJS','Vault','AWS','Docker','ExpressJS','Cognito','REST APIs'],
     display: ['dashboard.hbs', 'vault.ssh','CNA Fast'],
-    proj_img: ['/images/work/dashboard.png','/images/work/vault.png','/images/work/fast.png']
+    proj_img: ['/images/work/dashboard.png','/images/work/vault.png','/images/work/cna.png']
  // Replace with the actual image URL
   },
   {
@@ -29,7 +29,7 @@ export const companies: Company[] = [
     details: 'Developed the backend of generalised monitoring software for machine learning models classifying wire bond integrity in semiconductor chips. Collaborated with a multidisciplinary team of data scientists and engineers to design testing solution architecture.',
     image: '/images/st.jpeg',
     method: ['FastAPI','Spicy.stats','Tensorflow','Scikit-Learn','numpy','Dataiku'],
-    display: ['mlops', 'data_quality','alert'],
+    display: ['mlops', 'data_quality'],
     proj_img: ['/images/mlops.jpg','/images/datamlops.jpg']
   },
   {
@@ -40,17 +40,17 @@ export const companies: Company[] = [
     image: '/images/tum.png',
     method: ['Computer Vision','Python','OpenCV','FFmpeg','Excel'],
     display: ['vehicles', 'stat'],
-    proj_img: ['/images/work/tum.jpeg','/images/work/stats.png']
+    proj_img: ['/images/work/ve.png','/images/work/ana.png']
   },
    {
     name: 'NTU@SG',
-    role: 'Tutor & Teaching Assistant',
-    proj_name: '',
-    details: 'Managed three classes: Design – System Thinking, Venture Capital Practice, and Technology Commercialization. Assist tutors prepare slides, check class attendance, and review students’ assignment. Acquired knowledge in Business, Problem Solving, and AI Technology',
+    role: 'Student Research Assistant',
+    proj_name: 'Conversational AI system',
+    details: 'Implemented and tested the affordances of generative AI (via fine-tuning and/or prompt-tuning) to propose new pedagogical features in this system. Current use cases in math and data science education for secondary and tertiary education',
     image: '/images/ntu.jpeg',
-    method: ['System Design','Management'],
-    display: ['class', 'electrical'],
-    proj_img: ['/images/work/comm.png','/images/work/girl.png']
+    method: ['Fine-tuning','Prompt-tuning','Problem-Solving','Generative AI','Research'],
+    display: ['Generative AI'],
+    proj_img: ['/images/work/edu.jpg']
   },
   // Add more companies as needed
 ];
