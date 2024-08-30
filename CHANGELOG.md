@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [3.0.2] - 2024-08-23
+
+- Remove unneeded scroll handler
+
 ## [3.0.1] - 2024-06-20
 
 - Minor styling changes + Prettify code
