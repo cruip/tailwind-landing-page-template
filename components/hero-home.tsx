@@ -70,7 +70,7 @@ export default function HeroHome() {
               data-aos="zoom-y-out"
               data-aos-delay={150}
             >
-              Learning by Creating Build Your Own  Product in 3 Weeks <br className="max-lg:hidden" />
+              Learning by Creating <br className="max-lg:hidden" />
               Build Your Own  Product in 3 Weeks
             </h1>
             <div className="mx-auto max-w-3xl">
@@ -79,8 +79,7 @@ export default function HeroHome() {
                 data-aos="zoom-y-out"
                 data-aos-delay={300}
               >
-                Simple is a modern website builder powered by AI that changes
-                how companies create user interfaces together.
+                Product Squad: A Practical Path to Your New Tech Career
               </p>
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.300/.8),transparent)1]">
                 <div
@@ -93,18 +92,11 @@ export default function HeroHome() {
                     href="#0"
                   >
                     <span className="relative inline-flex items-center">
-                      Start Free Trial{" "}
-                      <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                        -&gt;
-                      </span>
+                      Join Waitlist{" "}
+                      
                     </span>
                   </a>
-                  <a
-                    className="btn w-full bg-white text-gray-800 shadow hover:bg-gray-50 sm:ml-4 sm:w-auto"
-                    href="#0"
-                  >
-                    Learn More
-                  </a>
+                 
                 </div>
               </div>
             </div>
