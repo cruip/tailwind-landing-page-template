@@ -3,7 +3,7 @@
 ![Simple TailwindCSS template preview](https://github.com/cruip/tailwind-landing-page-template/assets/2683512/f9a98fab-a1bc-4fb5-8572-4de0b6bd932a)
 
 **Simple Light** is a free landing page template built on top of **TailwindCSS** and fully coded in **React** / **Next.js**. Simple light is designed to provide all the basic components a developer need to create a landing page for SaaS products, online services, and more.
-Use it for whatever you want, and be sure to reach us out on Twitter if you build anything cool/useful with it.
+Use it for whatever you want, and be sure to reach us out on X if you build anything cool/useful with it.
 Created and maintained with ❤️ by [Cruip.com](https://cruip.com/).
 
 _Version 1.3.3 built with Tailwind CSS and React + Vite is available [here](https://github.com/cruip/tailwind-landing-page-template/releases/tag/1.3.3)._
@@ -84,5 +84,5 @@ We're an Italian developer/designer duo creating high-quality design/code resour
 
 ## Stay in the loop
 
-If you would like to know when we release new resources, you can follow [@pacovitiello](https://x.com/pacovitiello) and [@DavidePacilio](https://x.com/DavidePacilio) on Twitter, or you can subscribe to our [newsletter](https://cruip.com/newsletter/).
+If you would like to know when we release new resources, you can follow [@pacovitiello](https://x.com/pacovitiello) and [@DavidePacilio](https://x.com/DavidePacilio) on X, or you can subscribe to our [newsletter](https://cruip.com/newsletter/).
 
