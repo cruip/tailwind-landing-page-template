@@ -5,30 +5,37 @@ export default function Footer({ border = false }: { border?: boolean }) {
   return (
     <footer>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Top area: Blocks */}
+        {/* Khu vực trên: Các khối */}
         <div
           className={`grid gap-10 py-8 sm:grid-cols-12 md:py-12 ${border ? "border-t [border-image:linear-gradient(to_right,transparent,theme(colors.slate.200),transparent)1]" : ""}`}
         >
-          {/* 1st block */}
+          {/* Khối thứ nhất */}
           <div className="space-y-2 sm:col-span-12 lg:col-span-4">
             <div>
               <Logo />
             </div>
             <div className="text-sm text-gray-600">
-              &copy; Cruip.com - All rights reserved.
+              &copy; DongA Corp - All right reserved.
             </div>
+            <div className="text-sm text-gray-600">
+              156 Đ. Nam Kỳ Khởi Nghĩa, Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt Nam
+            </div>
+            <div className="text-sm text-gray-600">
+              <a href="mailto:contact@dongacorp.com.vn">contact@dongacorp.com.vn</a>
+            </div>
+            <div className="text-sm text-gray-600">MST: 0314304520</div>
           </div>
 
-          {/* 2nd block */}
+          {/* Khối thứ hai */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Product</h3>
+            <h3 className="text-sm font-medium">Sản phẩm</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Features
+                  Tính năng
                 </Link>
               </li>
               <li>
@@ -36,7 +43,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Integrations
+                  Tích hợp
                 </Link>
               </li>
               <li>
@@ -44,7 +51,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Pricing & Plans
+                  Giá cả & Kế hoạch
                 </Link>
               </li>
               <li>
@@ -52,7 +59,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Changelog
+                  Nhật ký thay đổi
                 </Link>
               </li>
               <li>
@@ -60,22 +67,22 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Our method
+                  Phương pháp của chúng tôi
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 3rd block */}
+          {/* Khối thứ ba */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Company</h3>
+            <h3 className="text-sm font-medium">Công ty</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  About us
+                  Về chúng tôi
                 </Link>
               </li>
               <li>
@@ -83,7 +90,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Diversity & Inclusion
+                  Đa dạng & Hòa nhập
                 </Link>
               </li>
               <li>
@@ -99,7 +106,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Careers
+                  Nghề nghiệp
                 </Link>
               </li>
               <li>
@@ -107,22 +114,22 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Financial statements
+                  Báo cáo tài chính
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 4th block */}
+          {/* Khối thứ tư */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Resources</h3>
+            <h3 className="text-sm font-medium">Tài nguyên</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Community
+                  Cộng đồng
                 </Link>
               </li>
               <li>
@@ -130,7 +137,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Terms of service
+                  Điều khoản dịch vụ
                 </Link>
               </li>
               <li>
@@ -138,15 +145,15 @@ export default function Footer({ border = false }: { border?: boolean }) {
                   className="text-gray-600 transition hover:text-gray-900"
                   href="#0"
                 >
-                  Report a vulnerability
+                  Báo cáo lỗ hổng
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* 5th block */}
+          {/* Khối thứ năm */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Social</h3>
+            <h3 className="text-sm font-medium">Mạng xã hội</h3>
             <ul className="flex gap-1">
               <li>
                 <Link
@@ -198,10 +205,10 @@ export default function Footer({ border = false }: { border?: boolean }) {
         </div>
       </div>
 
-      {/* Big text */}
+      {/* Văn bản lớn */}
       <div className="relative -mt-16 h-60 w-full" aria-hidden="true">
-        <div className="pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 text-center text-[348px] font-bold leading-none before:bg-gradient-to-b before:from-gray-200 before:to-gray-100/30 before:to-80% before:bg-clip-text before:text-transparent before:content-['Simple'] after:absolute after:inset-0 after:bg-gray-300/70 after:bg-clip-text after:text-transparent after:mix-blend-darken after:content-['Simple'] after:[text-shadow:0_1px_0_white]"></div>
-        {/* Glow */}
+        <div className="pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 text-center text-[348px] font-bold leading-none before:bg-gradient-to-b before:from-gray-200 before:to-gray-100/30 before:to-80% before:bg-clip-text before:text-transparent before:content-['Đơn giản'] after:absolute after:inset-0 after:bg-gray-300/70 after:bg-clip-text after:text-transparent after:mix-blend-darken after:content-['Đơn giản'] after:[text-shadow:0_1px_0_white]"></div>
+        {/* Phát sáng */}
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-2/3"
           aria-hidden="true"
