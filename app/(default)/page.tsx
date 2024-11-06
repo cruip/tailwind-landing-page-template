@@ -1,6 +1,6 @@
 export const metadata = {
   title: "DongA Corp",
-  description: "Sự hài lòng của khách hàng là ưu tiên hàng đầu của chúng tôi description",
+  description: "Sự hài lòng của khách hàng là ưu tiên hàng đầu của chúng tôi",
 };
 
 import Hero from "@/components/hero-home";
