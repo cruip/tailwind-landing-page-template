@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+## [3.1.0] - 2024-12-08
+
+- Update dependencies + Upgrade to Next.js 15
+
 ## [3.0.2] - 2024-08-23
 
 - Remove unneeded scroll handler
