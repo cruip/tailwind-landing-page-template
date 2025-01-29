@@ -1,0 +1,79 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './animations.css';
+
+/* Additional custom styles */
+.btn {
+  @apply relative rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 ease-in-out;
+}
+
+/* Custom utility classes */
+.bg-gradient-hover {
+  @apply bg-gradient-to-r from-blue-600 to-blue-400 bg-[length:200%_100%] bg-[0%] transition-all duration-300 hover:bg-[100%];
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent;
+}
+
+.shimmer {
+  @apply relative overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+}
+
+.hover-glow {
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-scale {
+  animation: scale-pulse 2s ease-in-out infinite;
+}
+
+.animate-wave {
+  animation: wave 2s ease-in-out infinite;
+}
+
+.typing-cursor::after {
+  content: '|';
+  animation: typing-cursor 1s step-end infinite;
+}
+
+.slide-up {
+  animation: slide-up-fade 0.5s ease-out forwards;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply relative transition-all duration-300;
+}
+
+.card-hover::after {
+  @apply absolute inset-0 rounded-lg border-2 border-transparent opacity-0 transition-all duration-300 content-[''];
+}
+
+.card-hover:hover::after {
+  @apply border-blue-500/50 opacity-100;
+}
+
+/* Gradient border animation */
+.gradient-border {
+  @apply relative rounded-lg p-[1px] before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-600 before:to-blue-400 before:content-[''];
+}
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-md bg-white/10;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+} 

@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <BusinessCategories />
-      <FeaturesPlanet />
-      <LargeTestimonial />
+      {/* <BusinessCategories /> */}
+      {/* <FeaturesPlanet /> */}
+      {/* <LargeTestimonial /> */}
       <Cta />
     </>
   );
