@@ -44,6 +44,17 @@
   --text-7xl--line-height: 1;
   --text-7xl--letter-spacing: -0.037em;
 
+  --animate-code-1: code-1;
+  --animate-code-2: code-2;
+  --animate-code-3: code-3;
+  --animate-code-4: code-4;
+  --animate-code-5: code-5;
+  --animate-code-6: code-6;
+  --animate-breath: breath;
+  --animate-float: float;
+  --animate-line: line;
+  --animate-infinite-scroll: infinite-scroll;  
+
   @keyframes code-1 {
     0% {
       opacity: 0;
