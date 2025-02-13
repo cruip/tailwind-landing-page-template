@@ -17,7 +17,7 @@ export default function Banner() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Download<span className="hidden sm:inline"> on GitHub</span>
+                Download<span className="hidden sm:inline"> on GitHub LET'S GOOO!!!</span>
               </a>{" "}
               <span className="px-1.5 italic">or</span>{" "}
               <a
