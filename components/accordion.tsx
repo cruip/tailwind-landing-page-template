@@ -21,6 +21,7 @@ export default function Accordion({
     <div className="relative rounded-lg bg-white/70 shadow-sm shadow-black/[0.03] before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(var(--color-gray-100),var(--color-gray-200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
       <h2>
         <button
+          type="button"
           className="flex w-full items-center justify-between px-4 py-3 text-left font-semibold"
           onClick={(e) => {
             e.preventDefault();

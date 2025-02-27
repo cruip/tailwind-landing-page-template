@@ -15,7 +15,7 @@ export default function Banner() {
                 className="font-medium text-slate-50 hover:underline"
                 href="https://github.com/cruip/tailwind-landing-page-template"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Download<span className="hidden sm:inline"> on GitHub</span>
               </a>{" "}

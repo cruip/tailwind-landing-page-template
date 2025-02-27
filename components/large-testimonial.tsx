@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import TestimonialImg from "@/public/images/large-testimonial.jpg";
-
+import UserImg from "./user-img";
 export default function LargeTestimonial() {
   return (
     <section>
@@ -42,6 +44,7 @@ export default function LargeTestimonial() {
                 CTO at Microsoft
               </a>
             </div>
+            <UserImg />  
           </div>
         </div>
       </div>

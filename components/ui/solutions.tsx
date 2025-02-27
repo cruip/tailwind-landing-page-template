@@ -1,0 +1,38 @@
+"use client";
+
+
+export function Solutions() {
+    return (
+<section className="relative before:absolute before:inset-0 before:-z-20 before:bg-gray-900">
+  <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      {/* Solutions*/}
+      <div className="h-10 px-4 bg-white/90 rounded-[40px] justify-center items-center gap-2 inline-flex overflow-hidden">
+        <div data-svg-wrapper>
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_830_376)">
+              <path d="M32.2 24.4378L27.6089 32.3042H21.6594V30.354H25.3875H25.6765L25.8208 30.1036L26.9567 28.1315L27.3885 27.382H26.5234H21.6594V21.4718H25.8766H26.1693L26.3126 21.2166L27.8258 18.5216H31.9506H32.8156L32.3838 17.7721L31.2479 15.8L31.1037 15.5496H30.8147H26.3815H26.0888L25.9455 15.8048L24.4322 18.4998H21.6594V15.5556H25.0405H25.9115L25.4722 14.8035L24.3205 12.8314L24.1758 12.5836H23.8888H21.6594V5.69531H27.609L30.48 10.6115H29.1339L27.6053 7.91474L27.4616 7.6613H27.1703H24.1096H23.6096V8.1613V10.1491V10.6491H24.1096H25.6965L27.2249 13.3311L27.3688 13.5836H27.6594H32.2151L35.3639 19.0001L33.9343 21.4658H28.6533H28.3682L28.223 21.7111L27.2008 23.4378H24.1096H23.6096V23.9378V25.9099V26.4099H24.1096H28.6217H28.9087L29.0535 26.162L30.0604 24.4378H32.2Z" fill="#4285F4" stroke="#3377E7"/>
+              <path d="M12.0955 7.92622L10.5686 10.6199H9.22516L12.0925 5.70996H18.0507V12.5898H15.8085H15.5215L15.3767 12.8377L14.2263 14.8076L13.787 15.5598H14.658H18.0507V18.4997H15.2659L13.7544 15.8078L13.6111 15.5526H13.3185H8.88997H8.60096L8.45671 15.8031L7.32201 17.773L6.89026 18.5226H7.75527H11.8753L13.3868 21.2145L13.5301 21.4697H13.8228H18.0507V27.3724H13.1766H12.3116L12.7433 28.122L13.878 30.0919L14.0223 30.3424H14.3113H18.0507V32.2894H12.0926L7.50708 24.4325H9.64309L10.6488 26.1546L10.7936 26.4025H11.0806H15.5878H16.0878V25.9025V23.9325V23.4325H15.5878H12.5003L11.4793 21.7078L11.3341 21.4625H11.0491H5.77394L4.34622 19L7.49136 13.5898H12.0419H12.3325L12.4763 13.3374L14.003 10.6585H15.5878H16.0878V10.1585V8.17279V7.67279H15.5878H12.5305H12.2391L12.0955 7.92622Z" fill="#669DF6" stroke="#3377E7"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_830_376">
+                <rect width="40" height="40" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+
+        <div className="h-6 justify-center items-center inline-flex">
+          <div className="text-[#0b1325] text-2xl font-medium font-['SF_Pro_Display'] leading-normal">
+            Solutions
+          </div>
+        </div>
+      </div>
+    <div className="h-10 px-4 mt-8 text-white">
+    Okay
+    </div>
+
+  </div>
+</section>
+
+    )
+}
