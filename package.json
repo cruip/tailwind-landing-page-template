@@ -14,7 +14,7 @@
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "aos": "3.0.0-beta.6",
-    "next": "15.1.6",
+    "next": "^15.1.9",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "19.0.0",
     "react-dom": "19.0.0",
@@ -28,7 +28,8 @@
     "tailwindcss": "^4.0.3"
   },
   "overrides": {
-    "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.1"
-  }
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3"
+  },
+  "packageManager": "pnpm@10.15.1+sha512.34e538c329b5553014ca8e8f4535997f96180a1d0f614339357449935350d924e22f8614682191264ec33d1462ac21561aff97f6bb18065351c162c7e8f6de67"
 }
