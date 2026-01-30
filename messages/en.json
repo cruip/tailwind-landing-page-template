@@ -9,5 +9,62 @@
   },
   "header": {
     "getApp": "Get App"
+  },
+  "home": {
+    "hero": {
+      "headline1": "Blend with purpose",
+      "headline2": "Fuel your lifestyle",
+      "description": "A fun and fast way to stay fit with smoothie whey",
+      "bannerText": "The functional nutrition revolution",
+      "cta": "BLEND NOW",
+      "feature1": "Professional Nutrition",
+      "feature2": "Customized Plans",
+      "feature3": "Expert Guidance"
+    },
+    "goalBased": {
+      "title": "Goal-based Nutrition",
+      "description": "Personalized nutrition plans designed to help you achieve your fitness and wellness goals",
+      "cta": "Explore Programs",
+      "goals": {
+        "muscleGain": "Muscle Gain",
+        "weightLoss": "Weight Loss",
+        "recovery": "Recovery",
+        "wellness": "Wellness",
+        "energy": "Energy Boost",
+        "viewAll": "View All"
+      }
+    },
+    "combo": {
+      "headline1": "Choose Your Combo",
+      "headline2": "Chase Your Goal",
+      "description": "Create personalized combos that align with your fitness goals and dietary preferences",
+      "cta": "Create Your Combo"
+    },
+    "menu": {
+      "title": "Khám phá Menu Goodblend",
+      "description": "Explore our wide range of delicious and nutritious smoothies, bowls, and healthy options",
+      "cta": "View All",
+      "carouselTitle": "Featured Products"
+    },
+    "trainers": {
+      "headline": "Drink formulas co-created by professional trainers",
+      "trainer1": {
+        "name": "Mr. John Doe",
+        "title": "Professional Trainer"
+      },
+      "trainer2": {
+        "name": "Ms. Jane Smith",
+        "title": "Fitness Expert"
+      },
+      "trainer3": {
+        "name": "Dr. Mike Johnson",
+        "title": "Nutrition Specialist"
+      }
+    },
+    "appDownload": {
+      "headline": "BEGIN in app",
+      "description": "Download the Goodblend app to access personalized nutrition plans, track your progress, and order your favorite combos",
+      "availableOn": "Available on"
+    }
   }
 }

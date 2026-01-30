@@ -8,6 +8,7 @@ import { useLocale } from "next-intl";
 import Navigation from "./Navigation";
 import LanguageSelector from "./LanguageSelector";
 import UserMenu from "./UserMenu";
+import RotatingBanner from "./RotatingBanner";
 import Button from "@/components/ui/Button/Button";
 import { useTranslations } from "next-intl";
 
@@ -17,7 +18,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   return (
-    <header className="fixed top-2 z-30 w-full md:top-6">
+    <header className="fixed top-0 left-0 right-0 z-30 w-full pt-2 md:pt-6">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative flex h-[72px] items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-gray-950 to-gray-800 px-3 shadow-lg shadow-black/[0.03]">
           {/* Logo Section */}
@@ -77,6 +78,9 @@ export default function Header() {
             </div>
           </div>
         )}
+
+        {/* Rotating Text Banner - Below Header, same width as header, 8px gap */}
+        <RotatingBanner />
       </div>
     </header>
   );

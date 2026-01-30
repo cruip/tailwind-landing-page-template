@@ -28,7 +28,7 @@ export default function DefaultLayout({
       <HtmlLang />
       <Header />
 
-      <main className="grow pt-24 md:pt-28">{children}</main>
+      <main className="grow">{children}</main>
 
       <Footer border={true} />
     </>

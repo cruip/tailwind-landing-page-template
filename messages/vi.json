@@ -9,5 +9,62 @@
   },
   "header": {
     "getApp": "Tải App"
+  },
+  "home": {
+    "hero": {
+      "headline1": "Blend with purpose",
+      "headline2": "Fuel your lifestyle",
+      "description": "A fun and fast way to stay fit with smoothie whey",
+      "bannerText": "The functional nutrition revolution",
+      "cta": "BLEND NOW",
+      "feature1": "Dinh dưỡng chuyên nghiệp",
+      "feature2": "Kế hoạch tùy chỉnh",
+      "feature3": "Hướng dẫn chuyên gia"
+    },
+    "goalBased": {
+      "title": "Dinh dưỡng theo mục tiêu",
+      "description": "Kế hoạch dinh dưỡng cá nhân hóa được thiết kế để giúp bạn đạt được mục tiêu thể dục và sức khỏe",
+      "cta": "Khám phá chương trình",
+      "goals": {
+        "muscleGain": "Tăng cơ",
+        "weightLoss": "Giảm cân",
+        "recovery": "Phục hồi",
+        "wellness": "Sức khỏe",
+        "energy": "Tăng năng lượng",
+        "viewAll": "Xem tất cả"
+      }
+    },
+    "combo": {
+      "headline1": "Chọn Combo của bạn",
+      "headline2": "Theo đuổi mục tiêu",
+      "description": "Tạo combo cá nhân hóa phù hợp với mục tiêu thể dục và sở thích ăn uống của bạn",
+      "cta": "Tạo Combo"
+    },
+    "menu": {
+      "title": "Khám phá Menu Goodblend",
+      "description": "Khám phá nhiều loại smoothies, bowls và các lựa chọn lành mạnh ngon miệng và bổ dưỡng",
+      "cta": "Xem tất cả",
+      "carouselTitle": "Sản phẩm nổi bật"
+    },
+    "trainers": {
+      "headline": "Công thức đồ uống được đồng sáng tạo bởi các huấn luyện viên chuyên nghiệp",
+      "trainer1": {
+        "name": "Anh John Doe",
+        "title": "Huấn luyện viên chuyên nghiệp"
+      },
+      "trainer2": {
+        "name": "Chị Jane Smith",
+        "title": "Chuyên gia thể dục"
+      },
+      "trainer3": {
+        "name": "Bác sĩ Mike Johnson",
+        "title": "Chuyên gia dinh dưỡng"
+      }
+    },
+    "appDownload": {
+      "headline": "BẮT ĐẦU trong app",
+      "description": "Tải ứng dụng Goodblend để truy cập kế hoạch dinh dưỡng cá nhân hóa, theo dõi tiến trình và đặt combo yêu thích của bạn",
+      "availableOn": "Có sẵn trên"
+    }
   }
 }
