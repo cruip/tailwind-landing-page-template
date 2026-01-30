@@ -14,9 +14,12 @@
     "hero": {
       "headline1": "Blend with purpose",
       "headline2": "Fuel your lifestyle",
+      "blend_with_purpose": "Blend with purpose",
+      "fuel_your_lifestyle": "Fuel your lifestyle",
       "description": "A fun and fast way to stay fit with smoothie whey",
       "bannerText": "The functional nutrition revolution",
       "cta": "BLEND NOW",
+      "blend_now": "BLEND NOW",
       "feature1": "Professional Nutrition",
       "feature2": "Customized Plans",
       "feature3": "Expert Guidance"
