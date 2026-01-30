@@ -1,8 +1,8 @@
 import { setRequestLocale } from "next-intl/server";
 
 export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
+  title: "Goodblend - Blend with Purpose",
+  description: "Khám phá Goodblend - nền tảng functional nutrition hàng đầu với các sản phẩm smoothies, healthy bowls, detox và đồ uống tốt cho sức khỏe. Blend with purpose.",
 };
 
 import Hero from "@/components/hero-home";
