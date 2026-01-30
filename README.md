@@ -1,91 +1,182 @@
-# Free Tailwind landing page template
+# Goodblend Landing Page
 
-![Simple TailwindCSS template preview](https://github.com/cruip/tailwind-landing-page-template/assets/2683512/f9a98fab-a1bc-4fb5-8572-4de0b6bd932a)
+Landing page website cho **Goodblend** - một nền tảng về functional nutrition và smoothies, được xây dựng với **Next.js** và **Tailwind CSS v4**.
 
-**Simple Light** is a free landing page template built on top of **TailwindCSS** and fully coded in **React** / **Next.js**. Simple light is designed to provide all the basic components a developer need to create a landing page for SaaS products, online services, and more.
+## Giới thiệu
 
-**UPDATE 2025-02-04** Added Tailwind v4 support!
+Goodblend là một thương hiệu về functional nutrition, cung cấp các sản phẩm smoothies và đồ uống tốt cho sức khỏe. Website này được thiết kế để giới thiệu về thương hiệu, sản phẩm, và các dịch vụ của Goodblend.
 
-Use it for whatever you want, and be sure to reach us out on X if you build anything cool/useful with it.
-Created and maintained with ❤️ by [Cruip.com](https://cruip.com/).
+**Tagline:** "blend with purpose"
 
-_Version 1.3.3 built with Tailwind CSS and React + Vite is available [here](https://github.com/cruip/tailwind-landing-page-template/releases/tag/1.3.3)._
+## Tính năng
 
-## Live demo
+- ✅ Responsive design cho Mobile, Tablet và Desktop
+- ✅ Design System hoàn chỉnh với Typography, Colors, và Spacing
+- ✅ Component-based architecture với React và Next.js
+- ✅ Tailwind CSS v4 với custom theme
+- ✅ Font Be Vietnam Pro
+- ✅ Dark theme header với navigation
+- ✅ Footer với newsletter subscription
+- ✅ Optimized performance với Next.js App Router
 
-Check the live demo here 👉️ [https://simple.cruip.com/](https://simple.cruip.com/)
+## Design System
 
-## Simple Pro
+Website sử dụng một Design System hoàn chỉnh được định nghĩa trong `DESIGN_RULES.md`:
 
-[![Simple Pro](https://github.com/cruip/tailwind-landing-page-template/assets/2683512/992be2ba-3de7-4838-be41-12e85686c193)](https://cruip.com/)
+### Typography
+- **Font:** Be Vietnam Pro
+- **Headings:** H1-H4 với các variants (Bold, Bold Italic, Regular)
+- **Body:** Large và Small với Regular và Bold
+- **Caption:** Regular, Italic, và Small
+- **Display:** D1, D2, D3 cho các text lớn
 
-## Design files
+### Colors
+- **Graphite Grey:** Palette từ Grey 100 (darkest) đến Grey 10 (lightest)
+- **Active Red:** Palette từ Red 100 (darkest) đến Red 10 (lightest pink)
+- **Ivory White:** Pure white
 
-If you need the design files, you can download them from Figma's Community 👉 https://bit.ly/3HOZMpf
+### Spacing
+- **Mobile:** 8 / 16 / 24 / 32px
+- **Desktop:** 12 / 16 / 24 / 32 / 48 / 64px
+- Section spacing, card padding, và text spacing được định nghĩa rõ ràng
 
-## Usage
+### Breakpoints
+- **Mobile:** ≤599px (4 columns)
+- **Tablet Portrait:** 600-904px (8 columns)
+- **Tablet Landscape:** 905-1239px (12 columns)
+- **Desktop:** ≥1040px (12 columns, max-width 1440px)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Xem chi tiết trong [DESIGN_RULES.md](./DESIGN_RULES.md) và [THEME_USAGE.md](./THEME_USAGE.md).
 
-### Getting Started
+## Cấu trúc Project
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+├── app/                    # Next.js App Router
+│   ├── (auth)/            # Auth pages (signin, signup, reset-password)
+│   ├── (default)/         # Default layout pages
+│   ├── api/               # API routes
+│   └── css/               # Global styles và theme
+│       └── additional-styles/
+│           ├── theme.css  # Theme styles
+│           └── utility-patterns.css  # Utility classes
+├── components/            # React components
+│   ├── ui/               # UI components (header, footer, logo)
+│   └── ...               # Feature components
+├── public/               # Static assets
+│   └── images/           # Images và logos
+├── DESIGN_RULES.md       # Design system documentation
+└── THEME_USAGE.md        # Theme usage guide
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Node.js 18+ hoặc cao hơn
+- pnpm (recommended) hoặc npm/yarn
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone repository:
+```bash
+git clone <repository-url>
+cd tailwind-landing-page-template
+```
 
-### Learn More
+2. Install dependencies:
+```bash
+pnpm install
+# hoặc
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+3. Run development server:
+```bash
+pnpm dev
+# hoặc
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Mở [http://localhost:3000](http://localhost:3000) trong browser
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Build for Production
 
-### Deploy on Vercel
+```bash
+pnpm build
+pnpm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Development
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Sử dụng Theme
 
-### Support notes
+Website sử dụng custom theme dựa trên Design System. Xem [THEME_USAGE.md](./THEME_USAGE.md) để biết cách sử dụng:
 
-This template has been developed with the App Router (`app`) and React Server Components. If you’re unfamiliar with these beta features, you can find more information about them on the Next.js beta documentation page. So, please note that any request dealing with React (e.g. extra features, customisations, et cetera) is to be considered out of the support scope.
+- Typography utilities: `.text-h1`, `.text-h2`, `.text-body-lg`, etc.
+- Color utilities: `.bg-grey-*`, `.text-red-*`, etc.
+- Spacing utilities: `.spacing-section`, `.card-padding`, etc.
 
-For more information about what support covers, please see our (FAQs)[https://cruip.com/faq/].
+### Components
 
-## Credits
+Các components chính:
 
-- [Nucleo](https://nucleoapp.com/)
+- **Header** (`components/ui/header.tsx`): Navigation header với logo, menu, và CTA button
+- **Footer** (`components/ui/footer.tsx`): Footer với newsletter subscription và links
+- **Logo** (`components/ui/logo.tsx`): Goodblend logo component
 
-## Terms and License
+### Styling
 
-- Released under the [GPL](https://www.gnu.org/licenses/gpl-3.0.html).
-- Copyright 2024 [Cruip](https://cruip.com/).
-- Use it for personal and commercial projects, but please don’t republish, redistribute, or resell the template.
-- Attribution is not required, although it is really appreciated.
+- Global styles: `app/css/style.css`
+- Theme configuration: Được định nghĩa trong `@theme` block
+- Utility classes: `app/css/additional-styles/utility-patterns.css`
 
-## About Us
+## Screens
 
-We're an Italian developer/designer duo creating high-quality design/code resources for developers, makers, and startups.
+Website bao gồm các màn hình sau:
 
-## Stay in the loop
+- **Home:** Trang chủ với hero section và các features
+- **App & Membership:** Thông tin về app và membership
+- **Partnership:** Thông tin về đối tác
+- **About Us:** Giới thiệu về Goodblend
+- **Menu:** Menu sản phẩm (Smoothies Whey, Healthy, Bowl, Detox, Nước ép, Bites)
+- **Stores:** Chi nhánh cửa hàng
+- **Careers:** Tuyển dụng
 
-If you would like to know when we release new resources, you can follow [@pacovitiello](https://x.com/pacovitiello) and [@DavidePacilio](https://x.com/DavidePacilio) on X, or you can subscribe to our [newsletter](https://cruip.com/newsletter/).
+## Tech Stack
 
+- **Framework:** Next.js 15+ (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Font:** Be Vietnam Pro (Google Fonts)
+- **Package Manager:** pnpm
+
+## Deploy
+
+### Vercel (Recommended)
+
+Cách dễ nhất để deploy là sử dụng [Vercel Platform](https://vercel.com):
+
+1. Push code lên GitHub/GitLab
+2. Import project vào Vercel
+3. Vercel sẽ tự động detect Next.js và deploy
+
+### Other Platforms
+
+Có thể deploy lên bất kỳ platform nào hỗ trợ Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- etc.
+
+## Documentation
+
+- [DESIGN_RULES.md](./DESIGN_RULES.md) - Design System documentation
+- [THEME_USAGE.md](./THEME_USAGE.md) - Theme usage guide
+
+## License
+
+Copyright © 2025 Goodblend. All rights reserved.
+
+## Contact
+
+Để biết thêm thông tin về Goodblend, vui lòng truy cập website hoặc liên hệ qua email.

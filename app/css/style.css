@@ -9,9 +9,45 @@
 }
 
 @theme {
-  --font-inter: Inter, sans-serif;
+  /* Font Family */
+  --font-be-vietnam-pro: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
   --font-mono: Roboto Mono, monospace;
 
+  /* Typography - Based on Design Rules */
+  
+  /* Heading Styles */
+  --text-h1: 2.5rem; /* 40px */
+  --text-h1--line-height: auto;
+  --text-h2: 2rem; /* 32px */
+  --text-h2--line-height: auto;
+  --text-h3: 1.5rem; /* 24px */
+  --text-h3--line-height: auto;
+  --text-h4: 1.25rem; /* 20px */
+  --text-h4--line-height: 99.9%;
+  --text-title: 3rem; /* 48px */
+  --text-title--line-height: auto;
+  
+  /* Body Styles */
+  --text-body-lg: 1rem; /* 16px */
+  --text-body-lg--line-height: 1.5; /* 150% */
+  --text-body-sm: 0.875rem; /* 14px */
+  --text-body-sm--line-height: 1.4; /* 140% */
+  
+  /* Caption Styles */
+  --text-caption: 0.75rem; /* 12px */
+  --text-caption--line-height: 1rem; /* 16px */
+  --text-caption-sm: 0.625rem; /* 10px */
+  --text-caption-sm--line-height: 0.75rem; /* 12px */
+  
+  /* Display Styles */
+  --text-display-1: 12.5rem; /* 200px */
+  --text-display-1--line-height: 5.125rem; /* 82px */
+  --text-display-2: 8rem; /* 128px */
+  --text-display-2--line-height: 5.125rem; /* 82px */
+  --text-display-3: 6rem; /* 96px */
+  --text-display-3--line-height: 6.875rem; /* 110px */
+  
+  /* Legacy Tailwind text sizes (keeping for compatibility) */
   --text-xs: 0.75rem;
   --text-xs--line-height: 1.5;
   --text-sm: 0.875rem;
@@ -43,6 +79,104 @@
   --text-7xl: 4.5rem;
   --text-7xl--line-height: 1;
   --text-7xl--letter-spacing: -0.037em;
+  
+  /* Spacing - Based on Design Rules */
+  /* Mobile: 8 / 16 / 24 / 32 */
+  /* Desktop: 12 / 16 / 24 / 32 / 48 / 64 */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 0.75rem; /* 12px */
+  --spacing-lg: 1rem; /* 16px */
+  --spacing-xl: 1.5rem; /* 24px */
+  --spacing-2xl: 2rem; /* 32px */
+  --spacing-3xl: 3rem; /* 48px */
+  --spacing-4xl: 4rem; /* 64px */
+  
+  /* Section Spacing */
+  --spacing-section-mobile: 3rem; /* 48px */
+  --spacing-section-desktop: 6rem; /* 96px */
+  --spacing-section-title-mobile: 1.5rem; /* 24px */
+  --spacing-section-title-desktop: 2rem; /* 32px */
+  --spacing-content-cta-mobile: 2rem; /* 32px */
+  --spacing-content-cta-desktop: 4rem; /* 64px */
+  
+  /* Card Spacing */
+  --spacing-card-padding-mobile: 1.25rem; /* 20px */
+  --spacing-card-padding-desktop: 1.5rem; /* 24px */
+  --spacing-card-gap-mobile: 1rem; /* 16px */
+  --spacing-card-gap-desktop: 1.5rem; /* 24px */
+  --radius-card-mobile: 1rem; /* 16px */
+  --radius-card-desktop: 1.5rem; /* 24px */
+  
+  /* Text & Component Spacing */
+  --spacing-heading-body-mobile: 1.5rem; /* 24px */
+  --spacing-heading-body-desktop: 2rem; /* 32px */
+  --spacing-subhead-heading-mobile: 0.25rem; /* 4px */
+  --spacing-subhead-heading-desktop: 0.75rem; /* 12px */
+  --spacing-text-button-mobile-min: 2rem; /* 32px */
+  --spacing-text-button-mobile-max: 3rem; /* 48px */
+  --spacing-text-button-desktop-min: 3rem; /* 48px */
+  --spacing-text-button-desktop-max: 4rem; /* 64px */
+  
+  /* Breakpoints */
+  --breakpoint-mobile-max: 599px;
+  --breakpoint-tablet-portrait-min: 600px;
+  --breakpoint-tablet-portrait-max: 904px;
+  --breakpoint-tablet-landscape-min: 905px;
+  --breakpoint-tablet-landscape-max: 1239px;
+  --breakpoint-desktop-min: 1040px;
+  --breakpoint-max-width: 1440px;
+  
+  /* Grid System */
+  --grid-columns-mobile: 4;
+  --grid-columns-tablet-portrait: 8;
+  --grid-columns-tablet-landscape: 12;
+  --grid-columns-desktop: 12;
+  --grid-gutter-mobile: 1rem; /* 16px */
+  --grid-gutter-tablet: 1.5rem; /* 24px */
+  --grid-gutter-desktop: 1.5rem; /* 24px */
+  --grid-padding-mobile: 1rem; /* 16px */
+  --grid-padding-tablet: 1.5rem; /* 24px */
+  --grid-padding-desktop: 1.5rem; /* 24px */
+  
+  /* Colors - Graphite Grey Palette */
+  /* Note: Actual hex values should be defined based on design specs */
+  --color-grey-100: #1a1a1a; /* Darkest grey - adjust as needed */
+  --color-grey-90: #2a2a2a;
+  --color-grey-80: #3a3a3a;
+  --color-grey-70: #4a4a4a;
+  --color-grey-60: #5a5a5a;
+  --color-grey-50: #6a6a6a;
+  --color-grey-40: #7a7a7a;
+  --color-grey-30: #8a8a8a;
+  --color-grey-20: #9a9a9a;
+  --color-grey-15: #a5a5a5;
+  --color-grey-10: #e5e5e5; /* Lightest grey - adjust as needed */
+  
+  /* Colors - Active Red Palette */
+  /* Note: Actual hex values should be defined based on design specs */
+  --color-red-100: #8b0000; /* Darkest red - adjust as needed */
+  --color-red-90: #a00000;
+  --color-red-80: #b50000;
+  --color-red-70: #ca0000;
+  --color-red-60: #df0000;
+  --color-red-50: #ef4444; /* Common red */
+  --color-red-40: #f87171;
+  --color-red-30: #fca5a5;
+  --color-red-20: #fecaca;
+  --color-red-10: #fee2e2; /* Lightest pink - adjust as needed */
+  
+  /* Colors - Ivory White */
+  --color-white-100: #ffffff;
+  
+  /* Color Styles - Gradients */
+  --gradient-red: linear-gradient(to bottom, var(--color-red-50), var(--color-red-60));
+  --gradient-grey: linear-gradient(to bottom, var(--color-grey-20), var(--color-grey-30));
+  --gradient-stroke: linear-gradient(to right, var(--color-grey-30), var(--color-grey-20));
+  
+  /* Color Styles - Strokes */
+  --stroke-red: var(--color-red-50);
+  --stroke-white: var(--color-white-100);
 
   --animate-code-1: code-1;
   --animate-code-2: code-2;

@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "app": "App & Membership",
+    "partnership": "Partnership",
+    "about": "About Us",
+    "menu": "Our Menu",
+    "stores": "Stores",
+    "career": "Career"
+  },
+  "header": {
+    "getApp": "Get App"
+  }
+}

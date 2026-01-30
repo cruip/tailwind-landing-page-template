@@ -1,3 +1,5 @@
+import { setRequestLocale } from "next-intl/server";
+
 export const metadata = {
   title: "Sign In - Simple",
   description: "Page description",
@@ -5,7 +7,14 @@ export const metadata = {
 
 import Link from "next/link";
 
-export default function SignIn() {
+export default async function SignIn({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <>

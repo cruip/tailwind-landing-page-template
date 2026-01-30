@@ -1,0 +1,13 @@
+{
+  "nav": {
+    "app": "App & Membership",
+    "partnership": "Đối tác",
+    "about": "Về chúng tôi",
+    "menu": "Thực đơn",
+    "stores": "Cửa hàng",
+    "career": "Tuyển dụng"
+  },
+  "header": {
+    "getApp": "Tải App"
+  }
+}

@@ -1,9 +1,18 @@
+import { setRequestLocale } from "next-intl/server";
+
 export const metadata = {
   title: "Sign Up - Simple",
   description: "Page description",
 };
 
-export default function SignUp() {
+export default async function SignUp({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <div className="mb-10">

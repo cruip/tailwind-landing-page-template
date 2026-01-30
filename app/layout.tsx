@@ -1,10 +1,11 @@
 import "./css/style.css";
 
-import { Inter } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 
-const inter = Inter({
+const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-be-vietnam-pro",
   display: "swap",
 });
 
@@ -19,9 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="vi" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${inter.variable} bg-gray-50 font-inter tracking-tight text-gray-900 antialiased`}
+        className={`${beVietnamPro.variable} bg-gray-50 font-be-vietnam-pro tracking-tight text-gray-900 antialiased`}
+        suppressHydrationWarning
       >
         <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}

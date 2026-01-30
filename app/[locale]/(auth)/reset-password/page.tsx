@@ -1,9 +1,18 @@
+import { setRequestLocale } from "next-intl/server";
+
 export const metadata = {
   title: "Reset Password - Simple",
   description: "Page description",
 };
 
-export default function ResetPassword() {
+export default async function ResetPassword({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <div className="mb-10">
