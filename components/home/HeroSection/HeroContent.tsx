@@ -23,38 +23,39 @@ export default function HeroContent() {
       </div>
 
       {/* Content — Figma: 1440x844px, left-aligned, vertical layout */}
-      <div className="layout-content flex flex-1 flex-col pt-[164px] pb-[68px]">
+      <div className="layout-content flex flex-1 flex-col pt-[164px] pb-[56px]">
         <div>
-          {/* Headlines — "Blend with purpose" + "Fuel your lifestyle" vertical stack */}
-          <div className="mb-4 max-w-[910px] p-0 md:mb-[43px]" data-aos="fade-up">
-            <h1 className="text-[40px] font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+          {/* "Blend with purpose" — 43px gap to row below */}
+          <div className="max-w-[910px]" data-aos="fade-up">
+            <h1 className="text-display-d3">
               {t("blend_with_purpose")}
             </h1>
           </div>
 
-          <h2
-            className="mb-6 max-w-[910px] text-[40px] font-bold leading-tight text-white md:mb-8 md:text-5xl lg:text-6xl"
-            data-aos="fade-up"
-            data-aos-delay={100}
-          >
-            {t("fuel_your_lifestyle")}
-          </h2>
-
-          {/* Sub-headline — below headlines, left-aligned */}
-          <p
-            className="max-w-[280px] text-base font-normal leading-[150%] text-white md:text-lg md:leading-[150%]"
-            data-aos="fade-up"
-            data-aos-delay={200}
-          >
-            {t("description")}
-          </p>
+          {/* Desktop: description (trái) + 130px + "Fuel your lifestyle" (phải); mép trên hai khối thẳng hàng */}
+          <div className="flex flex-col gap-6 md:flex-row md:items-start md:gap-[130px]">
+            <p
+              className="text-heading-h4--regular m-0 max-w-[280px] order-2 md:order-1 md:pt-[43px]"
+              data-aos="fade-up"
+              data-aos-delay={200}
+            >
+              {t("description")}
+            </p>
+            <h2
+              className="text-display-d3 m-0 max-w-[910px] text-right order-1 md:order-2 md:shrink-0"
+              data-aos="fade-up"
+              data-aos-delay={100}
+            >
+              {t("fuel_your_lifestyle")}
+            </h2>
+          </div>
         </div>
 
-        {/* CTA Button — centered, 12px from bottom of hero */}
+        {/* CTA Button — centered */}
         <div
-          className="mt-auto flex justify-center pb-[12px]"
-          data-aos="fade-up"
-          data-aos-delay={300}
+          className="mt-auto flex justify-center"
+          // data-aos="fade-up"
+          // data-aos-delay={300}
         >
           <Button variant="primary" size="lg" className="h-[56px] rounded-2xl">
             {t("blend_now")}

@@ -20,6 +20,126 @@
   }
 }
 
+/* ========== Typography - Design system (lấy từ bảng styles) ========== */
+/* Font: Be Vietnam Pro. Dùng class thay vì inline style để tái sử dụng. */
+
+/* Display - D1: 200/82, D2: 128/82, D3: 96/110 */
+.text-display-d1 {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-display-1);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-display-1--line-height);
+}
+.text-display-d2 {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-display-2);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-display-2--line-height);
+}
+.text-display-d3 {
+  color: var(--color-ivory-white-100);
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: 2.5rem; /* 40px mobile */
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -3.84px;
+}
+@media (min-width: 768px) {
+  .text-display-d3 { font-size: 3.75rem; } /* 60px tablet */
+}
+@media (min-width: 1024px) {
+  .text-display-d3 {
+    font-size: var(--text-display-3);
+    line-height: var(--text-display-3--line-height);
+    letter-spacing: var(--text-display-3--letter-spacing);
+  }
+}
+
+/* Heading - H1: 40, H2: 32, H3: 24, H4: 20, Title: 48 */
+.text-heading-h1 {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-h1);
+  font-weight: 700;
+  line-height: var(--text-h1--line-height);
+}
+.text-heading-h2 {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-h2);
+  font-weight: 700;
+  line-height: var(--text-h2--line-height);
+}
+.text-heading-h3 {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-h3);
+  font-weight: 700;
+  line-height: var(--text-h3--line-height);
+}
+.text-heading-h4 {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-h4);
+  font-weight: 700;
+  line-height: var(--text-h4--line-height);
+}
+/* Heading H4 Regular - 20px, weight 400, line-height normal (e.g. hero description) */
+.text-heading-h4--regular {
+  color: var(--color-ivory-white-100);
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.text-heading-title {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-title);
+  line-height: var(--text-title--line-height);
+}
+
+/* Body - lg: 16/150, sm: 14/140 */
+.text-body-lg {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-body-lg);
+  font-weight: 400;
+  line-height: var(--text-body-lg--line-height);
+}
+.text-body-lg--bold {
+  font-weight: 700;
+}
+.text-body-sm {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-body-sm);
+  font-weight: 400;
+  line-height: var(--text-body-sm--line-height);
+}
+.text-body-sm--bold {
+  font-weight: 700;
+}
+
+/* Caption - 12/16, Italic 12, Regular Sm 10/12 */
+.text-caption {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-caption);
+  font-weight: 400;
+  line-height: var(--text-caption--line-height);
+}
+.text-caption--italic {
+  font-style: italic;
+}
+.text-caption-sm {
+  font-family: var(--font-be-vietnam-pro), "Be Vietnam Pro", sans-serif;
+  font-size: var(--text-caption-sm);
+  font-weight: 400;
+  line-height: var(--text-caption-sm--line-height);
+}
+
+/* Color utility - Ivory White 100 (text) */
+.text-ivory-white {
+  color: var(--color-ivory-white-100);
+}
+
 /* Buttons */
 .btn,
 .btn-sm {
@@ -74,133 +194,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .form-checkbox {
     @apply rounded-xs;
-}
-
-/* Typography Utilities - Based on Design Rules */
-.text-h1 {
-    font-size: var(--text-h1);
-    line-height: var(--text-h1--line-height);
-    font-weight: 700; /* Bold */
-}
-
-.text-h1-italic {
-    font-size: var(--text-h1);
-    line-height: var(--text-h1--line-height);
-    font-weight: 700;
-    font-style: italic;
-}
-
-.text-h2 {
-    font-size: var(--text-h2);
-    line-height: var(--text-h2--line-height);
-    font-weight: 700; /* Bold */
-}
-
-.text-h2-italic {
-    font-size: var(--text-h2);
-    line-height: var(--text-h2--line-height);
-    font-weight: 700;
-    font-style: italic;
-}
-
-.text-h3 {
-    font-size: var(--text-h3);
-    line-height: var(--text-h3--line-height);
-    font-weight: 400; /* Regular */
-}
-
-.text-h3-bold {
-    font-size: var(--text-h3);
-    line-height: var(--text-h3--line-height);
-    font-weight: 700; /* Bold */
-}
-
-.text-h3-italic {
-    font-size: var(--text-h3);
-    line-height: var(--text-h3--line-height);
-    font-weight: 700;
-    font-style: italic;
-}
-
-.text-h4 {
-    font-size: var(--text-h4);
-    line-height: var(--text-h4--line-height);
-    font-weight: 400; /* Regular */
-}
-
-.text-h4-bold {
-    font-size: var(--text-h4);
-    line-height: var(--text-h4--line-height);
-    font-weight: 700; /* Bold */
-}
-
-.text-h4-italic {
-    font-size: var(--text-h4);
-    line-height: var(--text-h4--line-height);
-    font-weight: 700;
-    font-style: italic;
-}
-
-.text-title {
-    font-size: var(--text-title);
-    line-height: var(--text-title--line-height);
-}
-
-.text-body-lg {
-    font-size: var(--text-body-lg);
-    line-height: var(--text-body-lg--line-height);
-    font-weight: 400; /* Regular */
-}
-
-.text-body-lg-bold {
-    font-size: var(--text-body-lg);
-    line-height: var(--text-body-lg--line-height);
-    font-weight: 700; /* Bold */
-}
-
-.text-body-sm {
-    font-size: var(--text-body-sm);
-    line-height: var(--text-body-sm--line-height);
-    font-weight: 400; /* Regular */
-}
-
-.text-body-sm-bold {
-    font-size: var(--text-body-sm);
-    line-height: var(--text-body-sm--line-height);
-    font-weight: 700; /* Bold */
-}
-
-.text-caption {
-    font-size: var(--text-caption);
-    line-height: var(--text-caption--line-height);
-    font-weight: 400; /* Regular */
-}
-
-.text-caption-italic {
-    font-size: var(--text-caption);
-    line-height: var(--text-caption--line-height);
-    font-style: italic;
-}
-
-.text-caption-sm {
-    font-size: var(--text-caption-sm);
-    line-height: var(--text-caption-sm--line-height);
-    font-weight: 400; /* Regular */
-}
-
-.text-display-1 {
-    font-size: var(--text-display-1);
-    line-height: var(--text-display-1--line-height);
-}
-
-.text-display-2 {
-    font-size: var(--text-display-2);
-    line-height: var(--text-display-2--line-height);
-}
-
-.text-display-3 {
-    font-size: var(--text-display-3);
-    line-height: var(--text-display-3--line-height);
 }
 
 /* Spacing Utilities - Section Spacing */

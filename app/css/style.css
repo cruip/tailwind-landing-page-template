@@ -44,8 +44,9 @@
   --text-display-1--line-height: 5.125rem; /* 82px */
   --text-display-2: 8rem; /* 128px */
   --text-display-2--line-height: 5.125rem; /* 82px */
-  --text-display-3: 6rem; /* 96px */
-  --text-display-3--line-height: 6.875rem; /* 110px */
+  --text-display-3: 6rem; /* 96px - Display D3 */
+  --text-display-3--line-height: 110%; /* 105.6px */
+  --text-display-3--letter-spacing: -3.84px;
   
   /* Legacy Tailwind text sizes (keeping for compatibility) */
   --text-xs: 0.75rem;
@@ -166,8 +167,9 @@
   --color-red-20: #fecaca;
   --color-red-10: #fee2e2; /* Lightest pink - adjust as needed */
   
-  /* Colors - Ivory White */
+  /* Colors - Ivory White (Design: Ivory-White-100 #FDF9F3) */
   --color-white-100: #ffffff;
+  --color-ivory-white-100: #FDF9F3;
   
   /* Color Styles - Gradients */
   --gradient-red: linear-gradient(to bottom, var(--color-red-50), var(--color-red-60));
