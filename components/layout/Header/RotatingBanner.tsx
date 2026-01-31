@@ -37,16 +37,28 @@ export default function RotatingBanner() {
           borderRadius: "8px"
         }}
       >
-        <div className="flex animate-[scroll_20s_linear_infinite] items-center gap-4 whitespace-nowrap">
-          {/* Repeat the text multiple times for seamless scroll */}
-          {[...Array(8)].map((_, i) => (
-            <div key={i} className="flex items-center gap-4">
-              <span className="text-sm font-medium text-white md:text-base">
-                {t("bannerText")}
+        <div className="flex w-max animate-[scroll_20s_linear_infinite]">
+          {/* Duplicate content for seamless infinite scroll */}
+          <div className="flex shrink-0 items-center gap-4">
+            {[...Array(6)].map((_, i) => (
+              <span key={i} className="flex items-center gap-4">
+                <span className="whitespace-nowrap text-sm font-medium text-white md:text-base">
+                  {t("bannerText")}
+                </span>
+                <span className="text-red-200">★</span>
               </span>
-              <span className="text-red-200">★</span>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="flex shrink-0 items-center gap-4">
+            {[...Array(6)].map((_, i) => (
+              <span key={i} className="flex items-center gap-4">
+                <span className="whitespace-nowrap text-sm font-medium text-white md:text-base">
+                  {t("bannerText")}
+                </span>
+                <span className="text-red-200">★</span>
+              </span>
+            ))}
+          </div>
         </div>
         <style jsx>{`
           @keyframes scroll {

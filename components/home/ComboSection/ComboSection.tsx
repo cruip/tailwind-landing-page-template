@@ -13,7 +13,7 @@ export default function ComboSection() {
       <div className="absolute left-0 top-0 h-full w-1/4 bg-gradient-to-r from-red-50 to-transparent"></div>
       <div className="absolute right-0 top-0 h-full w-1/4 bg-gradient-to-l from-red-50 to-transparent"></div>
 
-      <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="layout-content relative">
         <div className="grid gap-8 md:gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left: Mobile App Mockups */}
           <div className="relative">

@@ -32,7 +32,7 @@ export default function MenuSection() {
 
   return (
     <section className="bg-white py-12 md:py-24">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="layout-content">
         <div className="grid gap-8 md:gap-12 lg:grid-cols-2 lg:items-start">
           {/* Left: Text Content */}
           <div className="space-y-6">

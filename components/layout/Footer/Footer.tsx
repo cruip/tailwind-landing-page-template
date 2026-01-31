@@ -30,7 +30,7 @@ const policyLinks = [
 export default function Footer({ border = false }: { border?: boolean }) {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="layout-content">
         {/* Top area: Newsletter and Navigation */}
         <div className={`grid gap-8 py-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-12 ${border ? "border-t border-gray-800" : ""}`}>
           {/* Newsletter Section - Left */}

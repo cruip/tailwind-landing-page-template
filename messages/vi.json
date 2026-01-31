@@ -17,7 +17,8 @@
       "blend_with_purpose": "Blend with purpose",
       "fuel_your_lifestyle": "Fuel your lifestyle",
       "description": "A fun and fast way to stay fit with smoothie whey",
-      "bannerText": "The functional nutrition revolution",
+      "bannerText": "Cuộc cách mạng dinh dưỡng chức năng",
+      "bannerText2": "Nạp năng lượng cho buổi tập",
       "cta": "BLEND NOW",
       "blend_now": "BLEND NOW",
       "feature1": "Dinh dưỡng chuyên nghiệp",
@@ -25,9 +26,9 @@
       "feature3": "Hướng dẫn chuyên gia"
     },
     "goalBased": {
-      "title": "Dinh dưỡng theo mục tiêu",
-      "description": "Kế hoạch dinh dưỡng cá nhân hóa được thiết kế để giúp bạn đạt được mục tiêu thể dục và sức khỏe",
-      "cta": "Khám phá chương trình",
+      "title": "Goal-based Nutrition",
+      "description": "Chế độ luyện tập của bạn là duy nhất, nhiên liệu cũng phải tương xứng. Goodblend cá nhân hóa smoothie whey theo mục tiêu của bạn: tăng cơ, phục hồi, giảm mỡ hay năng suất mỗi ngày.",
+      "cta": "Công thức dành riêng cho bạn",
       "goals": {
         "muscleGain": "Tăng cơ",
         "weightLoss": "Giảm cân",

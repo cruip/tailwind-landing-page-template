@@ -28,7 +28,7 @@ export default function TrainersSection() {
       {/* Red gradient at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-red-600/20 to-transparent"></div>
 
-      <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="layout-content relative">
         {/* Headline */}
         <div className="mb-8 text-center md:mb-12">
           <h2 className="text-[32px] font-bold leading-tight text-white md:text-4xl lg:text-5xl">

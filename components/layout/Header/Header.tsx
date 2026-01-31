@@ -19,7 +19,7 @@ export default function Header() {
   
   return (
     <header className="fixed top-0 left-0 right-0 z-30 w-full pt-2 md:pt-6">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+      <div className="layout-content">
         <div className="relative flex h-[72px] items-center justify-between gap-3 rounded-2xl bg-gradient-to-r from-gray-950 to-gray-800 px-3 shadow-lg shadow-black/[0.03]">
           {/* Logo Section */}
           <div className="flex items-center flex-shrink-0">

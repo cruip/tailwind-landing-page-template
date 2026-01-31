@@ -18,6 +18,7 @@
       "fuel_your_lifestyle": "Fuel your lifestyle",
       "description": "A fun and fast way to stay fit with smoothie whey",
       "bannerText": "The functional nutrition revolution",
+      "bannerText2": "Fuel your workout",
       "cta": "BLEND NOW",
       "blend_now": "BLEND NOW",
       "feature1": "Professional Nutrition",
@@ -26,8 +27,8 @@
     },
     "goalBased": {
       "title": "Goal-based Nutrition",
-      "description": "Personalized nutrition plans designed to help you achieve your fitness and wellness goals",
-      "cta": "Explore Programs",
+      "description": "Your training is unique, your fuel should match it. Goodblend personalizes smoothie whey to your goal: muscle, recovery, lean or everyday performance.",
+      "cta": "Formulas just for you",
       "goals": {
         "muscleGain": "Muscle Gain",
         "weightLoss": "Weight Loss",

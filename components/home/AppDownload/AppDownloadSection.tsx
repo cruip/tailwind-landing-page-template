@@ -16,7 +16,7 @@ export default function AppDownloadSection() {
       {/* Dark gradient at bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
 
-      <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="layout-content relative">
         <div className="grid gap-8 md:gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left: Text Content */}
           <div className="space-y-6 text-white">
