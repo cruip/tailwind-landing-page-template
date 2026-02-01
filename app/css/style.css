@@ -163,6 +163,7 @@
   --color-red-60: #df0000;
   --color-red-50: #ef4444; /* Common red */
   --color-red-40: #f87171;
+  --color-active-red-40: #DF5F64; /* Active Red 40 - design */
   --color-red-30: #fca5a5;
   --color-red-20: #fecaca;
   --color-red-10: #fee2e2; /* Lightest pink - adjust as needed */
@@ -322,14 +323,6 @@
       transform: translateX(-100%);
     }
   }
-  @keyframes marquee-scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
   @keyframes spin-slow {
     from {
       transform: rotate(0deg);
@@ -337,6 +330,24 @@
     to {
       transform: rotate(360deg);
     }
+  }
+}
+
+/* Marquee animations - global để dùng với inline style */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 

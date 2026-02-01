@@ -39,14 +39,16 @@
       }
     },
     "combo": {
+      "badge": "Ưu đãi combo độc quyền trên app",
       "headline1": "Chọn Combo của bạn",
       "headline2": "Theo đuổi mục tiêu",
-      "description": "Tạo combo cá nhân hóa phù hợp với mục tiêu thể dục và sở thích ăn uống của bạn",
-      "cta": "Tạo Combo"
+      "description": "Mỗi ly smoothie được phối hợp kỹ lưỡng từ trái cây tươi, rau củ sạch và dinh dưỡng chức năng - giúp bạn theo đuổi mục tiêu và phù hợp nhịp sống hằng ngày.",
+      "description2": "Mỗi ly smoothie được phối hợp kỹ lưỡng từ trái cây tươi, rau củ sạch và dinh dưỡng chức năng.",
+      "cta": "Tính năng và lợi ích"
     },
     "menu": {
       "title": "Khám phá Menu Goodblend",
-      "description": "Khám phá nhiều loại smoothies, bowls và các lựa chọn lành mạnh ngon miệng và bổ dưỡng",
+      "description": "Những công thức sinh tố được tạo ra với sự chăm chút và cân bằng.",
       "cta": "Xem tất cả",
       "carouselTitle": "Sản phẩm nổi bật"
     },

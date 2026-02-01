@@ -6,8 +6,6 @@ export const metadata = {
 };
 
 import HeroSection from "@/components/home/HeroSection/HeroSection";
-import GoalBasedSection from "@/components/home/GoalBasedNutrition/GoalBasedSection";
-import ComboSection from "@/components/home/ComboSection/ComboSection";
 import MenuSection from "@/components/home/MenuSection/MenuSection";
 import TrainersSection from "@/components/home/TrainersSection/TrainersSection";
 import AppDownloadSection from "@/components/home/AppDownload";
@@ -23,8 +21,6 @@ export default async function Home({
   return (
     <>
       <HeroSection />
-      <GoalBasedSection />
-      <ComboSection />
       <MenuSection />
       <TrainersSection />
       <AppDownloadSection />

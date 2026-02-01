@@ -39,15 +39,17 @@
       }
     },
     "combo": {
+      "badge": "App-only exclusive combo deals",
       "headline1": "Choose Your Combo",
       "headline2": "Chase Your Goal",
-      "description": "Create personalized combos that align with your fitness goals and dietary preferences",
-      "cta": "Create Your Combo"
+      "description": "Every smoothie is thoughtfully crafted with real fruits, fresh vegetables, and functional nutrition - blended to support your goals and fit seamlessly into your everyday lifestyle.",
+      "description2": "Every smoothie is thoughtfully crafted with real fruits, fresh vegetables, and functional nutrition.",
+      "cta": "Features and Benefits"
     },
     "menu": {
       "title": "Khám phá Menu Goodblend",
-      "description": "Explore our wide range of delicious and nutritious smoothies, bowls, and healthy options",
-      "cta": "View All",
+      "description": "Smoothie recipes created with care and balance.",
+      "cta": "See All",
       "carouselTitle": "Featured Products"
     },
     "trainers": {
