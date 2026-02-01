@@ -1,94 +1,52 @@
 "use client";
 
-import { useState } from "react";
 import TrainerCard from "./TrainerCard";
 import { useTranslations } from "next-intl";
+
+const trainerImages = [
+  "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80",
+];
 
 export default function TrainersSection() {
   const t = useTranslations("home.trainers");
 
   const trainers = [
-    { name: t("trainer1.name"), title: t("trainer1.title") },
-    { name: t("trainer2.name"), title: t("trainer2.title") },
-    { name: t("trainer3.name"), title: t("trainer3.title") },
+    { name: t("trainer1.name"), title: t("trainer1.title"), image: trainerImages[0] },
+    { name: t("trainer2.name"), title: t("trainer2.title"), image: trainerImages[1] },
+    { name: t("trainer3.name"), title: t("trainer3.title"), image: trainerImages[2] },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(1);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? trainers.length - 1 : prev - 1));
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev === trainers.length - 1 ? 0 : prev + 1));
-  };
-
   return (
-    <section className="relative bg-gray-900 py-12 md:py-24">
-      {/* Red gradient at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-red-600/20 to-transparent"></div>
-
+    <section className="relative overflow-hidden bg-[#141719] py-16 md:py-24">
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#c1272d]/40 to-transparent" />
       <div className="layout-content relative">
-        {/* Headline */}
-        <div className="mb-8 text-center md:mb-12">
-          <h2 className="text-[32px] font-bold leading-tight text-white md:text-4xl lg:text-5xl">
+        <div className="mb-12 text-center">
+          <h2 className="text-[32px] font-semibold leading-tight text-[#fdf9f3] md:text-[48px]">
             {t("headline")}
           </h2>
         </div>
 
-        {/* Trainer Carousel */}
-        <div className="relative">
-          <div className="flex items-center justify-center gap-4">
-            {/* Previous Button */}
-            <button
-              onClick={goToPrevious}
-              className="z-10 flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white transition hover:bg-red-700"
-              aria-label="Previous trainer"
-            >
-              ←
-            </button>
-
-            {/* Trainer Cards */}
-            <div className="flex items-center justify-center gap-6">
-              {trainers.map((trainer, index) => {
-                const isActive = index === currentIndex;
-                const isVisible =
-                  index === currentIndex ||
-                  index === currentIndex - 1 ||
-                  index === currentIndex + 1 ||
-                  (currentIndex === 0 && index === trainers.length - 1) ||
-                  (currentIndex === trainers.length - 1 && index === 0);
-
-                if (!isVisible) return null;
-
-                return (
-                  <div
-                    key={index}
-                    className={`transition-all duration-300 ${
-                      isActive
-                        ? "scale-110 z-20"
-                        : "scale-90 opacity-60 z-10"
-                    }`}
-                  >
-                    <TrainerCard
-                      name={trainer.name}
-                      title={trainer.title}
-                      className="w-[280px]"
-                    />
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Next Button */}
-            <button
-              onClick={goToNext}
-              className="z-10 flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white transition hover:bg-red-700"
-              aria-label="Next trainer"
-            >
-              →
-            </button>
-          </div>
+        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+          <TrainerCard
+            name={trainers[0].name}
+            title={trainers[0].title}
+            imageUrl={trainers[0].image}
+            className="w-[220px] -rotate-12 md:w-[260px] lg:w-[300px]"
+          />
+          <TrainerCard
+            name={trainers[1].name}
+            title={trainers[1].title}
+            imageUrl={trainers[1].image}
+            className="w-[240px] md:w-[280px] lg:w-[320px]"
+          />
+          <TrainerCard
+            name={trainers[2].name}
+            title={trainers[2].title}
+            imageUrl={trainers[2].image}
+            className="w-[220px] rotate-12 md:w-[260px] lg:w-[300px]"
+          />
         </div>
       </div>
     </section>

@@ -27,8 +27,12 @@
     },
     "goalBased": {
       "title": "Goal-based Nutrition",
+      "titleLine1": "Dinh dưỡng",
+      "titleLine2": "theo mục tiêu",
       "description": "Chế độ luyện tập của bạn là duy nhất, nhiên liệu cũng phải tương xứng. Goodblend cá nhân hóa smoothie whey theo mục tiêu của bạn: tăng cơ, phục hồi, giảm mỡ hay năng suất mỗi ngày.",
       "cta": "Công thức dành riêng cho bạn",
+      "marquee1": "CUỘC CÁCH MẠNG DINH DƯỠNG CHỨC NĂNG",
+      "marquee2": "NẠP NĂNG LƯỢNG CHO BUỔI TẬP",
       "goals": {
         "muscleGain": "Tăng cơ",
         "weightLoss": "Giảm cân",
@@ -68,6 +72,7 @@
       }
     },
     "appDownload": {
+      "eyebrow": "BẮT ĐẦU TỐT HƠN",
       "headline": "BẮT ĐẦU trong app",
       "description": "Tải ứng dụng Goodblend để truy cập kế hoạch dinh dưỡng cá nhân hóa, theo dõi tiến trình và đặt combo yêu thích của bạn",
       "availableOn": "Có sẵn trên"

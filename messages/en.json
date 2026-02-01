@@ -27,8 +27,12 @@
     },
     "goalBased": {
       "title": "Goal-based Nutrition",
+      "titleLine1": "Goal-based",
+      "titleLine2": "Nutrition",
       "description": "Your training is unique, your fuel should match it. Goodblend personalizes smoothie whey to your goal: muscle, recovery, lean or everyday performance.",
       "cta": "Formulas just for you",
+      "marquee1": "THE FUNCTIONAL NUTRITION REVOLUTION",
+      "marquee2": "FUEL YOUR WORKOUT",
       "goals": {
         "muscleGain": "Muscle Gain",
         "weightLoss": "Weight Loss",
@@ -68,6 +72,7 @@
       }
     },
     "appDownload": {
+      "eyebrow": "BETTER STARTS",
       "headline": "BEGIN in app",
       "description": "Download the Goodblend app to access personalized nutrition plans, track your progress, and order your favorite combos",
       "availableOn": "Available on"

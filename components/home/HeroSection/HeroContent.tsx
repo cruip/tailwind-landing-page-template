@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button/Button";
 import { useTranslations } from "next-intl";
-import HeroBg from "@/public/images/homepage-hero-bg.webp";
+import heroBg from "@/public/images/homepage-hero-bg.webp";
 
 export default function HeroContent() {
   const t = useTranslations("home.hero");
@@ -13,7 +13,7 @@ export default function HeroContent() {
       {/* Hero Background Image — Figma: vignette (mép tối, giữa sáng) */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src={HeroBg}
+          src={heroBg}
           alt="Hero background"
           fill
           className="object-cover object-center"
@@ -22,7 +22,11 @@ export default function HeroContent() {
         />
         {/* Vignette overlay — dark edges, brighter center for text contrast */}
         <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_50%,transparent_40%,rgba(0,0,0,0.4)_70%,rgba(0,0,0,0.7)_100%)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_70%_70%_at_50%_40%,rgba(0,0,0,0)_55%,rgba(20,23,25,0.6)_80%,rgba(20,23,25,0.95)_100%)]"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#141719]"
           aria-hidden
         />
       </div>

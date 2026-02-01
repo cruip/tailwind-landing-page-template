@@ -84,7 +84,7 @@ export default function MenuSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fcfcfc] py-12 md:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[#f7f4f1] py-12 md:py-20 lg:py-24">
       <div className="pointer-events-none absolute -right-24 -top-32 h-[320px] w-[260px] rotate-[-41deg] rounded-full bg-[#c1272d] opacity-70 blur-[190px]" />
       <div className="pointer-events-none absolute -left-40 bottom-[-120px] h-[320px] w-[260px] rotate-[-50deg] rounded-full bg-[#c1272d] opacity-70 blur-[190px]" />
       <div className="layout-content">
@@ -96,7 +96,13 @@ export default function MenuSection() {
                 <div className="relative z-10 -rotate-[10deg]">
                   <div className="h-[320px] w-[170px] rounded-[40px] border-[10px] border-[#1f1f1f] bg-[#111] p-2 shadow-2xl md:h-[420px] md:w-[220px]">
                     <div className="relative h-full w-full overflow-hidden rounded-[28px] bg-[#1a1a1a]">
-                      
+                      <OptimizedImage
+                        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+                        alt="Goodblend app screen"
+                        fill
+                        className="object-cover"
+                        sizes="(min-width: 768px) 220px, 170px"
+                      />
                     </div>
                   </div>
                 </div>
@@ -104,7 +110,7 @@ export default function MenuSection() {
                   <div className="h-[320px] w-[170px] rounded-[40px] border-[10px] border-[#1f1f1f] bg-[#111] p-2 shadow-2xl md:h-[420px] md:w-[220px]">
                     <div className="relative h-full w-full overflow-hidden rounded-[28px] bg-[#1a1a1a]">
                       <OptimizedImage
-                        src="/images/app-gb-screen-shot.png"
+                        src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=600&q=80"
                         alt="Goodblend app menu"
                         fill
                         className="object-cover"
@@ -121,10 +127,10 @@ export default function MenuSection() {
                 {t("combo.badge")}
               </p>
               <div className="space-y-2">
-                <h2 className="text-[36px] font-semibold leading-tight text-[#141719] md:text-[48px]">
+                <h2 className="bg-gradient-to-r from-[#141719] to-[#2d2f30] bg-clip-text text-[36px] font-semibold leading-tight text-transparent md:text-[48px]">
                   {t("combo.headline1")}
                 </h2>
-                <h3 className="text-[36px] font-semibold leading-tight text-[#141719] md:text-[48px]">
+                <h3 className="bg-gradient-to-r from-[#141719] to-[#2d2f30] bg-clip-text text-[36px] font-semibold leading-tight text-transparent md:text-[48px]">
                   {t("combo.headline2")}
                 </h3>
               </div>
@@ -182,7 +188,7 @@ export default function MenuSection() {
 
             <div className="flex flex-col gap-8 lg:flex-row lg:items-start">
               <div className="flex flex-col gap-6 lg:w-[380px]">
-                <h2 className="text-[32px] font-semibold text-[#141719] md:text-[40px]">
+                <h2 className="bg-gradient-to-r from-[#141719] to-[#2d2f30] bg-clip-text text-[32px] font-semibold text-transparent md:text-[40px]">
                   {t("menu.title")}
                 </h2>
                 <p className="text-[16px] leading-[1.5] text-[#505b66]">
