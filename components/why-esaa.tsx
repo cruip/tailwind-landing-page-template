@@ -81,7 +81,7 @@ export default function WhyEsaa() {
                 data-aos="fade-up"
                 data-aos-delay={index * 75}
               >
-                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-blue-500 to-violet-500 text-white shadow-md shadow-blue-500/20">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-linear-to-br from-blue-500 to-blue-600 text-white shadow-md shadow-blue-500/20">
                   <svg
                     className="h-5 w-5 fill-current"
                     xmlns="http://www.w3.org/2000/svg"

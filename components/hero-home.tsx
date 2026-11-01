@@ -29,7 +29,7 @@ export default function HeroHome() {
               One private AI workspace for{" "}
               <br className="max-lg:hidden" />
               your company&apos;s{" "}
-              <span className="bg-linear-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
                 knowledge
               </span>
             </h1>

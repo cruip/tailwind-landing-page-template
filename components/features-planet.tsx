@@ -1,10 +1,29 @@
 import Image from "next/image";
 import PlanetImg from "@/public/images/planet.png";
 import PlanetOverlayImg from "@/public/images/planet-overlay.svg";
-import PlanetTagImg01 from "@/public/images/planet-tag-01.png";
-import PlanetTagImg02 from "@/public/images/planet-tag-02.png";
-import PlanetTagImg03 from "@/public/images/planet-tag-03.png";
-import PlanetTagImg04 from "@/public/images/planet-tag-04.png";
+
+const planetTags = [
+  {
+    label: "Cited answer",
+    className:
+      "absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_both] opacity-90",
+  },
+  {
+    label: "Deep research",
+    className:
+      "absolute left-56 top-7 z-10 animate-[float_4s_ease-in-out_infinite_1s_both] opacity-50",
+  },
+  {
+    label: "Run in SAP",
+    className:
+      "absolute -left-20 bottom-24 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-50",
+  },
+  {
+    label: "Export to Excel",
+    className:
+      "absolute bottom-32 left-64 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-90",
+  },
+];
 
 export default function FeaturesPlanet() {
   const features = [
@@ -89,34 +108,16 @@ export default function FeaturesPlanet() {
                     alt="Planet decoration"
                   />
                   <div>
-                    <Image
-                      className="absolute -left-28 top-16 z-10 animate-[float_4s_ease-in-out_infinite_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg01}
-                      width={253}
-                      height={56}
-                      alt="Tag 01"
-                    />
-                    <Image
-                      className="absolute left-56 top-7 z-10 animate-[float_4s_ease-in-out_infinite_1s_both] opacity-30 transition-opacity duration-500"
-                      src={PlanetTagImg02}
-                      width={241}
-                      height={56}
-                      alt="Tag 02"
-                    />
-                    <Image
-                      className="absolute -left-20 bottom-24 z-10 animate-[float_4s_ease-in-out_infinite_2s_both] opacity-25 transition-opacity duration-500"
-                      src={PlanetTagImg03}
-                      width={243}
-                      height={56}
-                      alt="Tag 03"
-                    />
-                    <Image
-                      className="absolute bottom-32 left-64 z-10 animate-[float_4s_ease-in-out_infinite_3s_both] opacity-80 transition-opacity duration-500"
-                      src={PlanetTagImg04}
-                      width={251}
-                      height={56}
-                      alt="Tag 04"
-                    />
+                    {planetTags.map((tag, i) => (
+                      <div key={i} className={tag.className}>
+                        <div className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-gray-800/80 px-3 py-2 shadow-lg backdrop-blur-sm">
+                          <span className="h-2 w-2 rounded-full bg-blue-400" />
+                          <span className="whitespace-nowrap text-sm font-medium text-gray-200">
+                            {tag.label}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -125,7 +126,11 @@ export default function FeaturesPlanet() {
           {/* Grid */}
           <div className="grid overflow-hidden sm:grid-cols-2 lg:grid-cols-3 *:relative *:p-6 *:before:absolute *:before:bg-gray-800 *:before:[block-size:100vh] *:before:[inline-size:1px] *:before:[inset-block-start:0] *:before:[inset-inline-start:-1px] *:after:absolute *:after:bg-gray-800 *:after:[block-size:1px] *:after:[inline-size:100vw] *:after:[inset-block-start:-1px] *:after:[inset-inline-start:0] md:*:p-10">
             {features.map((feature, index) => (
-              <article key={index}>
+              <article
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={(index % 3) * 100}
+              >
                 <h3 className="mb-2 flex items-center space-x-2 font-medium text-gray-200">
                   <svg
                     className="fill-blue-400"

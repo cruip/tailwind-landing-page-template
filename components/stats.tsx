@@ -19,7 +19,7 @@ export default function Stats() {
                 key={index}
                 className="bg-gray-50 px-6 py-8 text-center"
               >
-                <div className="bg-linear-to-r from-blue-500 to-violet-500 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+                <div className="bg-linear-to-r from-blue-500 to-blue-600 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
                   {stat.value}
                 </div>
                 <div className="mt-2 text-sm font-medium text-gray-600">

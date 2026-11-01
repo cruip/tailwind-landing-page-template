@@ -51,7 +51,7 @@ export default function HowItWorks() {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <div className="relative z-10 mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-blue-500 to-violet-500 text-lg font-bold text-white shadow-lg shadow-blue-500/20">
+                <div className="relative z-10 mb-5 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-blue-500 to-blue-600 text-lg font-bold text-white shadow-lg shadow-blue-500/20">
                   {step.n}
                 </div>
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">

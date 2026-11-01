@@ -127,7 +127,7 @@ export default function Connectors() {
               <div className="grid gap-px overflow-hidden rounded-xl bg-gray-800 sm:grid-cols-3">
                 {extend.map((item, i) => (
                   <div key={i} className="bg-gray-900 p-6">
-                    <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br from-blue-500 to-violet-500 text-white">
+                    <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br from-blue-500 to-blue-600 text-white">
                       <svg
                         className="h-5 w-5 fill-current"
                         xmlns="http://www.w3.org/2000/svg"
