@@ -12,6 +12,19 @@
   --font-inter: Inter, sans-serif;
   --font-mono: Roboto Mono, monospace;
 
+  /* ESAA brand accent — the template's "blue" ramp remapped to ESAA's
+     indigo/violet so every existing accent becomes brand-consistent. */
+  --color-blue-50: #eef2ff;
+  --color-blue-100: #e0e7ff;
+  --color-blue-200: #c7d2fe;
+  --color-blue-300: #a5b4fc;
+  --color-blue-400: #818cf8;
+  --color-blue-500: #6366f1;
+  --color-blue-600: #4f46e5;
+  --color-blue-700: #4338ca;
+  --color-blue-800: #3730a3;
+  --color-blue-900: #312e81;
+
   --text-xs: 0.75rem;
   --text-xs--line-height: 1.5;
   --text-sm: 0.875rem;

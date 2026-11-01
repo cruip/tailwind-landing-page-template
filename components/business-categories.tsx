@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo01 from "@/public/images/logo-01.svg";
+import EsaaMark from "@/public/images/esaa-mark-dark.png";
 import Logo02 from "@/public/images/logo-02.svg";
 import Logo03 from "@/public/images/logo-03.svg";
 import Logo04 from "@/public/images/logo-04.svg";
@@ -14,7 +14,18 @@ export default function BusinessCategories() {
     <section>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="pb-12 md:pb-20">
-          {/* Tab panels */}
+          {/* Section header */}
+          <div className="mx-auto max-w-3xl pb-10 text-center md:pb-12">
+            <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
+              Connected to the places your work already lives
+            </h2>
+            <p className="text-lg text-gray-700">
+              Index content from 55+ sources — drives, wikis, chat, tickets, CRM
+              and ERP — on a schedule, and keep it in sync. Document permissions
+              are respected where the source supports them.
+            </p>
+          </div>
+          {/* Orbit */}
           <div className="relative flex h-[324px] items-center justify-center">
             {/* Small blue dots */}
             <div className="absolute -z-10">
@@ -179,10 +190,10 @@ export default function BusinessCategories() {
                 <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                   <Image
                     className="relative"
-                    src={Logo01}
-                    width={32}
-                    height={32}
-                    alt="Logo 01"
+                    src={EsaaMark}
+                    width={38}
+                    height={38}
+                    alt="ESAA"
                   />
                 </div>
               </div>
