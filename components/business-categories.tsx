@@ -1,13 +1,5 @@
 import Image from "next/image";
 import EsaaMark from "@/public/images/esaa-mark-dark.png";
-import Logo02 from "@/public/images/logo-02.svg";
-import Logo03 from "@/public/images/logo-03.svg";
-import Logo04 from "@/public/images/logo-04.svg";
-import Logo05 from "@/public/images/logo-05.svg";
-import Logo06 from "@/public/images/logo-06.svg";
-import Logo07 from "@/public/images/logo-07.svg";
-import Logo08 from "@/public/images/logo-08.svg";
-import Logo09 from "@/public/images/logo-09.svg";
 
 export default function BusinessCategories() {
   return (
@@ -20,9 +12,12 @@ export default function BusinessCategories() {
               Connected to the places your work already lives
             </h2>
             <p className="text-lg text-gray-700">
-              Index content from 55+ sources — drives, wikis, chat, tickets, CRM
-              and ERP — on a schedule, and keep it in sync. Document permissions
-              are respected where the source supports them.
+              Index content from{" "}
+              <span className="font-semibold text-gray-900">
+                57 built-in sources
+              </span>{" "}
+              — drives, wikis, chat, tickets, CRM and ERP — on a schedule, and
+              keep it in sync.
             </p>
           </div>
           {/* Orbit */}
@@ -184,15 +179,15 @@ export default function BusinessCategories() {
             {/* Vertical lines */}
             <div className="absolute inset-y-0 left-1/2 -z-10 w-px -translate-x-[216px] bg-linear-to-b from-gray-200 to-transparent mix-blend-multiply"></div>
             <div className="absolute inset-y-0 left-1/2 -z-10 w-px translate-x-[216px] bg-linear-to-t from-gray-200 to-transparent mix-blend-multiply"></div>
-            {/* Logos */}
+            {/* Center ESAA mark */}
             <div className="absolute before:absolute before:-inset-3 before:animate-[spin_3s_linear_infinite] before:rounded-full before:border before:border-transparent before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] before:[background:conic-gradient(from_180deg,transparent,var(--color-blue-500))_border-box]">
               <div className="animate-[breath_8s_ease-in-out_infinite_both]">
                 <div className="flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                   <Image
-                    className="relative"
+                    className="relative object-contain"
                     src={EsaaMark}
-                    width={38}
-                    height={38}
+                    width={40}
+                    height={40}
                     alt="ESAA"
                   />
                 </div>
@@ -201,106 +196,122 @@ export default function BusinessCategories() {
 
             <div className="relative flex flex-col">
               <article className="flex h-full w-full items-center justify-center focus-visible:outline-hidden focus-visible:ring-3 focus-visible:ring-indigo-300">
+                {/* Slack — inner left */}
                 <div className="absolute -translate-x-[136px]">
                   <div className="animate-[breath_7s_ease-in-out_3s_infinite_both]">
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
-                        className="relative"
-                        src={Logo02}
-                        width={23}
-                        height={22}
-                        alt="Logo 02"
+                        className="relative object-contain"
+                        src="/images/connectors/slack.png"
+                        unoptimized
+                        width={28}
+                        height={28}
+                        alt="Slack"
                       />
                     </div>
                   </div>
                 </div>
+                {/* Notion — inner right */}
                 <div className="absolute translate-x-[136px]">
                   <div className="animate-[breath_7s_ease-in-out_3.5s_infinite_both]">
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
-                        className="relative"
-                        src={Logo03}
-                        width={22}
-                        height={22}
-                        alt="Logo 03"
+                        className="relative object-contain"
+                        src="/images/connectors/notion.png"
+                        unoptimized
+                        width={26}
+                        height={26}
+                        alt="Notion"
                       />
                     </div>
                   </div>
                 </div>
+                {/* Google Drive — top left */}
                 <div className="absolute -translate-x-[216px] -translate-y-[82px]">
                   <div className="animate-[breath_6s_ease-in-out_3.5s_infinite_both]">
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
-                        className="relative"
-                        src={Logo04}
-                        width={24}
-                        height={22}
-                        alt="Logo 04"
+                        className="relative object-contain"
+                        src="/images/connectors/google-drive.png"
+                        unoptimized
+                        width={34}
+                        height={34}
+                        alt="Google Drive"
                       />
                     </div>
                   </div>
                 </div>
+                {/* Jira — top right */}
                 <div className="absolute -translate-y-[82px] translate-x-[216px]">
                   <div className="animate-[breath_6s_ease-in-out_1.5s_infinite_both]">
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
-                        className="relative"
-                        src={Logo05}
-                        width={25}
-                        height={25}
-                        alt="Logo 05"
+                        className="relative object-contain"
+                        src="/images/connectors/jira.svg"
+                        unoptimized
+                        width={34}
+                        height={34}
+                        alt="Jira"
                       />
                     </div>
                   </div>
                 </div>
+                {/* GitHub — bottom right */}
                 <div className="absolute translate-x-[216px] translate-y-[82px]">
                   <div className="animate-[breath_6s_ease-in-out_2s_infinite_both]">
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
-                        className="relative"
-                        src={Logo06}
-                        width={20}
-                        height={18}
-                        alt="Logo 06"
+                        className="relative object-contain"
+                        src="/images/connectors/github.png"
+                        unoptimized
+                        width={30}
+                        height={30}
+                        alt="GitHub"
                       />
                     </div>
                   </div>
                 </div>
+                {/* Salesforce — bottom left */}
                 <div className="absolute -translate-x-[216px] translate-y-[82px]">
                   <div className="animate-[breath_6s_ease-in-out_2.5s_infinite_both]">
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white shadow-lg shadow-black/[0.03] before:absolute before:inset-0 before:m-[8.334%] before:rounded-[inherit] before:border before:border-gray-700/5 before:bg-gray-200/60 before:[mask-image:linear-gradient(to_bottom,black,transparent)]">
                       <Image
-                        className="relative"
-                        src={Logo07}
-                        width={25}
-                        height={25}
-                        alt="Logo 07"
+                        className="relative object-contain"
+                        src="/images/connectors/salesforce.png"
+                        unoptimized
+                        width={34}
+                        height={34}
+                        alt="Salesforce"
                       />
                     </div>
                   </div>
                 </div>
-                <div className="absolute -translate-x-[292px] opacity-40">
+                {/* Confluence — far left */}
+                <div className="absolute -translate-x-[292px]">
                   <div className="animate-[breath_6s_ease-in-out_2s_infinite_both]">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200/60 bg-white shadow-lg">
                       <Image
-                        className="relative"
-                        src={Logo08}
-                        width={20}
-                        height={20}
-                        alt="Logo 08"
+                        className="relative object-contain"
+                        src="/images/connectors/confluence.svg"
+                        unoptimized
+                        width={22}
+                        height={22}
+                        alt="Confluence"
                       />
                     </div>
                   </div>
                 </div>
-                <div className="absolute translate-x-[292px] opacity-40">
+                {/* Dropbox — far right */}
+                <div className="absolute translate-x-[292px]">
                   <div className="animate-[breath_6s_ease-in-out_4s_infinite_both]">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gray-200/60 bg-white shadow-lg">
                       <Image
-                        className="relative"
-                        src={Logo09}
-                        width={21}
-                        height={13}
-                        alt="Logo 09"
+                        className="relative object-contain"
+                        src="/images/connectors/dropbox.png"
+                        unoptimized
+                        width={22}
+                        height={22}
+                        alt="Dropbox"
                       />
                     </div>
                   </div>
