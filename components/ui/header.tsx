@@ -11,22 +11,40 @@ export default function Header() {
             <Logo />
           </div>
 
-          {/* Desktop sign in links */}
+          {/* Desktop nav */}
+          <nav className="hidden md:flex md:grow md:justify-center">
+            <ul className="flex items-center gap-6 text-sm font-medium text-gray-700">
+              <li>
+                <Link href="#features" className="transition hover:text-gray-900">
+                  Features
+                </Link>
+              </li>
+              <li>
+                <Link href="#connectors" className="transition hover:text-gray-900">
+                  Connectors
+                </Link>
+              </li>
+              <li>
+                <Link href="#models" className="transition hover:text-gray-900">
+                  AI models
+                </Link>
+              </li>
+              <li>
+                <Link href="#security" className="transition hover:text-gray-900">
+                  Security
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* Primary CTA */}
           <ul className="flex flex-1 items-center justify-end gap-3">
             <li>
               <Link
-                href="/signin"
-                className="btn-sm bg-white text-gray-800 shadow-sm hover:bg-gray-50"
-              >
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/signup"
+                href="#demo"
                 className="btn-sm bg-gray-800 text-gray-200 shadow-sm hover:bg-gray-900"
               >
-                Register
+                Request a demo
               </Link>
             </li>
           </ul>

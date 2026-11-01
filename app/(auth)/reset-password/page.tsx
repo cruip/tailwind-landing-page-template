@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Reset Password - Simple",
-  description: "Page description",
+  title: "Reset password — ESAA",
+  description: "Reset your ESAA password.",
 };
 
 export default function ResetPassword() {
@@ -24,7 +24,7 @@ export default function ResetPassword() {
               id="email"
               className="form-input w-full py-2"
               type="email"
-              placeholder="corybarker@email.com"
+              placeholder="you@company.com"
               required
             />
           </div>

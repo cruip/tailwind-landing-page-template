@@ -14,19 +14,23 @@ export default function Footer({ border = false }: { border?: boolean }) {
             <div>
               <Logo />
             </div>
-            <div className="text-sm text-gray-600">
-              &copy; Cruip.com - All rights reserved.
+            <div className="max-w-xs text-sm text-gray-600">
+              Enterprise Search &amp; AI Agents — one private AI workspace for
+              your company&apos;s knowledge, files and business systems.
+            </div>
+            <div className="text-sm text-gray-500">
+              &copy; {new Date().getFullYear()} ESAA. All rights reserved.
             </div>
           </div>
 
           {/* 2nd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Product</h3>
+            <h3 className="text-sm font-medium">Platform</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#features"
                 >
                   Features
                 </Link>
@@ -34,33 +38,25 @@ export default function Footer({ border = false }: { border?: boolean }) {
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#connectors"
                 >
-                  Integrations
+                  Connectors
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#models"
                 >
-                  Pricing & Plans
+                  AI models
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#security"
                 >
-                  Changelog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Our method
+                  Security
                 </Link>
               </li>
             </ul>
@@ -68,46 +64,38 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 3rd block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Company</h3>
+            <h3 className="text-sm font-medium">Capabilities</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#features"
                 >
-                  About us
+                  Agentic search
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#features"
                 >
-                  Diversity & Inclusion
+                  Agents & actions
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#features"
                 >
-                  Blog
+                  Code interpreter
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#features"
                 >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Financial statements
+                  Equipment qualification
                 </Link>
               </li>
             </ul>
@@ -115,30 +103,22 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
           {/* 4th block */}
           <div className="space-y-2 sm:col-span-6 md:col-span-3 lg:col-span-2">
-            <h3 className="text-sm font-medium">Resources</h3>
+            <h3 className="text-sm font-medium">Get started</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#demo"
                 >
-                  Community
+                  Request a demo
                 </Link>
               </li>
               <li>
                 <Link
                   className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
+                  href="#features"
                 >
-                  Terms of service
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="text-gray-600 transition hover:text-gray-900"
-                  href="#0"
-                >
-                  Report a vulnerability
+                  Explore features
                 </Link>
               </li>
             </ul>
@@ -200,7 +180,7 @@ export default function Footer({ border = false }: { border?: boolean }) {
 
       {/* Big text */}
       <div className="relative -mt-16 h-60 w-full" aria-hidden="true">
-        <div className="pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 text-center text-[348px] font-bold leading-none before:bg-linear-to-b before:from-gray-200 before:to-gray-100/30 before:to-80% before:bg-clip-text before:text-transparent before:content-['Simple'] after:absolute after:inset-0 after:bg-gray-300/70 after:bg-clip-text after:text-transparent after:mix-blend-darken after:content-['Simple'] after:[text-shadow:0_1px_0_white]"></div>
+        <div className="pointer-events-none absolute left-1/2 -z-10 -translate-x-1/2 text-center text-[348px] font-bold leading-none before:bg-linear-to-b before:from-gray-200 before:to-gray-100/30 before:to-80% before:bg-clip-text before:text-transparent before:content-['ESAA'] after:absolute after:inset-0 after:bg-gray-300/70 after:bg-clip-text after:text-transparent after:mix-blend-darken after:content-['ESAA'] after:[text-shadow:0_1px_0_white]"></div>
         {/* Glow */}
         <div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-2/3"

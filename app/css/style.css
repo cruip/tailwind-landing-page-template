@@ -12,6 +12,18 @@
   --font-inter: Inter, sans-serif;
   --font-mono: Roboto Mono, monospace;
 
+  /* ESAA brand accent — a clean, consistent blue across the whole site. */
+  --color-blue-50: #eff6ff;
+  --color-blue-100: #dbeafe;
+  --color-blue-200: #bfdbfe;
+  --color-blue-300: #93c5fd;
+  --color-blue-400: #60a5fa;
+  --color-blue-500: #3b82f6;
+  --color-blue-600: #2563eb;
+  --color-blue-700: #1d4ed8;
+  --color-blue-800: #1e40af;
+  --color-blue-900: #1e3a8a;
+
   --text-xs: 0.75rem;
   --text-xs--line-height: 1.5;
   --text-sm: 0.875rem;
@@ -53,7 +65,10 @@
   --animate-breath: breath;
   --animate-float: float;
   --animate-line: line;
-  --animate-infinite-scroll: infinite-scroll;  
+  --animate-infinite-scroll: infinite-scroll;
+  --animate-drift: drift;
+  --animate-floaty: floaty;
+  --animate-shimmer: shimmer;
 
   @keyframes code-1 {
     0% {
@@ -186,6 +201,35 @@
       transform: translateX(-100%);
     }
   }
+  @keyframes drift {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(40px, -28px) scale(1.08);
+    }
+    66% {
+      transform: translate(-28px, 22px) scale(0.94);
+    }
+  }
+  @keyframes floaty {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
 }
 
 /*
@@ -203,5 +247,36 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+/* Smooth custom cursor */
+@media (pointer: fine) {
+  .has-smooth-cursor,
+  .has-smooth-cursor a,
+  .has-smooth-cursor button,
+  .has-smooth-cursor [role="button"],
+  .has-smooth-cursor label,
+  .has-smooth-cursor summary {
+    cursor: none;
+  }
+  .has-smooth-cursor input,
+  .has-smooth-cursor textarea,
+  .has-smooth-cursor select {
+    cursor: text;
+  }
+  .smooth-cursor {
+    transition: opacity 0.25s ease;
+  }
+  .smooth-cursor svg {
+    transition: transform 0.18s ease;
+  }
+  .smooth-cursor.is-active svg {
+    transform: scale(1.4);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .smooth-cursor {
+    display: none !important;
   }
 }

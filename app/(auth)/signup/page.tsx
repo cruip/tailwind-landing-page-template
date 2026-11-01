@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Sign Up - Simple",
-  description: "Page description",
+  title: "Create your account — ESAA",
+  description: "Create your ESAA account.",
 };
 
 export default function SignUp() {
@@ -24,7 +24,7 @@ export default function SignUp() {
               id="name"
               className="form-input w-full py-2"
               type="text"
-              placeholder="Corey Barker"
+              placeholder="Jane Doe"
               required
             />
           </div>
@@ -39,7 +39,7 @@ export default function SignUp() {
               id="email"
               className="form-input w-full py-2"
               type="email"
-              placeholder="corybarker@email.com"
+              placeholder="you@company.com"
               required
             />
           </div>
