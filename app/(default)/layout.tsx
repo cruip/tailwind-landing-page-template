@@ -18,9 +18,10 @@ export default function DefaultLayout({
     AOS.init({
       once: true,
       disable: "phone",
-      duration: 550,
-      easing: "ease-out",
-      offset: 40,
+      duration: 800,
+      easing: "ease-out-cubic",
+      offset: 80,
+      delay: 0,
     });
   }, []);
 

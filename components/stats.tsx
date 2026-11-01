@@ -17,7 +17,9 @@ export default function Stats() {
             {stats.map((stat, index) => (
               <div
                 key={index}
-                className="bg-gray-50 px-6 py-8 text-center"
+                className="bg-gray-50 px-6 py-8 text-center transition-colors hover:bg-white"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
                 <div className="bg-linear-to-r from-blue-500 to-blue-600 bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
                   {stat.value}

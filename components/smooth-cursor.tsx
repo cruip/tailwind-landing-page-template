@@ -24,9 +24,9 @@ export default function SmoothCursor() {
     let targetY = window.innerHeight / 2;
     let x = targetX;
     let y = targetY;
-    let vx = 0;
-    let vy = 0;
-    let rot = 0;
+    let prevX = x;
+    let prevY = y;
+    let rot = -40;
     let press = 1;
     let raf = 0;
     let shown = false;
@@ -39,53 +39,47 @@ export default function SmoothCursor() {
         el.style.opacity = "1";
       }
     };
-    const onEnterInteractive = () => el.classList.add("is-active");
-    const onLeaveInteractive = () => el.classList.remove("is-active");
-    const onDown = () => {
-      press = 0.7;
-    };
-    const onUp = () => {
-      press = 1;
-    };
+    const onDown = () => (press = 0.78);
+    const onUp = () => (press = 1);
     const onDocLeave = () => {
       el.style.opacity = "0";
       shown = false;
     };
+    const onEnterInteractive = () => el.classList.add("is-active");
+    const onLeaveInteractive = () => el.classList.remove("is-active");
 
     window.addEventListener("mousemove", onMove, { passive: true });
     window.addEventListener("mousedown", onDown);
     window.addEventListener("mouseup", onUp);
     document.addEventListener("mouseleave", onDocLeave);
 
-    // Grow slightly over clickable elements.
     const interactive = "a, button, [role='button'], input, textarea, label, summary";
-    document.querySelectorAll(interactive).forEach((node) => {
-      node.addEventListener("mouseenter", onEnterInteractive);
-      node.addEventListener("mouseleave", onLeaveInteractive);
+    const nodes = Array.from(document.querySelectorAll(interactive));
+    nodes.forEach((n) => {
+      n.addEventListener("mouseenter", onEnterInteractive);
+      n.addEventListener("mouseleave", onLeaveInteractive);
     });
 
-    // Spring constants.
-    const stiffness = 0.16;
-    const damping = 0.75;
-
     const loop = () => {
-      const ax = (targetX - x) * stiffness;
-      const ay = (targetY - y) * stiffness;
-      vx = (vx + ax) * damping;
-      vy = (vy + ay) * damping;
-      x += vx;
-      y += vy;
+      // Exponential follow — smooth, never overshoots (no jitter).
+      x += (targetX - x) * 0.2;
+      y += (targetY - y) * 0.2;
 
-      const speed = Math.hypot(vx, vy);
-      if (speed > 0.35) {
-        const targetRot = (Math.atan2(vy, vx) * 180) / Math.PI + 90;
-        let diff = targetRot - rot;
+      const dx = x - prevX;
+      const dy = y - prevY;
+      prevX = x;
+      prevY = y;
+
+      // Rotate toward travel direction only when clearly moving.
+      const dist = Math.hypot(dx, dy);
+      if (dist > 2) {
+        const target = (Math.atan2(dy, dx) * 180) / Math.PI + 90;
+        let diff = target - rot;
         diff = ((diff + 180) % 360) - 180;
-        rot += diff * 0.2;
+        rot += diff * 0.15;
       }
-      const stretch = Math.min(speed / 70, 0.28);
 
-      el.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rot}deg) scale(${press * (1 + stretch)}, ${press * (1 - stretch)})`;
+      el.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rot}deg) scale(${press})`;
       raf = requestAnimationFrame(loop);
     };
     raf = requestAnimationFrame(loop);
@@ -96,9 +90,9 @@ export default function SmoothCursor() {
       window.removeEventListener("mousedown", onDown);
       window.removeEventListener("mouseup", onUp);
       document.removeEventListener("mouseleave", onDocLeave);
-      document.querySelectorAll(interactive).forEach((node) => {
-        node.removeEventListener("mouseenter", onEnterInteractive);
-        node.removeEventListener("mouseleave", onLeaveInteractive);
+      nodes.forEach((n) => {
+        n.removeEventListener("mouseenter", onEnterInteractive);
+        n.removeEventListener("mouseleave", onLeaveInteractive);
       });
       document.documentElement.classList.remove("has-smooth-cursor");
     };
@@ -109,19 +103,19 @@ export default function SmoothCursor() {
       ref={ref}
       aria-hidden="true"
       className="smooth-cursor pointer-events-none fixed left-0 top-0 z-[9999] opacity-0"
-      style={{ willChange: "transform", transformOrigin: "12px 2px" }}
+      style={{ willChange: "transform", transformOrigin: "11px 2px" }}
     >
       <svg
-        width="24"
-        height="26"
-        viewBox="0 0 24 26"
+        width="22"
+        height="24"
+        viewBox="0 0 22 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ marginLeft: -12, marginTop: -2, display: "block" }}
+        style={{ marginLeft: -11, marginTop: -2, display: "block" }}
       >
         <path
-          d="M12 2 L20.5 23 L12 18 L3.5 23 Z"
-          fill="#2563eb"
+          d="M11 2 L18.5 21 L11 16.5 L3.5 21 Z"
+          fill="#111827"
           stroke="#ffffff"
           strokeWidth="1.6"
           strokeLinejoin="round"

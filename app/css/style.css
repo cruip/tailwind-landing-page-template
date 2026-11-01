@@ -65,7 +65,10 @@
   --animate-breath: breath;
   --animate-float: float;
   --animate-line: line;
-  --animate-infinite-scroll: infinite-scroll;  
+  --animate-infinite-scroll: infinite-scroll;
+  --animate-drift: drift;
+  --animate-floaty: floaty;
+  --animate-shimmer: shimmer;
 
   @keyframes code-1 {
     0% {
@@ -196,6 +199,35 @@
     }
     to {
       transform: translateX(-100%);
+    }
+  }
+  @keyframes drift {
+    0%,
+    100% {
+      transform: translate(0, 0) scale(1);
+    }
+    33% {
+      transform: translate(40px, -28px) scale(1.08);
+    }
+    66% {
+      transform: translate(-28px, 22px) scale(0.94);
+    }
+  }
+  @keyframes floaty {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
     }
   }
 }

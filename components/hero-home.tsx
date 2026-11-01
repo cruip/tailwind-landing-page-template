@@ -29,7 +29,7 @@ export default function HeroHome() {
               One private AI workspace for{" "}
               <br className="max-lg:hidden" />
               your company&apos;s{" "}
-              <span className="bg-linear-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent">
+              <span className="animate-[shimmer_6s_linear_infinite] bg-[length:200%_auto] bg-clip-text text-transparent [background-image:linear-gradient(110deg,var(--color-blue-600),45%,var(--color-blue-400),55%,var(--color-blue-600))]">
                 knowledge
               </span>
             </h1>
@@ -77,7 +77,7 @@ export default function HeroHome() {
             data-aos="fade-up"
             data-aos-delay={320}
           >
-            <div className="relative rounded-2xl bg-gray-900 p-1.5 shadow-2xl shadow-gray-900/20 before:pointer-events-none before:absolute before:-inset-5 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] after:absolute after:-inset-5 after:-z-10 after:border-x after:[border-image:linear-gradient(to_bottom,transparent,--theme(--color-slate-300/.8),transparent)1]">
+            <div className="relative animate-[floaty_7s_ease-in-out_infinite] rounded-2xl bg-gray-900 p-1.5 shadow-2xl shadow-gray-900/20 before:pointer-events-none before:absolute before:-inset-5 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] after:absolute after:-inset-5 after:-z-10 after:border-x after:[border-image:linear-gradient(to_bottom,transparent,--theme(--color-slate-300/.8),transparent)1]">
               {/* Window chrome */}
               <div className="flex items-center gap-1.5 px-3 py-2">
                 <span className="h-3 w-3 rounded-full bg-gray-600/80" />

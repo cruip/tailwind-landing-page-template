@@ -14,7 +14,7 @@ export default function Cta() {
             className="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2 translate-y-1/2"
             aria-hidden="true"
           >
-            <div className="h-56 w-[480px] rounded-full border-[20px] border-blue-500 blur-3xl" />
+            <div className="h-56 w-[480px] animate-[drift_16s_ease-in-out_infinite] rounded-full border-[20px] border-blue-500 blur-3xl" />
           </div>
           {/* Stripes illustration */}
           <div
