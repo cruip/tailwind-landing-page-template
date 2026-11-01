@@ -103,21 +103,21 @@ export default function SmoothCursor() {
       ref={ref}
       aria-hidden="true"
       className="smooth-cursor pointer-events-none fixed left-0 top-0 z-[9999] opacity-0"
-      style={{ willChange: "transform", transformOrigin: "11px 2px" }}
+      style={{ willChange: "transform", transformOrigin: "14px 3px" }}
     >
       <svg
-        width="22"
-        height="24"
-        viewBox="0 0 22 24"
+        width="28"
+        height="30"
+        viewBox="0 0 28 30"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ marginLeft: -11, marginTop: -2, display: "block" }}
+        style={{ marginLeft: -14, marginTop: -3, display: "block" }}
       >
         <path
-          d="M11 2 L18.5 21 L11 16.5 L3.5 21 Z"
+          d="M14 3 L25.5 27 L14 21 L2.5 27 Z"
           fill="#111827"
           stroke="#ffffff"
-          strokeWidth="1.6"
+          strokeWidth="2.2"
           strokeLinejoin="round"
         />
       </svg>
