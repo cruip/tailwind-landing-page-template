@@ -5,13 +5,16 @@ export const metadata = {
 };
 
 import Hero from "@/components/hero-home";
+import Stats from "@/components/stats";
 import BusinessCategories from "@/components/business-categories";
 import WhyEsaa from "@/components/why-esaa";
+import HowItWorks from "@/components/how-it-works";
 import FeaturesPlanet from "@/components/features-planet";
 import Connectors from "@/components/connectors";
 import Models from "@/components/models";
 import Security from "@/components/security";
 import WhoItsFor from "@/components/who-its-for";
+import Faq from "@/components/faq";
 import LargeTestimonial from "@/components/large-testimonial";
 import Cta from "@/components/cta";
 
@@ -19,13 +22,16 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Stats />
       <BusinessCategories />
       <WhyEsaa />
+      <HowItWorks />
       <FeaturesPlanet />
       <Connectors />
       <Models />
       <Security />
       <WhoItsFor />
+      <Faq />
       <LargeTestimonial />
       <Cta />
     </>

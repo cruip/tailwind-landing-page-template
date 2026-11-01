@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Sign In - Simple",
-  description: "Page description",
+  title: "Sign in — ESAA",
+  description: "Sign in to your ESAA workspace.",
 };
 
 import Link from "next/link";
@@ -26,7 +26,7 @@ export default function SignIn() {
                 id="email"
                 className="form-input w-full py-2"
                 type="email"
-                placeholder="corybarker@email.com"
+                placeholder="you@company.com"
                 required
               />
             </div>

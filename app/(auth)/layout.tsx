@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Logo from "@/components/ui/logo";
 import AuthBg from "@/public/images/auth-bg.svg";
+import AppShot from "@/public/images/esaa-app.png";
 
 export default function AuthLayout({
   children,
@@ -57,37 +58,28 @@ export default function AuthLayout({
             </div>
             {/* Illustration */}
             <div className="absolute left-32 top-1/2 w-[500px] -translate-y-1/2">
-              <div className="aspect-video w-full rounded-2xl bg-gray-900 px-5 py-3 shadow-xl transition duration-300">
-                <div className="relative mb-8 flex items-center justify-between before:block before:h-[9px] before:w-[41px] before:bg-[length:16px_9px] before:[background-image:radial-gradient(circle_at_4.5px_4.5px,var(--color-gray-600)_4.5px,transparent_0)] after:w-[41px]">
-                  <span className="text-[13px] font-medium text-white">
-                    cruip.com
+              <div className="rounded-2xl bg-gray-900 p-2 shadow-xl transition duration-300">
+                <div className="flex items-center gap-1.5 px-2 py-1.5">
+                  <span className="h-2.5 w-2.5 rounded-full bg-gray-600/80" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-gray-600/80" />
+                  <span className="h-2.5 w-2.5 rounded-full bg-gray-600/80" />
+                  <span className="ml-2 text-[12px] font-medium text-gray-400">
+                    ESAA
                   </span>
                 </div>
-                <div className="font-mono text-sm text-gray-500 transition duration-300 [&_span]:opacity-0">
-                  <span className="animate-[code-1_10s_infinite] text-gray-200">
-                    npm login
-                  </span>{" "}
-                  <span className="animate-[code-2_10s_infinite]">
-                    --registry=https://npm.pkg.github.com
-                  </span>
-                  <br />
-                  <span className="animate-[code-3_10s_infinite]">
-                    --scope=@phanatic
-                  </span>{" "}
-                  <span className="animate-[code-4_10s_infinite]">
-                    Successfully logged-in.
-                  </span>
-                  <br />
-                  <br />
-                  <span className="animate-[code-5_10s_infinite] text-gray-200">
-                    npm publish
-                  </span>
-                  <br />
-                  <span className="animate-[code-6_10s_infinite]">
-                    Package published.
-                  </span>
-                </div>
+                <Image
+                  src={AppShot}
+                  width={1853}
+                  height={958}
+                  alt="ESAA workspace"
+                  className="w-full rounded-lg"
+                  priority
+                />
               </div>
+              <p className="mt-6 max-w-xs text-sm text-gray-600">
+                One private AI workspace for your company&apos;s knowledge, files
+                and business systems.
+              </p>
             </div>
           </div>
         </>
