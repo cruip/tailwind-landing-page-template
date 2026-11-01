@@ -13,7 +13,7 @@ export default function HeroHome() {
           <div className="pb-12 text-center md:pb-16">
             <div
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/70 px-3 py-1 text-sm font-medium text-gray-700 shadow-sm backdrop-blur-sm"
-              data-aos="zoom-y-out"
+              data-aos="fade-up"
             >
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-500 opacity-75"></span>
@@ -23,8 +23,8 @@ export default function HeroHome() {
             </div>
             <h1
               className="mb-6 border-y text-5xl font-bold [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] md:text-6xl"
-              data-aos="zoom-y-out"
-              data-aos-delay={150}
+              data-aos="fade-up"
+              data-aos-delay={80}
             >
               One private AI workspace for{" "}
               <br className="max-lg:hidden" />
@@ -36,8 +36,8 @@ export default function HeroHome() {
             <div className="mx-auto max-w-3xl">
               <p
                 className="mb-8 text-lg text-gray-700"
-                data-aos="zoom-y-out"
-                data-aos-delay={300}
+                data-aos="fade-up"
+                data-aos-delay={160}
               >
                 ESAA is a self-hosted ChatGPT for your company that knows your
                 documents, can use your business systems, and keeps your data
@@ -47,8 +47,8 @@ export default function HeroHome() {
               <div className="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]">
                 <div
                   className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center"
-                  data-aos="zoom-y-out"
-                  data-aos-delay={450}
+                  data-aos="fade-up"
+                  data-aos-delay={240}
                 >
                   <a
                     className="btn group mb-4 w-full bg-linear-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
@@ -74,8 +74,8 @@ export default function HeroHome() {
           {/* Hero product shot */}
           <div
             className="mx-auto max-w-4xl"
-            data-aos="zoom-y-out"
-            data-aos-delay={600}
+            data-aos="fade-up"
+            data-aos-delay={320}
           >
             <div className="relative rounded-2xl bg-gray-900 p-1.5 shadow-2xl shadow-gray-900/20 before:pointer-events-none before:absolute before:-inset-5 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] after:absolute after:-inset-5 after:-z-10 after:border-x after:[border-image:linear-gradient(to_bottom,transparent,--theme(--color-slate-300/.8),transparent)1]">
               {/* Window chrome */}

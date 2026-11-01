@@ -89,7 +89,7 @@ export default function FeaturesPlanet() {
             </p>
           </div>
           {/* Planet */}
-          <div className="pb-16 md:pb-20" data-aos="zoom-y-out">
+          <div className="pb-16 md:pb-20" data-aos="fade-up">
             <div className="text-center">
               <div className="relative inline-flex rounded-full before:absolute before:inset-0 before:-z-10 before:scale-[.85] before:animate-[pulse_4s_cubic-bezier(.4,0,.6,1)_infinite] before:bg-linear-to-b before:from-blue-900 before:to-sky-700/50 before:blur-3xl after:absolute after:inset-0 after:rounded-[inherit] after:[background:radial-gradient(closest-side,var(--color-blue-500),transparent)]">
                 <Image

@@ -1,5 +1,13 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { CONNECTORS, CONNECTOR_CATEGORY_ORDER } from "./connectors.data";
+
+type ExtendItem = {
+  title: string;
+  body: string;
+  icon?: ReactNode;
+  logo?: string;
+};
 
 export default function Connectors() {
   const byCategory = CONNECTOR_CATEGORY_ORDER.map((category) => ({
@@ -7,7 +15,7 @@ export default function Connectors() {
     items: CONNECTORS.filter((c) => c.category === category),
   })).filter((g) => g.items.length > 0);
 
-  const extend = [
+  const extend: ExtendItem[] = [
     {
       title: "MCP servers",
       body: "Connect any Model Context Protocol server — a CRM, Notion, Zoho and more — as chat tools, with API-token or OAuth sign-in.",
@@ -18,9 +26,7 @@ export default function Connectors() {
     {
       title: "Custom actions (OpenAPI)",
       body: "Turn any REST API into a tool by importing its OpenAPI definition — shared or per-user credentials.",
-      icon: (
-        <path d="M8.7 3.3a1 1 0 0 1 0 1.4L5.4 8l3.3 3.3a1 1 0 1 1-1.4 1.4l-4-4a1 1 0 0 1 0-1.4l4-4a1 1 0 0 1 1.4 0Zm6.6 0a1 1 0 0 1 1.4 0l4 4a1 1 0 0 1 0 1.4l-4 4a1 1 0 1 1-1.4-1.4L18.6 8l-3.3-3.3a1 1 0 0 1 0-1.4Z" />
-      ),
+      logo: "/images/models/openapi.svg",
     },
     {
       title: "Ingestion API",
@@ -127,15 +133,28 @@ export default function Connectors() {
               <div className="grid gap-px overflow-hidden rounded-xl bg-gray-800 sm:grid-cols-3">
                 {extend.map((item, i) => (
                   <div key={i} className="bg-gray-900 p-6">
-                    <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br from-blue-500 to-blue-600 text-white">
-                      <svg
-                        className="h-5 w-5 fill-current"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                      >
-                        {item.icon}
-                      </svg>
-                    </div>
+                    {item.logo ? (
+                      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white">
+                        <Image
+                          src={item.logo}
+                          alt={item.title}
+                          width={22}
+                          height={22}
+                          unoptimized
+                          className="h-5 w-5 object-contain"
+                        />
+                      </div>
+                    ) : (
+                      <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-linear-to-br from-blue-500 to-blue-600 text-white">
+                        <svg
+                          className="h-5 w-5 fill-current"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                        >
+                          {item.icon}
+                        </svg>
+                      </div>
+                    )}
                     <h4 className="mb-1.5 font-semibold text-gray-100">
                       {item.title}
                     </h4>

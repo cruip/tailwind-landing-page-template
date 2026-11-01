@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import SmoothCursor from "@/components/smooth-cursor";
 
 export default function DefaultLayout({
   children,
@@ -17,13 +18,15 @@ export default function DefaultLayout({
     AOS.init({
       once: true,
       disable: "phone",
-      duration: 700,
-      easing: "ease-out-cubic",
+      duration: 550,
+      easing: "ease-out",
+      offset: 40,
     });
-  });
+  }, []);
 
   return (
     <>
+      <SmoothCursor />
       <Header />
 
       <main className="grow">{children}</main>
