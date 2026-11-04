@@ -1,6 +1,7 @@
 import "./css/style.css";
 
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -27,24 +28,25 @@ export default function RootLayout({
         minHeight: "100%",
       }}
     >
+      {/*
+        beforeInteractive injects into the initial HTML before hydration,
+        so scroll restoration is disabled before the browser can restore position.
+      */}
+      <Script
+        id="disable-scroll-restoration"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html:
+            'history.scrollRestoration="manual";window.scrollTo({top:0,behavior:"instant"});',
+        }}
+      />
       <body
         className={`${inter.variable} font-inter tracking-tight text-gray-900 antialiased`}
       >
         {/*
-          Scroll restoration fix — must run before React hydration:
-          1. Disable browser scroll restoration (prevents the browser restoring a previous position)
-          2. Instant scroll-to-top (no animation, so no visible jump)
-
-          IMPORTANT: The wrapper below uses [overflow-x:clip], NOT overflow-hidden.
-          overflow-hidden on any ancestor breaks position:sticky inside the hero.
-          Do not change this to overflow-hidden or overflow-clip (both axes).
+          [overflow-x:clip] only — not overflow-hidden / overflow-clip.
+          Those break position:sticky used by the smooth-scroll hero.
         */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              'history.scrollRestoration="manual";window.scrollTo({top:0,behavior:"instant"});',
-          }}
-        />
         <div className="flex min-h-screen flex-col [overflow-x:clip]">
           {children}
         </div>
