@@ -11,11 +11,16 @@ export default function HeroHome() {
   return (
     <SmoothScrollHero
       scrollHeight={1500}
-      desktopImage="/hero-city.jpg"
-      mobileImage="/hero-city.jpg"
+      images={[
+        "/hero-city.jpg",
+        "/data-screen.jpg",
+        // best available crop — image is a macro portrait; swap for a wide-angle lab shot when ready
+        { src: "/thisisengineering.jpg", size: "cover", position: "center 40%" },
+        // woman + laptop in frame
+        { src: "/student-outside.jpg", size: "cover", position: "center 60%" },
+      ]}
       initialClipPercentage={18}
       finalClipPercentage={82}
-      imageOpacity={0.7}
     >
       <div className="mx-auto w-full max-w-lg px-4 pointer-events-auto">
         <div className="pb-6 pt-16">
