@@ -1,6 +1,7 @@
 export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
+  title: "New Circuits — Navigating workplace change in the UK",
+  description:
+    "Practical guidance on job automation, re-skilling, and career change for people across the UK.",
 };
 
 import Hero from "@/components/hero-home";

@@ -14,6 +14,7 @@
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "aos": "3.0.0-beta.6",
+    "framer-motion": "^14.9.0",
     "next": "^15.1.11",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "react": "19.2.3",

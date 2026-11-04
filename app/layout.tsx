@@ -19,11 +19,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html
+      lang="en"
+      className="scroll-smooth"
+      style={{
+        background: "radial-gradient(125% 125% at 50% 10%, #fff 40%, #2563eb 100%)",
+        minHeight: "100%",
+      }}
+    >
       <body
-        className={`${inter.variable} bg-gray-50 font-inter tracking-tight text-gray-900 antialiased`}
+        className={`${inter.variable} font-inter tracking-tight text-gray-900 antialiased`}
       >
-        <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+        {/* Disable browser scroll restoration so the hero always starts at top */}
+        <script dangerouslySetInnerHTML={{ __html: 'history.scrollRestoration="manual";window.scrollTo(0,0);' }} />
+        <div className="flex min-h-screen flex-col [overflow-x:clip]">
           {children}
         </div>
       </body>

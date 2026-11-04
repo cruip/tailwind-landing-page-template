@@ -7,9 +7,17 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-white/90 px-3 shadow-lg shadow-black/[0.03] backdrop-blur-xs before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(var(--color-gray-100),var(--color-gray-200))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]">
           {/* Site branding */}
-          <div className="flex flex-1 items-center">
+          <div className="flex flex-none items-center">
             <Logo />
           </div>
+
+          {/* Desktop nav */}
+          <nav className="hidden flex-1 items-center justify-center gap-6 md:flex">
+            <a href="#about" className="text-sm text-gray-600 transition hover:text-gray-900">About</a>
+            <a href="#focus-areas" className="text-sm text-gray-600 transition hover:text-gray-900">Focus Areas</a>
+            <a href="#newsletter" className="text-sm text-gray-600 transition hover:text-gray-900">Newsletter</a>
+            <a href="#coming-soon" className="text-sm text-gray-600 transition hover:text-gray-900">Coming Soon</a>
+          </nav>
 
           {/* Desktop sign in links */}
           <ul className="flex flex-1 items-center justify-end gap-3">
